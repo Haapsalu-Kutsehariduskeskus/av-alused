@@ -1,4 +1,4 @@
-# Arvutivõrkude alused / Fundamentals of Computer Networks (6 ECTS)
+# Arvutivõrkude alused / Fundamentals of Computer Networks (3 EKAP)
 
 ![Networking](https://matob.web.id/random/wp-content/uploads/sites/2/2020/11/Computer-Networking-Basic-Definition-Topology-and-Types.jpg)
 
