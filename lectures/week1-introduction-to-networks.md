@@ -10,7 +10,7 @@ A network is a group of two or more computers or devices connected together to s
 
 Without networks, our world would be very different. No more emails, online games, social media, or streaming services. Networks make it possible for devices to talk to each other, whether they're in the same room or across the globe.
 
-![Simple Network Diagram](./Images/simple_network_diagram.png)
+![Simple Network Diagram](./images/simple_network_diagram.png)
 
 ### Types of Networks
 
@@ -26,7 +26,7 @@ Networks come in different shapes and sizes. Here are the main types:
 
 - **Storage Area Network (SAN):** SANs are specialized networks that connect storage devices, like hard drives, to servers. They’re often used in data centers to handle large amounts of data.
 
-![Network Types Comparison](./Images/network_types_comparison.png)
+![Network Types Comparison](./images/network_types_comparison.png)
 
 ---
 
@@ -38,7 +38,7 @@ A network isn’t just a bunch of computers thrown together. It has different pa
 
 These are the devices you use every day—PCs, laptops, smartphones, printers. They are the starting and ending points for data traveling across the network. When you send an email, your computer is the **end device** that starts the process, and your friend's phone is the end device that receives it.
 
-![End Devices](./Images/end_devices.png)
+![End Devices](./images/end_devices.png)
 
 ## Intermediary Devices
 
@@ -50,7 +50,7 @@ These devices are like the traffic cops of a network. They make sure your data g
 
 - **Firewalls:** Firewalls are the security guards of the network, keeping unwanted traffic out and protecting your data from hackers.
 
-![Intermediary Devices](./Images/intermediary_devices.png)
+![Intermediary Devices](./images/intermediary_devices.png)
 
 ## Network Media
 
@@ -62,7 +62,7 @@ Network media is the road that data travels on. There are three main types:
 
 - **Wireless:** This is the invisible path your data takes when you use Wi-Fi. Instead of cables, data is sent through the air using radio waves.
 
-![Network Media Types](./Images/network_media_types.png)
+![Network Media Types](./images/network_media_types.png)
 
 ---
 
@@ -78,7 +78,7 @@ Think of network protocols as the rules of the road for data. They define how da
 
 - **Ethernet:** Ethernet is the standard protocol for wired networks. It makes sure data flows smoothly over cables, like those in a LAN.
 
-![Protocol Flowchart](./Images/protocol_flowchart.gif)
+![Protocol Flowchart](./images/protocol_flowchart.gif)
 
 ## Standards Organizations
 
@@ -106,7 +106,7 @@ There are a few ways to access and configure Cisco devices:
 
 - **Telnet:** Telnet is also used for remote access, but it’s less secure than SSH because it sends data, including passwords, in plain text.
 
-![Cisco IOS Access](./Images/cisco_ios_access.png)
+![Cisco IOS Access](./images/cisco_ios_access.png)
 
 ---
 
@@ -124,7 +124,7 @@ Just like your computer has a name, so do network devices. Setting a hostname ma
 
 Once you’ve made changes to a device’s configuration, it’s important to save them. Otherwise, they’ll be lost when the device is restarted. Verifying configurations means checking that your settings are correct and that the device is working as expected.
 
-![Device Configuration](./Images/device_configuration.png)
+![Device Configuration](./images/device_configuration.png)
 
 ---
 
@@ -138,7 +138,7 @@ Protocols are the unsung heroes of network communication. They ensure that when 
 
 Protocols define the rules for data exchange. For example, TCP breaks data into packets, numbers them, and makes sure they’re reassembled in the correct order. If any packets go missing, TCP asks for them to be sent again, ensuring reliable communication.
 
-![Protocol Data Flow](./Images/protocol_data_flow.gif)
+![Protocol Data Flow](./images/protocol_data_flow.gif)
 
 ---
 
@@ -169,7 +169,7 @@ The TCP/IP model is more practical and is used to explain how the internet works
 
 The TCP/IP model focuses more on how data actually moves across the network, which is why it’s often used instead of the OSI model.
 
-![OSI vs TCP/IP Models](./Images/osi_vs_tcpip_models.png)
+![OSI vs TCP/IP Models](./images/osi_vs_tcpip_models.png)
 
 ---
 
@@ -181,6 +181,6 @@ The TCP/IP model focuses more on how data actually moves across the network, whi
 
 - **UDP:** If you’re streaming a video, UDP (User Datagram Protocol) might be in play. Unlike TCP, UDP doesn’t worry about resending lost packets, making it faster but less reliable. This is okay for streaming, where missing a frame or two isn’t a big deal.
 
-![Protocols in Action](./Images/protocols_in_action.png)
+![Protocols in Action](./images/protocols_in_action.png)
 
 
