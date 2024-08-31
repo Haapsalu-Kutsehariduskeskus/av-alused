@@ -21,7 +21,6 @@ By the end of this course, you will be prepared to configure and troubleshoot sm
 
 ## Õppejõud / Teachers
 - [Maria Talvik 1](mailto:maria.talvik@hkhk.edu.ee)
-- [Teacher Name 2](mailto:teacher2@example.com)
 
 ## Schedule
 - Week 1: Introduction to Networks and Basic Configurations
