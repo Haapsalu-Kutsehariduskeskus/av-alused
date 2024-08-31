@@ -1,7 +1,5 @@
 # Arvutivõrkude alused / Fundamentals of Computer Networks (6 ECTS)
 
-![Networking](https://matob.web.id/random/wp-content/uploads/sites/2/2020/11/Computer-Networking-Basic-Definition-Topology-and-Types.jpg)
-
 **Enhance Your Networking Skills for the Digital Age**  
 Networking is the backbone of the modern digital world. Whether you’re pursuing a career in cybersecurity, software development, or IT management, understanding how networks function, how to configure them, and how to protect them is essential.
 
@@ -45,3 +43,5 @@ By the end of this course, you will be prepared to configure and troubleshoot sm
 - **Quizzes:** 20%
 - **Assignments:** 20%
 - **Final Project:** 20%
+
+![Networking](https://matob.web.id/random/wp-content/uploads/sites/2/2020/11/Computer-Networking-Basic-Definition-Topology-and-Types.jpg)
