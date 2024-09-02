@@ -12,7 +12,7 @@
 </div>
 
 
-# Sissejuhatus võrkudesse
+# Week 1: Sissejuhatus võrkudesse
 
 Kas oled kunagi mõelnud, kuidas saad oma sõpradega internetis rääkida, mängida mänge inimestega, kes on kaugel, või vaadata videoid kogu maailmast? Kõik see on võimalik tänu millelegi, mida nimetatakse **võrguks**!
 
@@ -52,7 +52,7 @@ Mõtle sellele, et saad saata sõnumi või video kellegile teisel pool maailma v
 - **Termin "Wi-Fi"** ei tähenda tegelikult midagi. See on lihtsalt lööv kaubamärgi nimi!
 - **"Pilv"** ei ole ainult taevas — see on serverite võrgustik üle kogu maailma, mis salvestab ja haldab andmeid veebis.
 
-![Lihtne võrgu diagramm](./images/simple_network_diagram.png)
+![Lihtne võrgu diagramm](/lectures/images/simple_network_diagram.png)
 
 ## Võrgu osad
 
