@@ -1,24 +1,3 @@
-<style>
-  .small-grey-box {
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
-    padding: 10px;
-    font-size: 14px;
-  }
-  .small-heading {
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 10px;
-  }
-  .small-grey-box a {
-    color: #0645ad;
-    text-decoration: underline;
-  }
-  .small-grey-box a:hover {
-    color: #0b0080;
-  }
-</style>
-
 <div class="small-grey-box">
   <div class="small-heading">Module 1: Networking Today</div>
   - <a href="https://www.youtube.com/watch?v=TBAvNZIcdVQ&list=PLk4NQNr6-L8onI6MaPcfsRZJOvFO3S5D6&index=2">Networking Today</a>
