@@ -34,22 +34,22 @@ By the end of this course, students will be able to:
   - Physical Layer: Transmission media and signal transmission.
   - Data Link Layer: Ethernet protocol and MAC addresses.
 - **Labs**:
-  - 2. labs
-  - 3. labs
+  - 2labs
+  - 3labs
 
 ### **Week 3: OSI Model - Part 2 (Network Layer and Subnetting) (Modules 8-11)**
 - **Topics**:
   - Network Layer: IP addressing, IPv4, IPv6, and subnetting.
 - **Labs**:
-  - 4. labs
-  - 5. labs
+  - 4labs
+  - 5labs
 
 ### **Week 4: OSI Model - Part 3 (Transport, Session, Presentation, and Application Layers) (Modules 12-15)**
 - **Topics**:
   - Transport Layer: TCP and UDP protocols, ports.
   - Session, Presentation, and Application Layers: Overview and functions.
 - **Labs**:
-  - 6. labs
+  - 6labs
 
 ### **Week 5: Network Devices and Their Management (Modules 16-17)**
 - **Topics**:
@@ -57,7 +57,7 @@ By the end of this course, students will be able to:
   - Introduction to Cisco IOS CLI.
   - Ethernet LAN Switching and Routing Fundamentals.
 - **Labs**:
-  - 7. labs
+  - 7labs
 
 ### **Week 6: Final Project - Comprehensive Network Design**
 - **Final Project**:
