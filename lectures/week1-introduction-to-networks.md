@@ -114,7 +114,7 @@ Fiiberoptilised kaablid töötavad, edastades andmeid valgusimpulssidena läbi �
 
 Lõbus fakt: Üks fiiberoptilise kaabli kiud, mis on õhem kui inimese juus, suudab korraga kanda tuhandeid telefonikõnesid või internetiühendusi!
 
-- ![Fiiberoptilise kaabli näide](./images/fiber_optic.png)
+![Fiiberoptilise kaabli näide](./images/fiber_optic.png)
 
 ---
 
