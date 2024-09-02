@@ -166,10 +166,10 @@ Võrgu meedia on tee, mida mööda andmed liiguvad. On kolm peamist tüüpi:
 - **Turvalisus**: Võrgu turvalisuse tagamine pahatahtlike isikute eest, kes võivad soovida teavet varastada.
 
 ### Redundantsus ja kõrge saadavus
-Võrgu saadavuse tagamiseks ja seisakute vältimiseks on olulised strateegiad nagu redundantsus ja kõrge saadavuse süsteemid.
-Redundantsus hõlmab mitme tee või varukoopiate seadistamist, mille kaudu andmed saavad liikuda, nii et kui üks tee ebaõnnestub, saab teine ​​üle võtta ilma võrgu häirimiseta.
-Kõrge saadavuse süsteemid on loodud teenuste toimimise tagamiseks isegi riistvaratõrgete või hoolduse ajal, sageli kasutades failover-mehhanisme, koormuse tasakaalustamist ja klastrite moodustamist. Need strateegiad 
+**Võrgu saadavuse** tagamiseks ja seisakute vältimiseks on olulised strateegiad nagu redundantsus ja kõrge saadavuse süsteemid.
+**Redundantsus** hõlmab mitme tee või varukoopiate seadistamist, mille kaudu andmed saavad liikuda, nii et kui üks tee ebaõnnestub, saab teine ​​üle võtta ilma võrgu häirimiseta.
 
+**Kõrge saadavuse süsteemid** on loodud teenuste toimimise tagamiseks isegi riistvaratõrgete või hoolduse ajal, sageli kasutades **failover-mehhanisme**, koormuse tasakaalustamist ja klastrite moodustamist.
 ---
 
 ## Võrgus turvalisuse tagamine
@@ -178,12 +178,16 @@ Võrke tuleb kaitsta ohtude eest, nagu viirused ja häkkerid.
 - **Turvalahendused**: Tulemüürid ja paroolid aitavad hoida võrku turvalisena.
 
 ### Täiustatud võrgu turvalisus
+
 Võrkude kaitsmiseks keerukate ohtude eest on vaja täiustatud turvameetmeid. 
-Sissetungimise tuvastussüsteemid (IDS) jälgivad võrgu liiklust kahtlaste tegevuste suhtes ja hoiatavad administraatoreid võimalike turvarikkumiste eest.
-Virtuaalsed privaatvõrgud (VPN-id) loovad turvalisi, krüpteeritud ühendusi interneti kaudu, võimaldades kasutajatel juurdepääsu võrgule eemalt, ilma tundlikke andmeid paljastamata.
-Krüpteerimistehnikad kaitsevad andmeid, muutes need koodiks, mida saavad dešifreerida ainult volitatud osapooled, kaitstes teavet volitamata juurdepääsu eest edastamise ajal.
-Esimene teadaolev krüpteerimissüsteem kasutati Julius Caesari poolt enam kui 2000 aastat tagasi salajaste sõnumite saatmiseks oma kindralitele, meetodit tuntakse nüüd kui "Caesari šifrit".
-- ![Võrgu turvalisuse näide](/lectures/images/Network-Security.jpg)
+**Sissetungimise tuvastussüsteemid (IDS)** jälgivad võrgu liiklust kahtlaste tegevuste suhtes ja hoiatavad administraatoreid võimalike turvarikkumiste eest.
+
+**Virtuaalsed privaatvõrgud (VPN-id)** loovad turvalisi, krüpteeritud ühendusi interneti kaudu, võimaldades kasutajatel juurdepääsu võrgule eemalt, ilma tundlikke andmeid paljastamata.
+
+-**Krüpteerimistehnikad** kaitsevad andmeid, muutes need koodiks, mida saavad dešifreerida ainult volitatud osapooled, kaitstes teavet volitamata juurdepääsu eest edastamise ajal.
+**Esimene teadaolev krüpteerimissüsteem** kasutati Julius Caesari poolt enam kui 2000 aastat tagasi salajaste sõnumite saatmiseks oma kindralitele, meetodit tuntakse nüüd kui "Caesari šifrit".
+
+![Võrgu turvalisuse näide](/lectures/images/Network-Security.jpg)
 
 ---
 
@@ -303,7 +307,8 @@ Iga võrguseade, nagu ruuter või lüliti, vajab spetsiaalset nime, et saaksid s
 - Nimi peaks olema vähem kui 64 tähemärki pikk.
 
 ### Standardne nimetamise konventsioon
-Standardne nimetamise konventsioon on suurtes võrkudes ühtsuse ja lihtsa haldamise jaoks oluline. See aitab kõigil seadmeid ja nende rolle kiiresti tuvastada, muutes tõrkeotsingu ja hoolduse tõhusamaks. Näiteks, lüliti nimetamine "TLN-SW1" viitab sellele, et see on esimene lüliti Tallinnas, muutes selle asukoha ja eesmärgi selgeks.
+
+-Standardne nimetamise konventsioon on suurtes võrkudes ühtsuse ja lihtsa haldamise jaoks oluline. See aitab kõigil seadmeid ja nende rolle kiiresti tuvastada, muutes tõrkeotsingu ja hoolduse tõhusamaks. Näiteks, lüliti nimetamine "TLN-SW1" viitab sellele, et see on esimene lüliti Tallinnas, muutes selle asukoha ja eesmärgi selgeks.
 
 ### Tugevate paroolide seadistamine
 
