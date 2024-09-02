@@ -74,7 +74,7 @@ Mõtle sellele, et saad saata sõnumi või video kellegile teisel pool maailma v
 
 ### Levinud võrgutopoloogiad
 - Arutle erinevate võrgutopoloogiate (nt tähe, võrgusilma, siini ja rõnga) üle, nende eeliste üle ja kus neid kõige sagedamini kasutatakse.
-- ![Võrgutopoloogiate näide](./images/topology.png)
+- ![Võrgutopoloogiate näide](/lectures/images/topology.png)
 
 | **Topoloogia**    | **Kirjeldus**                                             | **Eelised**                                   | **Puudused**                                  |
 |-------------------|-----------------------------------------------------------|-----------------------------------------------|-----------------------------------------------|
@@ -97,7 +97,7 @@ Võrgud on erineva kuju ja suurusega. Siin on peamised tüübid:
 
 - **Storage Area Network (SAN):** SANid on spetsiaalsed võrgud, mis ühendavad salvestusseadmeid, nagu kõvakettad, serveritega. Neid kasutatakse sageli andmekeskustes, et hallata suures koguses andmeid.
 
-![Võrkude tüüpide võrdlus](./images/network_types_comparison.png)
+![Võrkude tüüpide võrdlus](/lectures/images/network_types_comparison.png)
 
 ---
 
@@ -114,7 +114,7 @@ Fiiberoptilised kaablid töötavad, edastades andmeid valgusimpulssidena läbi �
 
 Lõbus fakt: Üks fiiberoptilise kaabli kiud, mis on õhem kui inimese juus, suudab korraga kanda tuhandeid telefonikõnesid või internetiühendusi!
 
-![Fiiberoptilise kaabli näide](./images/fiber_optic.png)
+![Fiiberoptilise kaabli näide](/lectures/images/fiber_optic.png)
 
 ---
 
@@ -128,7 +128,7 @@ Võrk ei ole lihtsalt hunnik omavahel ühendatud arvuteid. Sellel on erinevad os
 
 Need on seadmed, mida sa kasutad igapäevaselt — lauaarvutid, sülearvutid, nutitelefonid, printerid. Need on andmete algus- ja lõpp-punktid, kui need võrgu kaudu liiguvad. Kui saadad e-kirja, on sinu arvuti see **lõppseade**, mis protsessi alustab, ja sinu sõbra telefon on lõppseade, mis selle vastu võtab.
 
-![Lõppseadmed](./images/end_devices.png)
+![Lõppseadmed](/lectures/images/end_devices.png)
 
 ### Vahepealsed seadmed
 
@@ -140,7 +140,7 @@ Need seadmed on nagu võrgu liikluspolitseinikud. Nad tagavad, et sinu andmed li
 
 - **Tulemüürid:** Tulemüürid on võrgu turvamehed, kes hoiavad soovimatu liikluse eemal ja kaitsevad sinu andmeid häkkerite eest.
 
-![Vahepealsed seadmed](./images/intermediary_devices.png)
+![Vahepealsed seadmed](/lectures/images/intermediary_devices.png)
 
 ### Võrgu meedia
 
@@ -154,7 +154,7 @@ Võrgu meedia on tee, mida mööda andmed liiguvad. On kolm peamist tüüpi:
 
 - **Juhtmevaba:** See on nähtamatu tee, mida mööda sinu andmed liiguvad, kui kasutad Wi-Fi ühendust. Kaablite asemel edastatakse andmed õhu kaudu raadiolainetega.
 
-![Võrgu meedia tüübid](./images/network_media_types.png)
+![Võrgu meedia tüübid](/lectures/images/network_media_types.png)
 
 ---
 
@@ -183,7 +183,7 @@ Sissetungimise tuvastussüsteemid (IDS) jälgivad võrgu liiklust kahtlaste tege
 Virtuaalsed privaatvõrgud (VPN-id) loovad turvalisi, krüpteeritud ühendusi interneti kaudu, võimaldades kasutajatel juurdepääsu võrgule eemalt, ilma tundlikke andmeid paljastamata.
 Krüpteerimistehnikad kaitsevad andmeid, muutes need koodiks, mida saavad dešifreerida ainult volitatud osapooled, kaitstes teavet volitamata juurdepääsu eest edastamise ajal.
 Esimene teadaolev krüpteerimissüsteem kasutati Julius Caesari poolt enam kui 2000 aastat tagasi salajaste sõnumite saatmiseks oma kindralitele, meetodit tuntakse nüüd kui "Caesari šifrit".
-- ![Võrgu turvalisuse näide](./images/Network-Security.jpg)
+- ![Võrgu turvalisuse näide](/lectures/images/Network-Security.jpg)
 
 ---
 
@@ -205,7 +205,7 @@ Mõtle võrgu protokollidele kui liikluseeskirjadele, mida andmed järgivad. Nee
 
 - **Ethernet:** Ethernet on juhtmega võrkude standardprotokoll. See tagab, et andmed liiguvad sujuvalt üle kaablite, nagu need, mis on LAN-is.
 
-![Protokollide vooskeem](./images/protocol_flowchart.png)
+![Protokollide vooskeem](/lectures/images/protocol_flowchart.png)
 
 ### Standardiorganisatsioonid
 
@@ -246,7 +246,7 @@ Võrguseadmete, nagu ruuterid, lülitid ja serverid, puhul mängivad riistvarasp
 
 Esimene kaubanduslik Etherneti kiirus oli 10 Mbps, kuid tänapäeva täiustatud võrguseadmed suudavad hallata kiirusi kuni 400 Gbps!
 
-![Cisco IOS-i juurdepääs](./images/cisco_ios_access.png)
+![Cisco IOS-i juurdepääs](/lectures/images/cisco_ios_access.png)
 
 ---
 
@@ -309,7 +309,7 @@ Standardne nimetamise konventsioon on suurtes võrkudes ühtsuse ja lihtsa halda
 
 Paroolid hoiavad sinu seadmeid turvalisena inimeste eest, kes ei peaks neid kasutama.
 
-![Seadme seadistamine](./images/device_configuration.png)
+![Seadme seadistamine](/lectures/images/device_configuration.png)
 
 ---
 
@@ -424,7 +424,7 @@ Internet Engineering Task Force (IETF) on võtmetähtsusega organisatsioon, mis 
 
 IETF-i töö avaldatakse dokumentides, mida nimetatakse "RFC-deks" (Request for Comments), mis toimivad interneti tehnoloogiate sinikavadena!
 
-![Protokolli andmevoog](./images/protocol_data_flow.png)
+![Protokolli andmevoog](/lectures/images/protocol_data_flow.png)
 
 ---
 
@@ -496,7 +496,7 @@ Igal andmel on vaja aadressi, et teada, kuhu see läheb. On kaks peamist tüüpi
 - **IP-aadress (3. kiht)**: Näitab võrgule, kuhu andmed peaksid globaalsetes mastaapides minema (nagu postiaadress).
 - **MAC-aadress (2. kiht)**: Näitab, milline konkreetne seade kohalikus võrgus peaks andmed vastu võtma (nagu maja number).
 
-![Protokollid tegevuses](./images/protocols_in_action.png)
+![Protokollid tegevuses](/lectures/images/protocols_in_action.png)
 
 * [Ethernet LAN-i lülitamine](/lectures/contents/ethernet_lan_switching/)
 * [IPv4 aadressimine](/lectures/contents/ipv4_addressing/)
@@ -524,7 +524,7 @@ Nad kasutavad IP-aadresse andmete saatmiseks üle interneti.
 IP-aadress on nagu tänava aadress, mis aitab sinu andmetel leida tee õigele võrgule. 
 Kui andmed jõuavad õigele võrgule, kasutavad need MAC-aadressi, et leida konkreetne seade, kuhu need peavad jõudma.
 
-![OSI vs TCP/IP mudelid](./images/osi_vs_tcpip_models.png)
+![OSI vs TCP/IP mudelid](/lectures/images/osi_vs_tcpip_models.png)
 
 * [Switch liidesed](/lectures/contents/switch_interfaces/)
 * [IPv4 päis](/lectures/contents/ipv4_header/)
