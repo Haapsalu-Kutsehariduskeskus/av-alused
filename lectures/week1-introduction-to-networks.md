@@ -120,7 +120,7 @@ Lõbus fakt: Üks fiiberoptilise kaabli kiud, mis on õhem kui inimese juus, suu
 
 ## Võrgu komponendid
 
-* [Võrgu seadmed](./contents/network_devices/)
+* [Võrgu seadmed](/lectures/contents/network_devices/)
 
 Võrk ei ole lihtsalt hunnik omavahel ühendatud arvuteid. Sellel on erinevad osad, millest igaühel on oma konkreetne ülesanne.
 
@@ -144,7 +144,7 @@ Need seadmed on nagu võrgu liikluspolitseinikud. Nad tagavad, et sinu andmed li
 
 ### Võrgu meedia
 
-* [Liidesed ja kaablid](./contents/interfaces_and_cables/)
+* [Liidesed ja kaablid](/lectures/contents/interfaces_and_cables/)
 
 Võrgu meedia on tee, mida mööda andmed liiguvad. On kolm peamist tüüpi:
 
@@ -221,7 +221,7 @@ Selleks, et võrgud ja seadmed saaksid suhelda globaalselt, on meil standardiorg
 
 ### Mis on Cisco IOS?
 
-* [Sissejuhatus Cisco IOS CLI-sse](./contents/intro_to_cisco_cli/)
+* [Sissejuhatus Cisco IOS CLI-sse](/lectures/contents/intro_to_cisco_cli/)
 
 Cisco IOS on operatsioonisüsteem (OS) spetsiaalsete seadmete, nagu ruuterid ja lülitid, jaoks, mis aitavad internetti ühendada. Nii nagu sinu arvutil on Windows või telefonil iOS või Android, on võrguseadmetel Cisco IOS.
 
@@ -465,7 +465,7 @@ Kihiline arhitektuur võrkudes on kasulik mitmel põhjusel:
 
 ### OSI ja TCP/IP mudelite võrdlus
 
-* [OSI mudel ja TCP/IP komplekt](./contents/osi_model_and_tcp_ip_suite/)
+* [OSI mudel ja TCP/IP komplekt](/lectures/contents/osi_model_and_tcp_ip_suite/)
 
 | **Aspekt**          | **OSI mudel**                                 | **TCP/IP mudel**                                |
 |---------------------|------------------------------------------------|-------------------------------------------------|
@@ -498,8 +498,8 @@ Igal andmel on vaja aadressi, et teada, kuhu see läheb. On kaks peamist tüüpi
 
 ![Protokollid tegevuses](./images/protocols_in_action.png)
 
-* [Ethernet LAN-i lülitamine](./contents/ethernet_lan_switching/)
-* [IPv4 aadressimine](./contents/ipv4_addressing/)
+* [Ethernet LAN-i lülitamine](/lectures/contents/ethernet_lan_switching/)
+* [IPv4 aadressimine](/lectures/contents/ipv4_addressing/)
 
 ### IPv4 vs. IPv6
 
@@ -526,7 +526,7 @@ Kui andmed jõuavad õigele võrgule, kasutavad need MAC-aadressi, et leida konk
 
 ![OSI vs TCP/IP mudelid](./images/osi_vs_tcpip_models.png)
 
-* [Switch liidesed](./contents/switch_interfaces/)
-* [IPv4 päis](./contents/ipv4_header/)
-* [Marsruutimise alused](./contents/routing_fundamentals/)
-* [Staatiline marsruutimine](./contents/static_routing/)
+* [Switch liidesed](/lectures/contents/switch_interfaces/)
+* [IPv4 päis](/lectures/contents/ipv4_header/)
+* [Marsruutimise alused](/lectures/contents/routing_fundamentals/)
+* [Staatiline marsruutimine](/lectures/contents/static_routing/)
