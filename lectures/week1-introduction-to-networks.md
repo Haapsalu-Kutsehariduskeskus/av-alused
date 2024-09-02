@@ -1,12 +1,10 @@
 # Introduction to Networks
 
-## Welcome to the World of Networks!
-
 Have you ever wondered how you can talk to your friends online, play games with people far away, or watch videos from all over the world? It’s all because of something called a **network**!
 
 In this lesson, we’ll learn about what networks are, how they work, and why they’re so important.
 
-### The Evolution of Networks
+## The Evolution of Networks
 
 Networks started with slow dial-up, where you used the phone line to connect to the internet. It was slow, and you couldn't use the phone and internet at the same time! Then came broadband, which made things faster with DSL and cable. Now, we use fiber optics, which is super-fast, sending data as light through tiny glass wires. This evolution has made everything we do online much quicker and more reliable.
 
@@ -19,6 +17,8 @@ Networks started with slow dial-up, where you used the phone line to connect to 
 | **Cable**           | 10-200 Mbps             |
 | **Fiber Optic**     | 100-1000 Mbps (1 Gbps)  |
 
+
+---
 
 ## How Networks Connect Us
 
@@ -48,7 +48,9 @@ Think about sending a message or video to someone on the other side of the globe
     - **Clients** are devices that ask for information, like when you search for a website.
 - **Peer-to-Peer Networks**: Sometimes, devices can both share and receive information directly from each other. This is called a peer-to-peer network. It’s simple, but not always the best for big networks.
 
-## Drawing and Understanding Networks
+---
+
+## Networks topology
 
 - **Network Maps**:
     - We use special diagrams called **topologies** to draw and understand networks.
@@ -67,8 +69,7 @@ Think about sending a message or video to someone on the other side of the globe
 | **Bus**         | All devices share a single communication line (bus).       | Simple layout, easy to implement.              | If the main cable fails, the whole network goes down. |
 | **Mesh**        | Each device is connected to multiple other devices.        | Highly reliable, offers redundancy.            | Complex and expensive to set up.              |
 
-
-### Types of Networks
+## Types of Networks
 
 Networks come in different shapes and sizes. Here are the main types:
 
@@ -101,17 +102,19 @@ Fun Fact: One strand of fiber optic cable, thinner than a human hair, can carry 
 
 - ![Fiber Optic Cable Example](./images/fiber_optic.png)
 
-# Network Components
+---
+
+## Network Components
 
 A network isn’t just a bunch of computers thrown together. It has different parts, each with a specific job to do.
 
-## End Devices
+### End Devices
 
 These are the devices you use every day—PCs, laptops, smartphones, printers. They are the starting and ending points for data traveling across the network. When you send an email, your computer is the **end device** that starts the process, and your friend's phone is the end device that receives it.
 
 ![End Devices](./images/end_devices.png)
 
-## Intermediary Devices
+### Intermediary Devices
 
 These devices are like the traffic cops of a network. They make sure your data gets from point A to point B smoothly and securely. Some common intermediary devices include:
 
@@ -123,7 +126,7 @@ These devices are like the traffic cops of a network. They make sure your data g
 
 ![Intermediary Devices](./images/intermediary_devices.png)
 
-## Network Media
+### Network Media
 
 Network media is the road that data travels on. There are three main types:
 
@@ -134,6 +137,8 @@ Network media is the road that data travels on. There are three main types:
 - **Wireless:** This is the invisible path your data takes when you use Wi-Fi. Instead of cables, data is sent through the air using radio waves.
 
 ![Network Media Types](./images/network_media_types.png)
+
+---
 
 ## What Makes a Good Network?
 
@@ -149,7 +154,7 @@ High-availability systems are designed to keep services running even during hard
 
 Some of the world’s most reliable networks have "five nines" availability, meaning they are up and running 99.999% of the time!.
 
-## Cool New Things in Networks
+### Cool New Things in Networks
 
 - **Bring Your Own Device (BYOD)**: People can use their own gadgets, like phones or tablets, at work or school.
 - **Online Collaboration**: We can work together with others online using tools like video calls.
@@ -160,6 +165,8 @@ The Internet of Things (IoT) refers to a vast network of connected devices that 
 
 By 2025, it's estimated that there will be over 75 billion IoT devices connected worldwide, transforming how we live and work!
 - ![IoT Devices Example](./images/IoT.png)
+
+---
 
 ## Staying Safe on the Network
 
@@ -173,19 +180,21 @@ Virtual Private Networks (VPNs) create secure, encrypted connections over the in
 The first known encryption system was used by Julius Caesar over 2,000 years ago to send secret messages to his generals, a method now known as the "Caesar Cipher"
 - ![Network Security Example](./images/Network-Security.jpg)
 
+---
+
 ## Becoming an IT Expert
 
 Learning about networks can lead to cool jobs in the future. There are special certifications (like diplomas) you can get, such as CCNA, to show you’re an expert in networking.
 
 ---
 
-# Basic Network Protocols and Standards
+## Basic Network Protocols and Standards
 
-## What Are Network Protocols?
+### What Are Network Protocols?
 
 Think of network protocols as the rules of the road for data. They define how data is packaged, sent, received, and understood. Without these rules, devices wouldn’t know how to communicate with each other.
 
-## Essential Protocols You Should Know
+### Essential Protocols You Should Know
 
 - **TCP/IP:** This is the backbone of the internet. TCP (Transmission Control Protocol) ensures that data is sent reliably, while IP (Internet Protocol) handles the addressing and routing of data packets to make sure they reach the right destination.
 
@@ -193,7 +202,7 @@ Think of network protocols as the rules of the road for data. They define how da
 
 ![Protocol Flowchart](./images/protocol_flowchart.gif)
 
-## Standards Organizations
+### Standards Organizations
 
 To ensure that networks and devices can communicate globally, we have standards organizations:
 
@@ -203,9 +212,7 @@ To ensure that networks and devices can communicate globally, we have standards 
 
 ---
 
-# Getting Started with Network Devices
-
-## Basic Switch and Device Setup
+## Getting Started with Network Devices; Basic Switch and Device Setup
 
 ### What is Cisco IOS?
 
@@ -221,7 +228,7 @@ Network Operating Systems (NOS) manage the hardware and software resources on ne
 
 - **MikroTik's RouterOS**: Popular for its flexibility and cost-effectiveness, RouterOS is used in MikroTik devices. It provides advanced features like firewalling, VPN, and bandwidth management, making it a favorite among small to medium-sized networks.
 
-## How It Works:
+### How It Works:
 
 - **The Shell** is like the screen you see when you play a game. It lets you control the device.
 - **The Kernel** is like the brain that makes everything work behind the scenes.
@@ -246,14 +253,14 @@ Cisco devices don’t have a pretty screen with icons like your computer. Instea
 - **Secure Shell (SSH)**: This lets you control the device from far away but safely.
 - **Telnet**: This also lets you control the device from far away, but it’s not safe, so we don’t really use it anymore.
 
-## Moving Around the Command System
+### Moving Around the Command System
 
 There are two main modes you’ll use:
 - **User Exec Mode**: This is the basic mode where you can do simple things. You’ll see a `>` symbol.
 - **Privileged Exec Mode**: This mode lets you do more advanced stuff. You’ll see a `#` symbol.
 - **Global Configuration Mode**: This is where you can change how the device works. You’ll see a `#` with some extra words next to it, like `Switch(config)#`.
 
-## Typing Commands
+### Typing Commands
 
 When you type commands, you have to be precise. For example, if you want to check if a device is working, you might type:
 ```
@@ -266,7 +273,7 @@ This tells the device to check if another device at that address is reachable.
 - If you forget a command, you can type `?` after a word, and it will show you what you can do next.
 - You can also use shortcuts to save time. For example, instead of typing `configure`, you can just type `conf`!
 
-## Using the Keyboard
+### Using the Keyboard
 
 - **Tab Key**: Helps complete commands if you’ve started typing them.
 - **Arrow Keys**: Move the cursor to fix mistakes or repeat commands.
@@ -275,9 +282,7 @@ This tells the device to check if another device at that address is reachable.
 
 ---
 
-# Setting Up Your Network Devices
-
-## Basic Device Configuration
+## Setting Up Your Network Devices; Basic Device Configuration
 
 ### Naming Your Devices
 
@@ -292,7 +297,7 @@ Every network device, like a router or switch, needs a special name so you can e
 ### Standard Naming Conventions
 Standard naming conventions are vital for consistency and easy management in large networks. They help everyone quickly identify devices and their roles, making troubleshooting and maintenance more efficient. For example, naming a switch "TLN-SW1" indicates it's the first switch in Tallinn, making its location and purpose clear.
 
-## Setting Strong Passwords
+### Setting Strong Passwords
 
 Passwords keep your devices safe from people who shouldn’t be using them.
 
@@ -300,9 +305,7 @@ Passwords keep your devices safe from people who shouldn’t be using them.
 
 ---
 
-# Learning About Network Protocols
-
-## Understanding Protocols and Models
+## Learning About Network Protocols; Understanding Protocols and Models
 
 ### Why Do We Need Rules to Communicate?
 
@@ -327,6 +330,7 @@ Data transmission methods define how data flows between devices. Here’s a quic
 
 - **Full-Duplex**: Data flows in both directions simultaneously. This is like a phone call, where both people can talk and listen at the same time.
 
+---
 
 ## What are Protocols?
 
@@ -346,7 +350,7 @@ If an error is found, the system can either ask for the data to be sent again or
 
 Error detection methods like Hamming codes have been used since the 1940s and are still important in today’s technology!
 
-## Types of Message Delivery
+### Types of Message Delivery
 
 - **Unicast**: Sending a message from one device to one other device.
 - **Multicast**: Sending a message from one device to several devices.
@@ -355,7 +359,7 @@ Error detection methods like Hamming codes have been used since the 1940s and ar
 ### Anycast Communication
 - Introduce anycast, where a message is sent to the nearest or best recipient among a group of devices.
 
-## Different Kinds of Protocols
+### Different Kinds of Protocols
 
 There are many types of protocols, each with its own job:
 - **Network Communication Protocols**: Help devices talk over the network.
@@ -374,7 +378,7 @@ There are many types of protocols, each with its own job:
 
 **Fun Fact:** The DNS system is often referred to as the "phonebook of the internet" because it matches domain names to their corresponding IP addresses!
 
-## How Protocols Work Together
+### How Protocols Work Together
 
 Many protocols work together to make sure everything runs smoothly.
 
@@ -384,7 +388,7 @@ For example:
 - **IP**: Finds the best route for the data to travel.
 - **Ethernet**: Connects devices through cables or Wi-Fi.
 
-## What is a Protocol Suite?
+### What is a Protocol Suite?
 
 A **Protocol Suite** is a group of protocols that work together to perform communication tasks.
 
@@ -393,13 +397,13 @@ The most common one is **TCP/IP**, which is the backbone of the internet.
 ### Evolution of TCP/IP
 - Discuss the history and evolution of TCP/IP, including its role in the development of the modern internet.
 
-## Sending Data Across the Network
+### Sending Data Across the Network
 
 When you send a message, like loading a web page, the data is broken down, packed up, and sent across the network in tiny pieces.
 
 The receiving device then puts it all back together so you can see the web page.
 
-## Who Makes the Rules?
+### Who Makes the Rules?
 
 There are many organizations that create and maintain these rules (protocols), making sure everything works together.
 
@@ -416,9 +420,7 @@ The IETF’s work is published in documents called "RFCs" (Request for Comments)
 
 ---
 
-# Understanding Network Layers and Models
-
-## Layers and Models
+## Understanding Network Layers and Models; Layers and Models
 
 ### Why Do We Use Layers?
 
@@ -435,8 +437,6 @@ Layered architectures in networks are helpful for a few reasons:
 - **Scalability**: Just like you can make a bigger sandwich by adding more layers, networks can grow by adding more layers or parts without changing the whole thing.
 
 - **Ease of Troubleshooting**: If something’s wrong with your sandwich, like a bad piece of lettuce, you can easily find it and fix it. In networks, if there’s a problem, it’s easier to find and fix it in just one layer.
-
-## The Two Main Models: OSI and TCP/IP
 
 ### OSI Model (7 Layers):
 
@@ -468,7 +468,7 @@ Layered architectures in networks are helpful for a few reasons:
 
 A fun way to remember the OSI layers is with the phrase: **“Please Do Not Throw Sausage Pizza Away.”** Each word helps you recall the layers in order.
 
-## How Does Data Travel in Layers?
+### How Does Data Travel in Layers?
 
 When data is sent across a network, it’s broken down into smaller pieces called segments.
 
@@ -480,7 +480,7 @@ As data moves down through the layers, each layer adds its own information to it
 
 When the data reaches its destination, the layers are peeled back, like unwrapping a gift, until the original data is revealed.
 
-## Addressing Data in the Network
+### Addressing Data in the Network
 
 Every piece of data needs an address to know where it’s going. There are two main types:
 - **IP Address (Layer 3)**: Tells the network where the data should go globally (like a postal address).
@@ -502,7 +502,7 @@ IPv4 and IPv6 are both versions of the Internet Protocol (IP) used to identify d
 IPv4’s 4.3 billion addresses seemed plenty in the 1980s, but with the explosion of smartphones, IoT devices, and more, IPv6 was created to handle the massive increase in internet-connected devices!
 
 
-## What Happens on Different Networks?
+### What Happens on Different Networks?
 
 When two devices, like your computer and a printer, are on the same local network (like in your home), they talk to each other using their MAC addresses. 
 Think of a MAC address like a house number—it helps devices find each other quickly when they're close by.
