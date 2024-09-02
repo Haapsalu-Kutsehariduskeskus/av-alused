@@ -18,7 +18,7 @@ By the end of this course, you will be prepared to configure and troubleshoot sm
 - Configure and troubleshoot connectivity in a small network using security best practices.
 
 ## Õppejõud / Teachers
-- [Maria Talvik 1](mailto:maria.talvik@hkhk.edu.ee)
+- [Maria Talvik](mailto:maria.talvik@hkhk.edu.ee)
 
 ## Schedule
 - Week 1: Introduction to Networks and Basic Configurations
@@ -44,4 +44,13 @@ By the end of this course, you will be prepared to configure and troubleshoot sm
 - **Assignments:** 20%
 - **Final Project:** 20%
 
-![Networking](https://matob.web.id/random/wp-content/uploads/sites/2/2020/11/Computer-Networking-Basic-Definition-Topology-and-Types.jpg)
+# Resources for Networking Studies
+
+- [CCNA Course from Jeremy's IT Lab](https://www.youtube.com/playlist?list=PLxbwE86jKRgMpuZuLBivzlM8s2Dk5lXBQ)
+- [CCNA 200-301 Notes](https://github.com/laaraujo/ccna-notes)
+- TÜ Võrgutehnoloogia/Network Technology I (LTAT.06.004, 6 ECTS)
+- [eucip](https://github.com/eucip/eucip/blob/master/oppematerjalid/c_haldus_03_side_ja_vorgud.md)
+- [[CCNA 200-301 Notes]](./resources/Laaneoks_VÕRG.pdf)
+
+
+![Networking](./images/main_networking.png)

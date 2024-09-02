@@ -1,515 +1,553 @@
-# Introduction to Networks
+<style>
+  .small-grey-box {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 14px;
+  }
+  .small-heading {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  .small-grey-box a {
+    color: #0645ad;
+    text-decoration: underline;
+  }
+  .small-grey-box a:hover {
+    color: #0b0080;
+  }
+</style>
 
-Have you ever wondered how you can talk to your friends online, play games with people far away, or watch videos from all over the world? It’s all because of something called a **network**!
+<div class="small-grey-box">
+  <div class="small-heading">Module 1: Networking Today</div>
+  - <a href="https://www.youtube.com/watch?v=TBAvNZIcdVQ&list=PLk4NQNr6-L8onI6MaPcfsRZJOvFO3S5D6&index=2">Networking Today</a>
 
-In this lesson, we’ll learn about what networks are, how they work, and why they’re so important.
+  <div class="small-heading">Module 2: Basic Switch and End Device Configuration</div>
+  - <a href="https://www.youtube.com/watch?v=4fMoxkiTEjc&list=PLk4NQNr6-L8onI6MaPcfsRZJOvFO3S5D6&index=2">Basic Switch and End Device Configuration - Part 1</a>
+  - <a href="https://www.youtube.com/watch?v=ruainw-2Y28&list=PLk4NQNr6-L8onI6MaPcfsRZJOvFO3S5D6&index=3">Basic Switch and End Device Configuration - Part 2</a>
 
-## The Evolution of Networks
+  <div class="small-heading">Module 3: Protocols and Models</div>
+  - <a href="https://www.youtube.com/watch?v=VqGIeL0jRJI&list=PLk4NQNr6-L8onI6MaPcfsRZJOvFO3S5D6&index=4">Protocols and Models - Part 1</a>
+  - <a href="https://www.youtube.com/watch?v=agX0G-9JTpM&list=PLk4NQNr6-L8onI6MaPcfsRZJOvFO3S5D6&index=5">Protocols and Models - Part 2</a>
+</div>
 
-Networks started with slow dial-up, where you used the phone line to connect to the internet. It was slow, and you couldn't use the phone and internet at the same time! Then came broadband, which made things faster with DSL and cable. Now, we use fiber optics, which is super-fast, sending data as light through tiny glass wires. This evolution has made everything we do online much quicker and more reliable.
 
-### Internet Speed Comparison
+# Sissejuhatus võrkudesse
 
-| **Connection Type** | **Average Speed**       |
+Kas oled kunagi mõelnud, kuidas saad oma sõpradega internetis rääkida, mängida mänge inimestega, kes on kaugel, või vaadata videoid kogu maailmast? Kõik see on võimalik tänu millelegi, mida nimetatakse **võrguks**!
+
+Selles õppetunnis õpime, mis on võrgud, kuidas need töötavad ja miks need on nii olulised.
+
+## Võrkude areng
+
+Võrgud algasid aeglase dial-up ühendusega, kus kasutati telefoniliini internetiühenduseks. See oli aeglane ning telefoni ja internetti ei saanud samal ajal kasutada! Siis tuli lairibaühendus, mis tegi asjad kiiremaks DSL-i ja kaabli abil. Nüüd kasutame fiiberoptilisi kaableid, mis on ülikiired ja edastavad andmeid valgusena läbi pisikeste klaaskiudude. See areng on teinud kõik, mida me internetis teeme, palju kiiremaks ja usaldusväärsemaks.
+
+### Interneti kiiruse võrdlus
+
+| **Ühenduse tüüp**   | **Keskmine kiirus**     |
 |---------------------|-------------------------|
-| **Dial-up**         | 56 Kbps (Kilobits per second) |
-| **DSL**             | 1-15 Mbps (Megabits per second) |
-| **Cable**           | 10-200 Mbps             |
-| **Fiber Optic**     | 100-1000 Mbps (1 Gbps)  |
+| **Dial-up**         | 56 Kbps (Kilobitti sekundis) |
+| **DSL**             | 1-15 Mbps (Megabitti sekundis) |
+| **Kaabel**          | 10-200 Mbps             |
+| **Fiiberoptiline**  | 100-1000 Mbps (1 Gbps)  |
 
 
 ---
 
-## How Networks Connect Us
+## Kuidas võrgud meid ühendavad
 
-Networks bring us closer together than ever before, allowing us to communicate, share, and learn with people all around the world!
+Võrgud toovad meid üksteisele lähemale kui kunagi varem, võimaldades meil suhelda, jagada ja õppida koos inimestega kogu maailmas!
 
-Think about sending a message or video to someone on the other side of the globe in just seconds. That’s the power of networks!
+Mõtle sellele, et saad saata sõnumi või video kellegile teisel pool maailma vaid sekunditega. See on võrkude jõud!
 
-### Fun Facts About Networks
+### Lõbusad faktid võrkude kohta
 
-- **The Internet** is the largest network in the world, connecting over 5 billion devices!
-- **Wi-Fi** stands for "Wireless Fidelity" and allows you to connect to a network without any cables.
-- **The first message** sent over the ARPANET (the precursor to the internet) in 1969 was just "LO" before the system crashed!
-- **Fiber optic cables** can transmit data at nearly the speed of light, allowing super-fast internet connections.
-- **There are more than 1.7 billion websites** on the internet, and the number is constantly growing.
-- **The first email** was sent by Ray Tomlinson in 1971, and it was just a test message that said "QWERTYUIOP."
-- **Over 300 billion emails** are sent every day worldwide—talk about staying connected!
-- **The term "Wi-Fi"** doesn’t actually stand for anything. It's just a catchy brand name!
-- **The "cloud"** isn't just in the sky—it's a network of servers all over the world that store and manage data online.
+- **Internet** on maailma suurim võrk, mis ühendab üle 5 miljardi seadme!
+- **Wi-Fi** tähendab "Wireless Fidelity" ja võimaldab sul ühendada võrku ilma kaabliteta.
+- **Esimene sõnum**, mis saadeti ARPANETi (interneti eelkäija) kaudu 1969. aastal, oli lihtsalt "LO", enne kui süsteem kokku jooksis!
+- **Fiiberoptilised kaablid** suudavad edastada andmeid peaaegu valguse kiirusel, võimaldades ülikiiret internetiühendust.
+- **Internetis on rohkem kui 1,7 miljardit veebisaiti**, ja see arv kasvab pidevalt.
+- **Esimene e-kiri** saadeti Ray Tomlinsoni poolt 1971. aastal ja see oli lihtsalt testisõnum, mis ütles "QWERTYUIOP."
+- **Üle 300 miljardi e-kirja** saadetakse iga päev üle maailma — rääkimata sellest, et me oleme ühendatud!
+- **Termin "Wi-Fi"** ei tähenda tegelikult midagi. See on lihtsalt lööv kaubamärgi nimi!
+- **"Pilv"** ei ole ainult taevas — see on serverite võrgustik üle kogu maailma, mis salvestab ja haldab andmeid veebis.
 
-![Simple Network Diagram](./images/simple_network_diagram.png)
+![Lihtne võrgu diagramm](./images/simple_network_diagram.png)
 
-## Parts of a Network
+## Võrgu osad
 
-- **Hosts**: Every device, like computers, phones, or tablets, on a network is called a host.
-- **Servers and Clients**:
-    - **Servers** are like big helpers that store and share information with other devices.
-    - **Clients** are devices that ask for information, like when you search for a website.
-- **Peer-to-Peer Networks**: Sometimes, devices can both share and receive information directly from each other. This is called a peer-to-peer network. It’s simple, but not always the best for big networks.
-
----
-
-## Networks topology
-
-- **Network Maps**:
-    - We use special diagrams called **topologies** to draw and understand networks.
-    - These diagrams show how all the devices are connected and how information moves around.
-- **Network Media**:
-    - This is the “road” that data travels on, like wires or even invisible waves (Wi-Fi and Bluetooth).
-
-### Common Network Topologies
-- Discuss different network topologies (e.g., star, mesh, bus, and ring), their advantages, and where they are most commonly used.
-- ![Network Topologies Example](./images/topology.png)
-
-| **Topology**    | **Description**                                           | **Pros**                                      | **Cons**                                      |
-|-----------------|-----------------------------------------------------------|-----------------------------------------------|-----------------------------------------------|
-| **Star**        | All devices connect to a central hub.                      | Easy to manage, adding/removing devices is simple. | Hub failure causes entire network to fail.    |
-| **Ring**        | Devices are connected in a circular pattern.               | Data flows in one direction, reducing collisions. | If one device fails, the whole network can be disrupted. |
-| **Bus**         | All devices share a single communication line (bus).       | Simple layout, easy to implement.              | If the main cable fails, the whole network goes down. |
-| **Mesh**        | Each device is connected to multiple other devices.        | Highly reliable, offers redundancy.            | Complex and expensive to set up.              |
-
-## Types of Networks
-
-Networks come in different shapes and sizes. Here are the main types:
-
-- **LAN (Local Area Network)**: A small network, like in your house or school.
-
-- **WAN (Wide Area Network)**: A big network that covers a large area, like the Internet that connects the whole world.
-
-- **Metropolitan Area Network (MAN):** A MAN is bigger than a LAN but smaller than a WAN, usually covering a city or a large campus. Think of it as a super-sized LAN for an entire town.
-
-- **Personal Area Network (PAN):** PANs are tiny networks, like the one between your smartphone and your Bluetooth earbuds. They cover a very small area, just a few meters.
-
-- **Storage Area Network (SAN):** SANs are specialized networks that connect storage devices, like hard drives, to servers. They’re often used in data centers to handle large amounts of data.
-
-![Network Types Comparison](./images/network_types_comparison.png)
+- **Hostid**: Iga seade, nagu arvutid, telefonid või tahvelarvutid, võrgus nimetatakse hostiks.
+- **Serverid ja kliendid**:
+    - **Serverid** on nagu suured abimehed, mis salvestavad ja jagavad teavet teiste seadmetega.
+    - **Kliendid** on seadmed, mis küsivad teavet, näiteks kui otsid veebisaiti.
+- **Peer-to-Peer võrgud**: Mõnikord saavad seadmed jagada ja vastu võtta teavet otse üksteiselt. Seda nimetatakse peer-to-peer võrguks. See on lihtne, kuid mitte alati parim suurte võrkude jaoks.
 
 ---
 
-## Connecting to the Internet
+## Võrkude topoloogia
 
-There are different ways to connect to the Internet:
-- **Cable**: Using wires, like the ones that bring electricity to your house.
-- **DSL**: A special type of Internet that comes through phone lines.
-- **Wireless**: Using invisible waves to connect, like with Wi-Fi or mobile data.
+- **Võrgu kaardid**:
+    - Kasutame spetsiaalseid diagramme, mida nimetatakse **topoloogiateks**, et joonistada ja mõista võrke.
+    - Need diagrammid näitavad, kuidas kõik seadmed on ühendatud ja kuidas teave liigub.
+- **Võrgu meedia**:
+    - See on "tee", mida mööda andmed liiguvad, näiteks kaablid või isegi nähtamatud lained (Wi-Fi ja Bluetooth).
 
-### Fiber Optic Internet
+### Levinud võrgutopoloogiad
+- Arutle erinevate võrgutopoloogiate (nt tähe, võrgusilma, siini ja rõnga) üle, nende eeliste üle ja kus neid kõige sagedamini kasutatakse.
+- ![Võrgutopoloogiate näide](./images/topology.png)
 
-Fiber optic cables work by transmitting data as light pulses through thin strands of glass or plastic fibers. Unlike traditional copper cables, which use electrical signals to send data, fiber optics can transfer information at much higher speeds and over longer distances without losing signal quality.
+| **Topoloogia**    | **Kirjeldus**                                             | **Eelised**                                   | **Puudused**                                  |
+|-------------------|-----------------------------------------------------------|-----------------------------------------------|-----------------------------------------------|
+| **Täht**          | Kõik seadmed ühenduvad keskse jaoturiga.                  | Lihtne hallata, seadmete lisamine/eemaldamine on lihtne. | Jaoturi rike põhjustab kogu võrgu rikke.      |
+| **Rõngas**        | Seadmed on ühendatud ringikujuliselt.                     | Andmed liiguvad ühes suunas, vähendades kokkupõrkeid. | Kui üks seade ebaõnnestub, võib kogu võrk olla häiritud. |
+| **Siin**          | Kõik seadmed jagavad ühte sideliini (siin).               | Lihtne paigutus, lihtne rakendada.            | Kui peamine kaabel ebaõnnestub, langeb kogu võrk.        |
+| **Võrgusilm**     | Iga seade on ühendatud mitme teise seadmega.              | Väga usaldusväärne, pakub varundamist.        | Keeruline ja kallis seadistada.               |
 
-Fun Fact: One strand of fiber optic cable, thinner than a human hair, can carry thousands of phone calls or internet connections at once!
+## Võrkude tüübid
 
-- ![Fiber Optic Cable Example](./images/fiber_optic.png)
+Võrgud on erineva kuju ja suurusega. Siin on peamised tüübid:
+
+- **LAN (Local Area Network)**: Väike võrk, nagu sinu kodus või koolis.
+
+- **WAN (Wide Area Network)**: Suur võrk, mis katab suurt ala, nagu internet, mis ühendab kogu maailma.
+
+- **Metropolitan Area Network (MAN):** MAN on suurem kui LAN, kuid väiksem kui WAN, tavaliselt katab see linna või suurt ülikoolilinnakut. Mõtle sellele kui super-suurusele LANile terve linna jaoks.
+
+- **Personal Area Network (PAN):** PANid on väikesed võrgud, nagu see, mis on sinu nutitelefoni ja Bluetooth kõrvaklappide vahel. Need katavad väga väikest ala, vaid mõne meetri ulatuses.
+
+- **Storage Area Network (SAN):** SANid on spetsiaalsed võrgud, mis ühendavad salvestusseadmeid, nagu kõvakettad, serveritega. Neid kasutatakse sageli andmekeskustes, et hallata suures koguses andmeid.
+
+![Võrkude tüüpide võrdlus](./images/network_types_comparison.png)
 
 ---
 
-## Network Components
+## Ühendamine internetiga
 
-A network isn’t just a bunch of computers thrown together. It has different parts, each with a specific job to do.
+On erinevaid viise, kuidas internetti ühendada:
+- **Kaabel**: Kasutades kaableid, nagu need, mis toovad elektri sinu koju.
+- **DSL**: Eriline tüüpi internet, mis tuleb telefoniliinide kaudu.
+- **Juhtmevaba**: Kasutades nähtamatuid laineid ühendamiseks, nagu Wi-Fi või mobiilne andmeside.
 
-### End Devices
+### Fiiberoptiline internet
 
-These are the devices you use every day—PCs, laptops, smartphones, printers. They are the starting and ending points for data traveling across the network. When you send an email, your computer is the **end device** that starts the process, and your friend's phone is the end device that receives it.
+Fiiberoptilised kaablid töötavad, edastades andmeid valgusimpulssidena läbi õhukeste klaaskiudude või plastikiudude. Erinevalt traditsioonilistest vaskkaablitest, mis kasutavad andmete edastamiseks elektrilisi signaale, suudavad fiiberoptilised kaablid edastada teavet palju suurematel kiirustel ja pikemate vahemaade taha ilma signaali kvaliteeti kaotamata.
 
-![End Devices](./images/end_devices.png)
+Lõbus fakt: Üks fiiberoptilise kaabli kiud, mis on õhem kui inimese juus, suudab korraga kanda tuhandeid telefonikõnesid või internetiühendusi!
 
-### Intermediary Devices
+- ![Fiiberoptilise kaabli näide](./images/fiber_optic.png)
 
-These devices are like the traffic cops of a network. They make sure your data gets from point A to point B smoothly and securely. Some common intermediary devices include:
+---
 
-- **Routers:** These decide the best path for your data to travel across a network or the internet.
+## Võrgu komponendid
+
+* [Võrgu seadmed](./contents/network_devices/)
+
+Võrk ei ole lihtsalt hunnik omavahel ühendatud arvuteid. Sellel on erinevad osad, millest igaühel on oma konkreetne ülesanne.
+
+### Lõppseadmed
+
+Need on seadmed, mida sa kasutad igapäevaselt — lauaarvutid, sülearvutid, nutitelefonid, printerid. Need on andmete algus- ja lõpp-punktid, kui need võrgu kaudu liiguvad. Kui saadad e-kirja, on sinu arvuti see **lõppseade**, mis protsessi alustab, ja sinu sõbra telefon on lõppseade, mis selle vastu võtab.
+
+![Lõppseadmed](./images/end_devices.png)
+
+### Vahepealsed seadmed
+
+Need seadmed on nagu võrgu liikluspolitseinikud. Nad tagavad, et sinu andmed liiguvad sujuvalt ja turvaliselt punktist A punkti B. Mõned levinud vahepealsed seadmed on:
+
+- **Ruuterid:** Need otsustavad parima tee, mida mööda sinu andmed võrgu või interneti kaudu liiguvad.
   
-- **Switches:** They connect multiple devices within the same network, like all the computers in a LAN, and ensure that data goes where it’s supposed to.
+- **Lülitid:** Need ühendavad omavahel mitmeid seadmeid samas võrgus, näiteks kõik arvutid LAN-is, ja tagavad, et andmed jõuavad sinna, kuhu need peavad.
 
-- **Firewalls:** Firewalls are the security guards of the network, keeping unwanted traffic out and protecting your data from hackers.
+- **Tulemüürid:** Tulemüürid on võrgu turvamehed, kes hoiavad soovimatu liikluse eemal ja kaitsevad sinu andmeid häkkerite eest.
 
-![Intermediary Devices](./images/intermediary_devices.png)
+![Vahepealsed seadmed](./images/intermediary_devices.png)
 
-### Network Media
+### Võrgu meedia
 
-Network media is the road that data travels on. There are three main types:
+* [Liidesed ja kaablid](./contents/interfaces_and_cables/)
 
-- **Copper cables:** These are traditional cables, like Ethernet cables, that use electrical signals to transmit data.
+Võrgu meedia on tee, mida mööda andmed liiguvad. On kolm peamist tüüpi:
+
+- **Vaskkaablid:** Need on traditsioonilised kaablid, nagu Etherneti kaablid, mis kasutavad andmete edastamiseks elektrilisi signaale.
   
-- **Fiber optics:** Fiber optic cables use light to send data at incredibly high speeds, making them perfect for long-distance communication.
+- **Fiiberoptilised kaablid:** Fiiberoptilised kaablid kasutavad andmete edastamiseks valgust, võimaldades neil liikuda uskumatult suurte kiirustega, mistõttu on need ideaalne pika vahemaa suhtlemiseks.
 
-- **Wireless:** This is the invisible path your data takes when you use Wi-Fi. Instead of cables, data is sent through the air using radio waves.
+- **Juhtmevaba:** See on nähtamatu tee, mida mööda sinu andmed liiguvad, kui kasutad Wi-Fi ühendust. Kaablite asemel edastatakse andmed õhu kaudu raadiolainetega.
 
-![Network Media Types](./images/network_media_types.png)
-
----
-
-## What Makes a Good Network?
-
-- **Fault Tolerance**: If something breaks, the network can still work because it has backup paths.
-- **Scalability**: The network can grow easily by adding more devices.
-- **Quality of Service**: The network makes sure important things, like video calls, work smoothly.
-- **Security**: Keeping the network safe from bad guys who might want to steal information.
-
-### Redundancy and High Availability
-To ensure network availability and prevent downtime, strategies like redundancy and high-availability systems are crucial.
-Redundancy involves setting up multiple paths or backups for data to travel, so if one path fails, another can take over without disrupting the network. 
-High-availability systems are designed to keep services running even during hardware failures or maintenance, often through the use of failover mechanisms, load balancing, and clustering. These strategies help keep networks reliable, minimizing interruptions and ensuring that users can always stay connected.
-
-Some of the world’s most reliable networks have "five nines" availability, meaning they are up and running 99.999% of the time!.
-
-### Cool New Things in Networks
-
-- **Bring Your Own Device (BYOD)**: People can use their own gadgets, like phones or tablets, at work or school.
-- **Online Collaboration**: We can work together with others online using tools like video calls.
-- **Cloud Computing**: Storing and accessing data on the Internet, so we can get our files from anywhere.
-
-### The Internet of Things (IoT)
-The Internet of Things (IoT) refers to a vast network of connected devices that communicate and exchange data with each other over the internet. These devices range from everyday items like smart thermostats and wearables to more complex systems used in industrial automation. IoT devices collect data through sensors and send it across networks to other devices or centralized systems for processing and action. This connectivity allows for smarter homes, where lights, security systems, and appliances can be controlled remotely, and for advanced industrial automation that improves efficiency and safety.
-
-By 2025, it's estimated that there will be over 75 billion IoT devices connected worldwide, transforming how we live and work!
-- ![IoT Devices Example](./images/IoT.png)
+![Võrgu meedia tüübid](./images/network_media_types.png)
 
 ---
 
-## Staying Safe on the Network
+## Mis teeb hea võrgu?
 
-Networks need to be protected from dangers like viruses and hackers.
-- **Security Solutions**: Things like firewalls and passwords help keep the network safe.
+- **Vigade taluvus**: Kui midagi läheb katki, saab võrk ikka töötada, kuna sellel on varuteed.
+- **Mastaapsus**: Võrk saab hõlpsasti kasvada, lisades rohkem seadmeid.
+- **Teenuse kvaliteet**: Võrk tagab, et olulised asjad, nagu videokõned, toimivad sujuvalt.
+- **Turvalisus**: Võrgu turvalisuse tagamine pahatahtlike isikute eest, kes võivad soovida teavet varastada.
 
-### Advanced Network Security
-To protect networks from sophisticated threats, advanced security measures are essential. 
-Intrusion Detection Systems (IDS) monitor network traffic for suspicious activities, alerting administrators to potential security breaches. 
-Virtual Private Networks (VPNs) create secure, encrypted connections over the internet, allowing users to access a network remotely without exposing sensitive data. Encryption techniques further secure data by converting it into a code that only authorized parties can decode, protecting information from unauthorized access during transmission.
-The first known encryption system was used by Julius Caesar over 2,000 years ago to send secret messages to his generals, a method now known as the "Caesar Cipher"
-- ![Network Security Example](./images/Network-Security.jpg)
-
----
-
-## Becoming an IT Expert
-
-Learning about networks can lead to cool jobs in the future. There are special certifications (like diplomas) you can get, such as CCNA, to show you’re an expert in networking.
+### Redundantsus ja kõrge saadavus
+Võrgu saadavuse tagamiseks ja seisakute vältimiseks on olulised strateegiad nagu redundantsus ja kõrge saadavuse süsteemid.
+Redundantsus hõlmab mitme tee või varukoopiate seadistamist, mille kaudu andmed saavad liikuda, nii et kui üks tee ebaõnnestub, saab teine ​​üle võtta ilma võrgu häirimiseta.
+Kõrge saadavuse süsteemid on loodud teenuste toimimise tagamiseks isegi riistvaratõrgete või hoolduse ajal, sageli kasutades failover-mehhanisme, koormuse tasakaalustamist ja klastrite moodustamist. Need strateegiad 
 
 ---
 
-## Basic Network Protocols and Standards
+## Võrgus turvalisuse tagamine
 
-### What Are Network Protocols?
+Võrke tuleb kaitsta ohtude eest, nagu viirused ja häkkerid.
+- **Turvalahendused**: Tulemüürid ja paroolid aitavad hoida võrku turvalisena.
 
-Think of network protocols as the rules of the road for data. They define how data is packaged, sent, received, and understood. Without these rules, devices wouldn’t know how to communicate with each other.
-
-### Essential Protocols You Should Know
-
-- **TCP/IP:** This is the backbone of the internet. TCP (Transmission Control Protocol) ensures that data is sent reliably, while IP (Internet Protocol) handles the addressing and routing of data packets to make sure they reach the right destination.
-
-- **Ethernet:** Ethernet is the standard protocol for wired networks. It makes sure data flows smoothly over cables, like those in a LAN.
-
-![Protocol Flowchart](./images/protocol_flowchart.gif)
-
-### Standards Organizations
-
-To ensure that networks and devices can communicate globally, we have standards organizations:
-
-- **IEEE (Institute of Electrical and Electronics Engineers):** This group sets the standards for a lot of technologies, including Ethernet.
-
-- **IETF (Internet Engineering Task Force):** The IETF develops and promotes voluntary internet standards, like TCP/IP, that keep the internet running smoothly.
+### Täiustatud võrgu turvalisus
+Võrkude kaitsmiseks keerukate ohtude eest on vaja täiustatud turvameetmeid. 
+Sissetungimise tuvastussüsteemid (IDS) jälgivad võrgu liiklust kahtlaste tegevuste suhtes ja hoiatavad administraatoreid võimalike turvarikkumiste eest.
+Virtuaalsed privaatvõrgud (VPN-id) loovad turvalisi, krüpteeritud ühendusi interneti kaudu, võimaldades kasutajatel juurdepääsu võrgule eemalt, ilma tundlikke andmeid paljastamata.
+Krüpteerimistehnikad kaitsevad andmeid, muutes need koodiks, mida saavad dešifreerida ainult volitatud osapooled, kaitstes teavet volitamata juurdepääsu eest edastamise ajal.
+Esimene teadaolev krüpteerimissüsteem kasutati Julius Caesari poolt enam kui 2000 aastat tagasi salajaste sõnumite saatmiseks oma kindralitele, meetodit tuntakse nüüd kui "Caesari šifrit".
+- ![Võrgu turvalisuse näide](./images/Network-Security.jpg)
 
 ---
 
-## Getting Started with Network Devices; Basic Switch and Device Setup
+## IT-eksperdiks saamine
 
-### What is Cisco IOS?
-
-Cisco IOS is the operating system (OS) for special devices like routers and switches that help connect the internet. Just like your computer has Windows or your phone has iOS or Android, network devices have Cisco IOS.
-
-### Different Types of Network Operating Systems
-
-Network Operating Systems (NOS) manage the hardware and software resources on network devices like routers and switches. Here are a few examples:
-
-- **Juniper's JUNOS**: Known for its stability and modular design, JUNOS is used on Juniper Networks' devices. It's praised for its user-friendly interface and robust security features.
-
-- **HP's ProCurve**: This NOS is used in HP networking products. It offers easy integration with HP hardware and is designed for simplicity in managing network tasks.
-
-- **MikroTik's RouterOS**: Popular for its flexibility and cost-effectiveness, RouterOS is used in MikroTik devices. It provides advanced features like firewalling, VPN, and bandwidth management, making it a favorite among small to medium-sized networks.
-
-### How It Works:
-
-- **The Shell** is like the screen you see when you play a game. It lets you control the device.
-- **The Kernel** is like the brain that makes everything work behind the scenes.
-- **The Hardware** is the actual device, like the router or switch, with parts like the motherboard and memory inside.
-
-### Understanding Hardware Specifications
-When it comes to network devices like routers, switches, and servers, hardware specifications play a crucial role in determining their performance and capability. Key specifications include the CPU, memory, and interface types, each of which impacts how well the device can handle data processing, traffic, and connectivity
-
-The first commercial Ethernet speed was 10 Mbps, but today’s advanced network devices can handle speeds up to 400 Gbps!
-
-![Cisco IOS Access](./images/cisco_ios_access.png)
+Võrkude tundmaõppimine võib tulevikus viia lahedate töökohtadeni. On olemas spetsiaalsed sertifikaadid (nagu diplomid), mida saad omandada, näiteks CCNA, et näidata, et oled võrguasjades ekspert.
 
 ---
 
-## Using the Command Line
+## Põhilised võrgu protokollid ja standardid
 
-Cisco devices don’t have a pretty screen with icons like your computer. Instead, you use a special command line, which is like typing in secret codes to make things happen.
+### Mis on võrgu protokollid?
 
-### Ways to Access the Command Line:
+Mõtle võrgu protokollidele kui liikluseeskirjadele, mida andmed järgivad. Need määratlevad, kuidas andmeid pakitakse, saadetakse, vastuvõetakse ja mõistetakse. Ilma nende reegliteta ei teaks seadmed, kuidas üksteisega suhelda.
 
-- **Console Cable**: This is like a special cable you plug in directly to set things up.
-- **Secure Shell (SSH)**: This lets you control the device from far away but safely.
-- **Telnet**: This also lets you control the device from far away, but it’s not safe, so we don’t really use it anymore.
+### Olulised protokollid, mida peaksid teadma
 
-### Moving Around the Command System
+- **TCP/IP:** See on interneti selgroog. TCP (Transmission Control Protocol) tagab, et andmed saadetakse usaldusväärselt, samas kui IP (Internet Protocol) tegeleb andmepakettide aadressimise ja marsruutimisega, et need jõuaksid õigesse sihtkohta.
 
-There are two main modes you’ll use:
-- **User Exec Mode**: This is the basic mode where you can do simple things. You’ll see a `>` symbol.
-- **Privileged Exec Mode**: This mode lets you do more advanced stuff. You’ll see a `#` symbol.
-- **Global Configuration Mode**: This is where you can change how the device works. You’ll see a `#` with some extra words next to it, like `Switch(config)#`.
+- **Ethernet:** Ethernet on juhtmega võrkude standardprotokoll. See tagab, et andmed liiguvad sujuvalt üle kaablite, nagu need, mis on LAN-is.
 
-### Typing Commands
+![Protokollide vooskeem](./images/protocol_flowchart.png)
 
-When you type commands, you have to be precise. For example, if you want to check if a device is working, you might type:
+### Standardiorganisatsioonid
+
+Selleks, et võrgud ja seadmed saaksid suhelda globaalselt, on meil standardiorganisatsioonid:
+
+- **IEEE (Institute of Electrical and Electronics Engineers):** See grupp kehtestab standardid paljudele tehnoloogiatele, sealhulgas Ethernetile.
+
+- **IETF (Internet Engineering Task Force):** IETF arendab ja edendab vabatahtlikke interneti standardeid, nagu TCP/IP, mis hoiavad interneti sujuvana.
+
+---
+
+## Võrguseadmete kasutamine; põhiline lüliti ja seadmete seadistamine
+
+### Mis on Cisco IOS?
+
+* [Sissejuhatus Cisco IOS CLI-sse](./contents/intro_to_cisco_cli/)
+
+Cisco IOS on operatsioonisüsteem (OS) spetsiaalsete seadmete, nagu ruuterid ja lülitid, jaoks, mis aitavad internetti ühendada. Nii nagu sinu arvutil on Windows või telefonil iOS või Android, on võrguseadmetel Cisco IOS.
+
+### Erinevad võrgu operatsioonisüsteemid
+
+Võrgu operatsioonisüsteemid (NOS) haldavad võrguseadmete, nagu ruuterid ja lülitid, riistvara ja tarkvara ressursse. Siin on mõned näited:
+
+- **Juniperi JUNOS**: Tuntud oma stabiilsuse ja modulaarse disaini poolest, JUNOS-i kasutatakse Juniper Networksi seadmetes. Seda kiidetakse kasutajasõbraliku liidese ja tugeva turvalisuse omaduste poolest.
+
+- **HP ProCurve**: Seda NOS-i kasutatakse HP võrgu toodetes. See pakub lihtsat integreerimist HP riistvaraga ja on mõeldud võrguülesannete lihtsaks haldamiseks.
+
+- **MikroTiki RouterOS**: Tuntud oma paindlikkuse ja kulutõhususe poolest, kasutatakse RouterOS-i MikroTiki seadmetes. See pakub täiustatud funktsioone, nagu tulemüürid, VPN ja ribalaiuse haldamine, muutes selle populaarseks väikestes ja keskmise suurusega võrkudes.
+
+### Kuidas see toimib:
+
+- **Shell** on nagu ekraan, mida näed mängides mängu. See võimaldab sul seadet juhtida.
+- **Kernel** on nagu aju, mis paneb kõik kulisside taga tööle.
+- **Riistvara** on tegelik seade, nagu ruuter või lüliti, mille sees on osad, nagu emaplaat ja mälu.
+
+### Riistvaraspetsifikatsioonide mõistmine
+Võrguseadmete, nagu ruuterid, lülitid ja serverid, puhul mängivad riistvaraspetsifikatsioonid olulist rolli nende jõudluse ja võimekuse määramisel. Olulised spetsifikatsioonid hõlmavad protsessorit (CPU), mälu ja liideste tüüpe, millest igaüks mõjutab, kui hästi seade suudab andmeid töödelda, liiklust hallata ja ühendusi tagada.
+
+Esimene kaubanduslik Etherneti kiirus oli 10 Mbps, kuid tänapäeva täiustatud võrguseadmed suudavad hallata kiirusi kuni 400 Gbps!
+
+![Cisco IOS-i juurdepääs](./images/cisco_ios_access.png)
+
+---
+
+## Käsurea kasutamine
+
+Cisco seadmetel ei ole ilusat ikoonidega ekraani nagu sinu arvutil. Selle asemel kasutad spetsiaalset käsurida, mis on nagu salakoodide kirjutamine, et asjad juhtuksid.
+
+### Käsureale juurdepääsu viisid:
+
+- **Konsoolikaabel**: See on nagu spetsiaalne kaabel, mille ühendad otse seadistamiseks.
+- **Secure Shell (SSH)**: See võimaldab sul seadet eemalt, kuid turvaliselt juhtida.
+- **Telnet**: See võimaldab samuti eemalt juhtimist, kuid see pole turvaline, seega ei kasutata seda enam eriti.
+
+### Liikumine käsusüsteemis
+
+On kaks peamist režiimi, mida kasutad:
+- **User Exec Mode**: See on põhirežiim, kus saad teha lihtsaid asju. Näed `>` sümbolit.
+- **Privileged Exec Mode**: See režiim võimaldab teha keerukamaid asju. Näed `#` sümbolit.
+- **Global Configuration Mode**: See on koht, kus saad muuta seadme toimimist. Näed `#` koos mõne lisasõnaga, nagu `Switch(config)#`.
+
+### Käskude sisestamine
+
+Kui sisestad käske, pead olema täpne. Näiteks, kui tahad kontrollida, kas seade töötab, võid kirjutada:
+
 ```
 ping 192.168.10.5
 ```
-This tells the device to check if another device at that address is reachable.
+See ütleb seadmele, et kontrollida, kas teine seade sellel aadressil on saavutatav.
 
-### Help and Shortcuts:
+### Abi ja otseteed:
 
-- If you forget a command, you can type `?` after a word, and it will show you what you can do next.
-- You can also use shortcuts to save time. For example, instead of typing `configure`, you can just type `conf`!
+- Kui unustad käsu, võid pärast sõna kirjutada `?`, ja see näitab sulle, mida saad edasi teha.
+- Samuti saad kasutada otseteid, et säästa aega. Näiteks, `configure` asemel võid lihtsalt kirjutada `conf`!
 
-### Using the Keyboard
+### Klaviatuuri kasutamine
 
-- **Tab Key**: Helps complete commands if you’ve started typing them.
-- **Arrow Keys**: Move the cursor to fix mistakes or repeat commands.
-- **Ctrl + C**: Stops what you're doing and takes you back to the main screen.
-- **Ctrl + Shift + 6**: This is like the "pause" button. It stops what’s happening if something is taking too long.
-
----
-
-## Setting Up Your Network Devices; Basic Device Configuration
-
-### Naming Your Devices
-
-Every network device, like a router or switch, needs a special name so you can easily find it. Don’t name your devices “Mickey” or “Goofy”—use names that tell you where they are, like "SW-Floor-1" (Switch on Floor 1).
-
-### Naming Rules:
-
-- The name must start with a letter, not a number.
-- It shouldn’t have spaces, but you can use dashes (-).
-- The name should be less than 64 characters long.
-
-### Standard Naming Conventions
-Standard naming conventions are vital for consistency and easy management in large networks. They help everyone quickly identify devices and their roles, making troubleshooting and maintenance more efficient. For example, naming a switch "TLN-SW1" indicates it's the first switch in Tallinn, making its location and purpose clear.
-
-### Setting Strong Passwords
-
-Passwords keep your devices safe from people who shouldn’t be using them.
-
-![Device Configuration](./images/device_configuration.png)
+- **Tabulaator (Tab)**: Aitab käskude täitmist, kui oled neid juba alustanud.
+- **Nooleklahvid**: Liiguta kursorit vigade parandamiseks või käskude kordamiseks.
+- **Ctrl + C**: Peatab käimasoleva tegevuse ja viib sind tagasi põhiekraanile.
+- **Ctrl + Shift + 6**: See on nagu "paus" nupp. See peatab tegevuse, kui miski võtab liiga kaua aega.
 
 ---
 
-## Learning About Network Protocols; Understanding Protocols and Models
+## Oma võrguseadmete seadistamine; põhiline seadmete seadistamine
 
-### Why Do We Need Rules to Communicate?
+### Seadmete nimetamine
 
-Just like people need to speak the same language to understand each other, computers need to follow specific rules called **protocols** to communicate.
+Iga võrguseade, nagu ruuter või lüliti, vajab spetsiaalset nime, et saaksid selle hõlpsasti leida. Ära nimeta oma seadmeid "Mickey" või "Goofy" – kasuta nimesid, mis ütlevad, kus need asuvad, näiteks "SW-Floor-1" (Lüliti 1. korrusel).
 
-Imagine if one person spoke English and another spoke French—they wouldn’t understand each other unless they agreed to speak the same language!
+### Nimetamisreeglid:
 
-### The Basics of Communication
+- Nimi peab algama tähega, mitte numbriga.
+- Selles ei tohiks olla tühikuid, kuid võid kasutada sidekriipsu (-).
+- Nimi peaks olema vähem kui 64 tähemärki pikk.
 
-For any communication, you need:
-- **A Sender** (the person or device sending the message).
-- **A Receiver** (the person or device getting the message).
-- **A Medium** (how the message is sent, like through wires or Wi-Fi).
+### Standardne nimetamise konventsioon
+Standardne nimetamise konventsioon on suurtes võrkudes ühtsuse ja lihtsa haldamise jaoks oluline. See aitab kõigil seadmeid ja nende rolle kiiresti tuvastada, muutes tõrkeotsingu ja hoolduse tõhusamaks. Näiteks, lüliti nimetamine "TLN-SW1" viitab sellele, et see on esimene lüliti Tallinnas, muutes selle asukoha ja eesmärgi selgeks.
 
-### Data Transmission Methods
+### Tugevate paroolide seadistamine
 
-Data transmission methods define how data flows between devices. Here’s a quick look at the three main types:
+Paroolid hoiavad sinu seadmeid turvalisena inimeste eest, kes ei peaks neid kasutama.
 
-- **Simplex**: Data flows in one direction only. An example is a TV broadcast, where the signal goes from the station to your TV without any return signal.
-
-- **Half-Duplex**: Data flows in both directions, but not at the same time. Think of a walkie-talkie, where one person talks while the other listens.
-
-- **Full-Duplex**: Data flows in both directions simultaneously. This is like a phone call, where both people can talk and listen at the same time.
+![Seadme seadistamine](./images/device_configuration.png)
 
 ---
 
-## What are Protocols?
+## Võrguprotokollide õppimine; protokollide ja mudelite mõistmine
 
-**Protocols** are the rules that devices follow to talk to each other.
+### Miks on suhtlemiseks vaja reegleid?
 
-They help with:
-- **Encoding**: Changing the message into a form that can be sent, like turning words into digital signals.
-- **Formatting**: Making sure the message is organized properly so it can be understood.
-- **Timing**: Ensuring that messages are sent and received at the right speed.
-- **Delivery**: Deciding if the message goes to one device, a group, or everyone.
+Nii nagu inimesed peavad rääkima sama keelt, et üksteisest aru saada, peavad ka arvutid järgima konkreetseid reegleid, mida nimetatakse **protokollideks**, et suhelda.
 
-### Error Detection and Correction
-Error detection and correction are key to making sure data is sent accurately across a network. When data travels, it can pick up errors due to interference.
-To catch these errors, protocols use methods like checksums or CRC, which help spot problems in the data.
+Kujuta ette, kui üks inimene räägib inglise keelt ja teine prantsuse keelt – nad ei mõistaks üksteist, kui nad ei lepiks kokku, et räägivad sama keelt!
 
-If an error is found, the system can either ask for the data to be sent again or try to fix it automatically using extra information that was sent with the data. These processes keep our communications reliable and accurate.
+### Suhtlemise põhitõed
 
-Error detection methods like Hamming codes have been used since the 1940s and are still important in today’s technology!
+Iga suhtluse jaoks on vaja:
+- **Saatjat** (isik või seade, mis sõnumi saadab).
+- **Vastuvõtjat** (isik või seade, mis sõnumi saab).
+- **Meediumit** (kuidas sõnum edastatakse, näiteks kaablite või Wi-Fi kaudu).
 
-### Types of Message Delivery
+### Andmeedastusmeetodid
 
-- **Unicast**: Sending a message from one device to one other device.
-- **Multicast**: Sending a message from one device to several devices.
-- **Broadcast**: Sending a message to all devices on the network.
+Andmeedastusmeetodid määravad, kuidas andmed seadmete vahel liiguvad. Siin on kiire ülevaade kolmest peamisest tüübist:
 
-### Anycast Communication
-- Introduce anycast, where a message is sent to the nearest or best recipient among a group of devices.
+- **Simplex**: Andmed liiguvad ainult ühes suunas. Näiteks on televisiooniülekanne, kus signaal liigub jaamast sinu telerisse ilma vastussignaalita.
 
-### Different Kinds of Protocols
+- **Half-Duplex**: Andmed liiguvad mõlemas suunas, kuid mitte samaaegselt. Mõtle raadiosaatjale, kus üks inimene räägib, samal ajal kui teine kuulab.
 
-There are many types of protocols, each with its own job:
-- **Network Communication Protocols**: Help devices talk over the network.
-- **Security Protocols**: Keep data safe by making sure only the right people can see it.
-- **Routing Protocols**: Help find the best path for data to travel.
-- **Service Discovery Protocols**: Help devices find each other on the network.
-
-### Common Network Protocols
-
-| **Protocol** | **Full Name**                  | **Purpose**                                                                 |
-|--------------|--------------------------------|------------------------------------------------------------------------------|
-| **HTTP**     | Hypertext Transfer Protocol    | Used for transferring web pages on the internet.                            |
-| **FTP**      | File Transfer Protocol         | Used for transferring files between computers.                              |
-| **DNS**      | Domain Name System             | Translates domain names into IP addresses.                                   |
-| **SMTP**     | Simple Mail Transfer Protocol  | Used for sending emails from one server to another.                         |
-
-**Fun Fact:** The DNS system is often referred to as the "phonebook of the internet" because it matches domain names to their corresponding IP addresses!
-
-### How Protocols Work Together
-
-Many protocols work together to make sure everything runs smoothly.
-
-For example:
-- **HTTP**: Helps load web pages.
-- **TCP**: Makes sure data gets to where it’s going without errors.
-- **IP**: Finds the best route for the data to travel.
-- **Ethernet**: Connects devices through cables or Wi-Fi.
-
-### What is a Protocol Suite?
-
-A **Protocol Suite** is a group of protocols that work together to perform communication tasks.
-
-The most common one is **TCP/IP**, which is the backbone of the internet.
-
-### Evolution of TCP/IP
-- Discuss the history and evolution of TCP/IP, including its role in the development of the modern internet.
-
-### Sending Data Across the Network
-
-When you send a message, like loading a web page, the data is broken down, packed up, and sent across the network in tiny pieces.
-
-The receiving device then puts it all back together so you can see the web page.
-
-### Who Makes the Rules?
-
-There are many organizations that create and maintain these rules (protocols), making sure everything works together.
-
-Some of these include:
-- **IETF**: They make sure the internet works smoothly.
-- **ICANN**: They help manage website names and IP addresses.
-- **IEEE**: They create standards for electronic devices.
-
-The Internet Engineering Task Force (IETF) is a key organization responsible for developing and maintaining the standards and protocols that make the internet function smoothly. The IETF brings together a global community of engineers, network designers, and researchers who collaborate to create and refine technical standards like HTTP, TCP/IP, and DNS.
-
-The IETF’s work is published in documents called "RFCs" (Request for Comments), which serve as the blueprints for internet technologies!
-
-![Protocol Data Flow](./images/protocol_data_flow.gif)
+- **Full-Duplex**: Andmed liiguvad mõlemas suunas samaaegselt. See on nagu telefonikõne, kus mõlemad inimesed saavad korraga rääkida ja kuulata.
 
 ---
 
-## Understanding Network Layers and Models; Layers and Models
+## Mis on protokollid?
 
-### Why Do We Use Layers?
+**Protokollid** on reeglid, mida seadmed järgivad, et omavahel rääkida.
 
-Networks can be complicated, but layers help us break down the big job of sending data into smaller, easier tasks.
+Need aitavad:
+- **Kodeerimisel**: Sõnumi muutmine vorminguks, mida saab saata, näiteks sõnade muutmine digitaalseteks signaalideks.
+- **Formaatimisel**: Veendudes, et sõnum on korralikult organiseeritud, et seda saaks mõista.
+- **Ajastamisel**: Tagades, et sõnumeid saadetakse ja võetakse vastu õige kiirusega.
+- **Kohaletoimetamisel**: Otsustades, kas sõnum läheb ühele seadmele, rühmale või kõigile.
 
-Each layer has a specific job, like baking, frosting, and decorating a cake!
+### Vigade tuvastamine ja parandamine
+Vigade tuvastamine ja parandamine on võtmetähtsusega, et andmed edastataks võrgus täpselt. Kui andmed liiguvad, võivad need saada häirete tõttu vigu.
+Nende vigade avastamiseks kasutavad protokollid meetodeid nagu kontrollsummad või CRC, mis aitavad avastada probleeme andmetes.
 
-### Advantages of Layered Architectures
+Kui viga leitakse, saab süsteem kas küsida andmete uuesti saatmist või proovida seda automaatselt parandada, kasutades andmetega kaasa saadetud lisateavet. Need protsessid hoiavad meie suhtluse usaldusväärse ja täpse.
 
-Layered architectures in networks are helpful for a few reasons:
+Vigade tuvastamise meetodeid, nagu Hamming-koodid, on kasutatud alates 1940. aastatest ja need on endiselt olulised tänapäeva tehnoloogias!
 
-- **Modularity**: Imagine if you want to change the cheese in your sandwich. You can do that without touching the bread or meat. In networks, this means you can update one part without messing up the others.
+### Sõnumite edastamise tüübid
 
-- **Scalability**: Just like you can make a bigger sandwich by adding more layers, networks can grow by adding more layers or parts without changing the whole thing.
+- **Unicast**: Sõnumi saatmine ühelt seadmelt ühele teisele seadmele.
+- **Multicast**: Sõnumi saatmine ühelt seadmelt mitmele seadmele.
+- **Broadcast**: Sõnumi saatmine kõigile võrgu seadmetele.
 
-- **Ease of Troubleshooting**: If something’s wrong with your sandwich, like a bad piece of lettuce, you can easily find it and fix it. In networks, if there’s a problem, it’s easier to find and fix it in just one layer.
+### Anycast-suhtlus
+- Anycast-suhtlus on meetod, kus üks sõnum saadetakse mitmele vastuvõtjale, kuid see jõuab ainult lähima või optimaalseima sihtkohani. Seda kasutatakse sageli koormuse tasakaalustamiseks ja võrgu jõudluse parandamiseks.
 
-### OSI Model (7 Layers):
+### Erinevad protokollide tüübid
 
-1. **Physical**: Sends electrical signals (like turning lights on and off).
-2. **Data Link**: Makes sure data is in the right format.
-3. **Network**: Decides the best path for data to travel.
-4. **Transport**: Makes sure data arrives safely.
-5. **Session**: Manages the connection between devices.
-6. **Presentation**: Prepares data so the application can use it.
-7. **Application**: Interacts directly with the software you use, like web browsers.
+On palju erinevaid protokolle, millest igaühel on oma ülesanne:
+- **Võrgu suhtlusprotokollid**: Aitavad seadmetel võrgu kaudu suhelda.
+- **Turvaproktokollid**: Hoiavad andmeid turvalisena, veendudes, et ainult õiged inimesed näevad neid.
+- **Marsruutimisprotokollid**: Aitavad leida parima tee, mida mööda andmed saavad liikuda.
+- **Teenuste avastamise protokollid**: Aitavad seadmetel leida üksteist võrgus.
 
-### TCP/IP Model (4 Layers):
+### Levinud võrgu protokollid
 
-1. **Network Access**: Combines Physical and Data Link layers (handles hardware).
-2. **Internet**: Handles the Network layer’s job (routes data across networks).
-3. **Transport**: Same as OSI’s Transport layer.
-4. **Application**: Combines the top three OSI layers (for apps and software).
+| **Protokoll** | **Täisnimi**                        | **Eesmärk**                                                                 |
+|---------------|-------------------------------------|------------------------------------------------------------------------------|
+| **HTTP**      | Hypertext Transfer Protocol         | Kasutatakse veebilehtede edastamiseks internetis.                            |
+| **FTP**       | File Transfer Protocol              | Kasutatakse failide edastamiseks arvutite vahel.                             |
+| **DNS**       | Domain Name System                  | Tõlgib domeeninimed IP-aadressideks.                                         |
+| **SMTP**      | Simple Mail Transfer Protocol       | Kasutatakse e-kirjade saatmiseks ühelt serverilt teisele.                    |
 
-### Comparison Between OSI and TCP/IP Models
+**Lõbus fakt:** DNS-süsteemi nimetatakse sageli interneti "telefoniraamatuks", kuna see seob domeeninimed vastavate IP-aadressidega!
 
-| **Aspect**         | **OSI Model**                                  | **TCP/IP Model**                             |
-|--------------------|------------------------------------------------|----------------------------------------------|
-| **Layers**         | 7 layers                                       | 4 layers                                     |
-| **Usage**          | Mainly for teaching and conceptual understanding| Widely used in real-world internet applications |
-| **Layer Names**    | Physical, Data Link, Network, Transport, Session, Presentation, Application | Link, Internet, Transport, Application |
-| **Adoption**       | Not fully implemented in practice              | Foundation of the internet and most networks |
+### Kuidas protokollid koos töötavad
 
-### Remembering the OSI Model
+Paljud protokollid töötavad koos, et tagada sujuv toimimine.
 
-A fun way to remember the OSI layers is with the phrase: **“Please Do Not Throw Sausage Pizza Away.”** Each word helps you recall the layers in order.
+Näiteks:
+- **HTTP**: Aitab veebilehti laadida.
+- **TCP**: Tagab, et andmed jõuavad vigadeta kohale.
+- **IP**: Leiab parima marsruudi, mida mööda andmed saavad liikuda.
+- **Ethernet**: Ühendab seadmeid kaablite või Wi-Fi kaudu.
 
-### How Does Data Travel in Layers?
+### Mis on protokollikomplekt?
 
-When data is sent across a network, it’s broken down into smaller pieces called segments.
+**Protokollikomplekt** on rühm protokolle, mis töötavad koos suhtlusülesannete täitmiseks.
 
-These segments are put together (or multiplexed) with other data to travel faster.
+Kõige levinum on **TCP/IP**, mis on interneti selgroog.
 
-### Data Encapsulation
+### TCP/IP areng
+- Arutlege TCP/IP ajaloo ja arengu üle, sealhulgas selle rolli üle kaasaegse interneti arengus.
 
-As data moves down through the layers, each layer adds its own information to it. This is called encapsulation.
+### Andmete saatmine võrgu kaudu
 
-When the data reaches its destination, the layers are peeled back, like unwrapping a gift, until the original data is revealed.
+Kui saadad sõnumi, näiteks laadid veebilehte, jagatakse andmed väikesteks tükkideks, pakitakse kokku ja saadetakse üle võrgu.
 
-### Addressing Data in the Network
+Vastuvõttev seade paneb need siis uuesti kokku, et saaksid veebilehte näha.
 
-Every piece of data needs an address to know where it’s going. There are two main types:
-- **IP Address (Layer 3)**: Tells the network where the data should go globally (like a postal address).
-- **MAC Address (Layer 2)**: Tells which specific device on a local network should receive the data (like a house number).
+### Kes teeb reeglid?
 
-![Protocols in Action](./images/protocols_in_action.png)
+On palju organisatsioone, kes loovad ja hooldavad neid reegleid (protokolle), tagades, et kõik toimib koos.
+
+Mõned neist on:
+- **IETF**: Nemad tagavad, et internet toimiks sujuvalt.
+- **ICANN**: Nad aitavad hallata veebisaitide nimesid ja IP-aadresse.
+- **IEEE**: Nad loovad standardid elektroonikaseadmete jaoks.
+
+Internet Engineering Task Force (IETF) on võtmetähtsusega organisatsioon, mis vastutab interneti toimimise tagamiseks vajalike standardite ja protokollide arendamise ja hooldamise eest. IETF ühendab ülemaailmse inseneride, võrgu disainerite ja teadlaste kogukonna, kes teevad koostööd tehniliste standardite, nagu HTTP, TCP/IP ja DNS, loomisel ja täiustamisel.
+
+IETF-i töö avaldatakse dokumentides, mida nimetatakse "RFC-deks" (Request for Comments), mis toimivad interneti tehnoloogiate sinikavadena!
+
+![Protokolli andmevoog](./images/protocol_data_flow.png)
+
+---
+
+## Võrgukihtide ja -mudelite mõistmine; kihid ja mudelid
+
+### Miks me kasutame kihte?
+
+Võrgud võivad olla keerulised, kuid kihid aitavad meil jagada suure andmete saatmise ülesande väiksemateks, lihtsamateks ülesanneteks.
+
+Igal kihil on konkreetne ülesanne, nagu koogi küpsetamine, glasuuri lisamine ja kaunistamine!
+
+### Kihilise arhitektuuri eelised
+
+Kihiline arhitektuur võrkudes on kasulik mitmel põhjusel:
+
+- **Modulaarsus**: Kujuta ette, et tahad oma võileivas juustu vahetada. Sa saad seda teha, ilma et peaksid puudutama leiba või liha. Võrkudes tähendab see, et saad uuendada ühte osa, ilma et see häiriks teisi osi.
+
+- **Mastaapsus**: Nii nagu saad teha suurema võileiva, lisades rohkem kihte, võivad võrgud kasvada, lisades rohkem kihte või osi, ilma et peaksid kogu asja muutma.
+
+- **Lihtne tõrkeotsing**: Kui midagi on sinu võileivas valesti, näiteks halb salatileht, saad selle hõlpsasti leida ja parandada. Võrkudes, kui on probleem, on lihtsam leida ja parandada see vaid ühes kihis.
+
+### OSI mudel (7 kihti):
+
+1. **Füüsiline**: Saadab elektrisignaale (nagu tulede sisse ja välja lülitamine).
+2. **Andmeside**: Tagab, et andmed on õiges vormingus.
+3. **Võrk**: Otsustab, milline on parim tee, mida mööda andmed liiguvad.
+4. **Transpordikiht**: Tagab, et andmed jõuavad turvaliselt kohale.
+5. **Seanss**: Haldab ühendust seadmete vahel.
+6. **Esitluskiht**: Valmistab andmed ette, et rakendus saaks neid kasutada.
+7. **Rakenduskiht**: Suhtleb otse tarkvaraga, mida kasutad, nagu veebibrauserid.
+
+### TCP/IP mudel (4 kihti):
+
+1. **Võrgujuurdepääs**: Ühendab füüsilise ja andmesidekihid (hõlmab riistvara).
+2. **Internet**: Hõlmab võrgu kihi ülesandeid (suunab andmed võrkude kaudu).
+3. **Transpordi**: Sama mis OSI transpordikiht.
+4. **Rakenduskiht**: Ühendab kolm ülemist OSI kihti (rakenduste ja tarkvara jaoks).
+
+### OSI ja TCP/IP mudelite võrdlus
+
+* [OSI mudel ja TCP/IP komplekt](./contents/osi_model_and_tcp_ip_suite/)
+
+| **Aspekt**          | **OSI mudel**                                 | **TCP/IP mudel**                                |
+|---------------------|------------------------------------------------|-------------------------------------------------|
+| **Kihid**           | 7 kihti                                        | 4 kihti                                         |
+| **Kasutus**         | Peamiselt õpetamiseks ja kontseptuaalseks mõistmiseks| Laialdaselt kasutatav reaalses internetis |
+| **Kihid**           | Füüsiline, andmeside, võrk, transport, seanss, esitlus, rakendus | Link, Internet, Transport, Rakendus |
+| **Rakendamine**     | Pole praktikas täielikult rakendatud           | Interneti ja enamiku võrkude alus |
+
+### OSI mudeli meeldejätmine
+
+Lõbus viis OSI kihtide meeldejätmiseks on lause: **"Palun Ära Too Soolast Pizza Ära."** Iga sõna aitab sul kihte järjekorras meelde jätta.
+
+### Kuidas andmed kihtides liiguvad?
+
+Kui andmeid saadetakse võrgus, jagatakse need väiksemateks osadeks, mida nimetatakse segmentideks.
+
+Need segmendid pannakse kokku (või multipleksitakse) teiste andmetega, et need kiiremini liiguksid.
+
+### Andmete kapseldamine
+
+Kui andmed liiguvad kihtide kaudu alla, lisab iga kiht oma teabe juurde. Seda nimetatakse kapseldamiseks.
+
+Kui andmed jõuavad sihtkohta, eemaldatakse kihid, nagu kingituse lahtipakkimine, kuni algsed andmed on nähtavad.
+
+### Andmete adresseerimine võrgus
+
+Igal andmel on vaja aadressi, et teada, kuhu see läheb. On kaks peamist tüüpi:
+- **IP-aadress (3. kiht)**: Näitab võrgule, kuhu andmed peaksid globaalsetes mastaapides minema (nagu postiaadress).
+- **MAC-aadress (2. kiht)**: Näitab, milline konkreetne seade kohalikus võrgus peaks andmed vastu võtma (nagu maja number).
+
+![Protokollid tegevuses](./images/protocols_in_action.png)
+
+* [Ethernet LAN-i lülitamine](./contents/ethernet_lan_switching/)
+* [IPv4 aadressimine](./contents/ipv4_addressing/)
 
 ### IPv4 vs. IPv6
 
-IPv4 and IPv6 are both versions of the Internet Protocol (IP) used to identify devices on a network, but they have key differences:
+IPv4 ja IPv6 on mõlemad versioonid Interneti protokollist (IP), mida kasutatakse seadmete tuvastamiseks võrgus, kuid neil on olulised erinevused:
 
-| **Aspect**             | **IPv4**                                       | **IPv6**                                                |
-|------------------------|------------------------------------------------|---------------------------------------------------------|
-| **Address Length**     | 32-bit (e.g., 192.168.1.1)                     | 128-bit (e.g., 2001:0db8:85a3::8a2e:0370:7334)          |
-| **Number of Addresses**| ~4.3 billion addresses                         | 340 undecillion addresses (a huge number!)              |
-| **Format**             | Dotted decimal format                          | Hexadecimal format with colons                          |
-| **Need for IPv6**      | Limited address space, running out of addresses| Vast address space to accommodate the growing number of internet-connected devices |
+| **Aspekt**           | **IPv4**                                      | **IPv6**                                                 |
+|----------------------|-----------------------------------------------|----------------------------------------------------------|
+| **Aadressi pikkus**  | 32-bitine (nt 192.168.1.1)                    | 128-bitine (nt 2001:0db8:85a3::8a2e:0370:7334)           |
+| **Aadresside arv**   | ~4,3 miljardit aadressi                       | 340 undecillion aadressi (tohutult suur number!)         |
+| **Vorming**          | Punktidega kümnendkohaline vorming            | Kuueteistkümnendkohaline vorming koos koolonitega        |
+| **IPv6 vajadus**     | Piiratud aadressiruum, aadressid otsa saamas  | Suur aadressiruum, et mahutada kasvavat internetti ühendatud seadmete arvu |
 
-IPv4’s 4.3 billion addresses seemed plenty in the 1980s, but with the explosion of smartphones, IoT devices, and more, IPv6 was created to handle the massive increase in internet-connected devices!
+IPv4 4,3 miljardit aadressi tundus 1980. aastatel küllaldasena, kuid nutitelefonide, IoT-seadmete ja muu plahvatusliku kasvuga loodi IPv6, et käsitleda internetti ühendatud seadmete arvu tohutut kasvu!
 
+### Mis toimub erinevates võrkudes?
 
-### What Happens on Different Networks?
+Kui kaks seadet, nagu sinu arvuti ja printer, asuvad samas kohalikus võrgus (näiteks sinu kodus), suhtlevad nad üksteisega kasutades MAC-aadresse. 
+Mõtle MAC-aadressile kui maja numbrile – see aitab seadmetel üksteist kiiresti leida, kui need on lähedal.
 
-When two devices, like your computer and a printer, are on the same local network (like in your home), they talk to each other using their MAC addresses. 
-Think of a MAC address like a house number—it helps devices find each other quickly when they're close by.
+Aga kui kaks seadet on erinevates võrkudes (näiteks sinu kodus olev arvuti ja internetis olev server), toimivad asjad veidi teisiti.
+Nad kasutavad IP-aadresse andmete saatmiseks üle interneti.
+IP-aadress on nagu tänava aadress, mis aitab sinu andmetel leida tee õigele võrgule. 
+Kui andmed jõuavad õigele võrgule, kasutavad need MAC-aadressi, et leida konkreetne seade, kuhu need peavad jõudma.
 
-But when two devices are on different networks (like your computer at home and a server on the internet), things work a bit differently.
-They use IP addresses to send data across the internet.
-The IP address is like a street address that helps your data find its way to the right network. 
-Once it gets to the right network, the data uses the MAC address to find the exact device it needs to reach.
+![OSI vs TCP/IP mudelid](./images/osi_vs_tcpip_models.png)
 
-![OSI vs TCP/IP Models](./images/osi_vs_tcpip_models.png)
+* [Switch liidesed](./contents/switch_interfaces/)
+* [IPv4 päis](./contents/ipv4_header/)
+* [Marsruutimise alused](./contents/routing_fundamentals/)
+* [Staatiline marsruutimine](./contents/static_routing/)

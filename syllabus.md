@@ -34,22 +34,22 @@ By the end of this course, students will be able to:
   - Physical Layer: Transmission media and signal transmission.
   - Data Link Layer: Ethernet protocol and MAC addresses.
 - **Labs**:
-  - Establishing a Console Session with Router.
+  - 2. labs
+  - 3. labs
 
 ### **Week 3: OSI Model - Part 2 (Network Layer and Subnetting) (Modules 8-11)**
 - **Topics**:
   - Network Layer: IP addressing, IPv4, IPv6, and subnetting.
 - **Labs**:
-  - Building a Switch and Router Network.
-  - Calculating IPv4 Subnets and implementing VLSM.
+  - 4. labs
+  - 5. labs
 
 ### **Week 4: OSI Model - Part 3 (Transport, Session, Presentation, and Application Layers) (Modules 12-15)**
 - **Topics**:
   - Transport Layer: TCP and UDP protocols, ports.
   - Session, Presentation, and Application Layers: Overview and functions.
 - **Labs**:
-  - Quick Review: Identifying and Configuring IPv6 Addresses.
-  - Configuring Network Devices with SSH and Securing Network Devices.
+  - 6. labs
 
 ### **Week 5: Network Devices and Their Management (Modules 16-17)**
 - **Topics**:
@@ -57,7 +57,7 @@ By the end of this course, students will be able to:
   - Introduction to Cisco IOS CLI.
   - Ethernet LAN Switching and Routing Fundamentals.
 - **Labs**:
-  - Static Routing in Packet Tracer.
+  - 7. labs
 
 ### **Week 6: Final Project - Comprehensive Network Design**
 - **Final Project**:
@@ -87,10 +87,6 @@ By the end of this course, students will be able to:
   - [Sissejuhatus võrgutehnoloogiasse], [Erkki Laaneoks], [2010]
 - **Software**:
   - Cisco Packet Tracer (Installation guide available in the repository)
-  
-## Academic Integrity
-
-Students are expected to adhere to the highest standards of academic integrity. Any form of cheating, plagiarism, or unauthorized collaboration will result in disciplinary action.
 
 ## Contact Information
 
