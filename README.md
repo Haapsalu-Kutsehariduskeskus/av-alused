@@ -53,4 +53,4 @@ By the end of this course, you will be prepared to configure and troubleshoot sm
 - [[CCNA 200-301 Notes]](./resources/Laaneoks_VÕRG.pdf)
 
 
-![Networking](./images/main_networking.png)
+![Networking](/lectures/images/main_networking.png)
