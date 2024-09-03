@@ -1,8 +1,5 @@
 # Arvutivõrkude alused / Fundamentals of Computer Networks (3 EKAP)
 
-**Valmistu tuleviku IT-võrkudeks**  
-Võrgundus on kaasaegse digimaailma alus. Kui soovid karjääri küberjulgeolekus, tarkvaraarenduses või IT-halduse valdkonnas, on oluline mõista, kuidas võrgud toimivad, kuidas neid seadistada ja kaitsta.
-
 ## Ülevaade
 
 See kursus tutvustab tudengitele arvutivõrkude põhimõisteid, hõlmates võrgustikuarhitektuure, mudeleid, protokolle ja olulisi võrgukomponente. Kursus annab vajalikke oskusi ruuterite ja lülitite põhikonfiguratsioonide tegemiseks ning IPv4 ja IPv6 aadressiskeemide mõistmiseks.
