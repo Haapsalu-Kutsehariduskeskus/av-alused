@@ -13,68 +13,68 @@
 
 </div>
 
-# Week 2: Understanding the OSI Model - Part 1 (Physical and Data Link Layers)
+# Nädal 2: OSI mudeli mõistmine - Osa 1 (Füüsiline ja andmekiht)
 
-### Introduction to the OSI Model
-The OSI Model (Open Systems Interconnection Model) is like a map for understanding how data travels across a network. It breaks down the process into seven layers, each with its own job. Think of it like a team where each player has a specific role to play.
+### Sissejuhatus OSI mudelisse
+OSI mudel (Open Systems Interconnection Model) on nagu kaart, mis aitab mõista, kuidas andmed liiguvad üle võrgu. See jagab protsessi seitsmeks kihiks, millest igaühel on oma ülesanne. Võite seda võrrelda meeskonnaga, kus iga mängija täidab konkreetset rolli.
 
-In this session, we’ll focus on two layers:
-1. **Physical Layer**
-2. **Data Link Layer**
+Selles sessioonis keskendume kahele kihile:
+1. **Füüsiline kiht**
+2. **Andmekiht**
 
-### 1. The Physical Layer: The Foundation of Networking
+### 1. Füüsiline kiht: Võrgu aluspõhi
 
-- **What Does the Physical Layer Do?**
-  - This is the layer where all the physical stuff happens. It’s about the hardware—the cables, wires, and signals that carry data from one device to another.
+- **Mida teeb füüsiline kiht?**
+  - See on kiht, kus toimub kõik füüsiline. See käsitleb riistvara—kaablid, juhtmed ja signaalid, mis kannavad andmeid ühest seadmest teise.
 
-  **Examples:** Cables, connectors, electrical voltages, physical network topologies.
-  **Concepts relevant to this layer:** RS-232, RJ45, V.34, 100BASE-TX, SDH, DSL, 802.11.
+  **Näited:** Kaablid, pistikud, elektrilised pinged, füüsilised võrgutopoloogiad.
+  **Selles kihis olulised kontseptsioonid:** RS-232, RJ45, V.34, 100BASE-TX, SDH, DSL, 802.11.
   
-  **Physical Layer Simplified:** In the simplest terms, this is the layer responsible for transmitting ones and zeros through cables using electrical signals (twisted pair) or light (fiber optic cables).
+  **Füüsiline kiht lihtsustatult:** Lihtsustatult öeldes vastutab see kiht andmete (nullide ja ühtede) edastamise eest kaablite kaudu, kasutades elektrilisi signaale (keerdpaarid) või valgust (optilised kaablid).
 
-- **Understanding Transmission Media:**
-  - **Transmission media** are the physical paths along which data travels. There are different types, each with its own strengths and weaknesses:
-    - **Copper Cables:** These are like the roads for data in a wired network.
-      - **Unshielded Twisted Pair (UTP) Cable:** The most common type of network cable, used in many homes and offices. It’s made of twisted pairs of wires to reduce interference from other signals.
-    - **Fiber-Optic Cables:** These use light instead of electricity to carry data, allowing for super-fast and long-distance communication.
-      - **Advantages:** Faster and more reliable than copper, but more expensive.
-    - **Wireless Media:** This includes Wi-Fi and Bluetooth. It’s like sending data through the air without any physical cables.
-      - **Advantages:** No need for cables; easier to move devices around.
-      - **Challenges:** Can be affected by walls and other obstacles, leading to slower speeds or lost connections.
+- **Edastuskandjate mõistmine:**
+  - **Edastuskandjad** on füüsilised rajad, mööda mida andmed liiguvad. Neid on erinevat tüüpi, igaühel on oma tugevused ja nõrkused:
+    - **Vaskkaablid:** Need on nagu andmete teed juhtmega võrgus.
+      - **Varjestamata keerdpaar (UTP) kaabel:** Kõige levinum võrgu kaabli tüüp, mida kasutatakse paljudes kodudes ja kontorites. See on valmistatud keerdpaari juhtmetest, et vähendada häireid teistest signaalidest.
+    - **Fiiberoptilised kaablid:** Need kasutavad andmete edastamiseks elektri asemel valgust, võimaldades ülikiiret ja kauglevi kommunikatsiooni.
+      - **Eelised:** Kiirem ja usaldusväärsem kui vask, kuid kallim.
+    - **Juhtmevaba meedia:** Siia kuuluvad Wi-Fi ja Bluetooth. See on nagu andmete saatmine läbi õhu ilma füüsiliste kaabliteta.
+      - **Eelised:** Ei vaja kaableid; seadmeid on lihtsam liigutada.
+      - **Väljakutsed:** Võivad mõjutada seinad ja muud takistused, mis põhjustavad aeglasemat kiirust või katkestatud ühendusi.
 
-![Physical Layer](/lectures/images/physical_layer.png)
+![Füüsiline kiht](/lectures/images/physical_layer.png)
 
-- **Understanding Binary and Hexadecimal:**
-  - Computers speak in binary (1s and 0s). Every piece of data, from a text message to a YouTube video, is broken down into binary.
-  - **Binary Example:** The number 2 in binary is written as `10`.
-  - Sometimes, data is also represented in hexadecimal (a base-16 system), which is easier for humans to read than long binary strings.
-  - **Hexadecimal Example:** The binary number `1010` is `A` in hexadecimal.
+- **Binaar- ja kuueteistkümnendjärgu mõistmine:**
+  - Arvutid suhtlevad binaarkoodis (1-d ja 0-d). Iga andmeühik, olgu see tekstisõnum või YouTube'i video, on jaotatud binaariks.
+  - **Binaari näide:** Number 2 binaaris on `10`.
+  - Mõnikord esitatakse andmeid ka kuueteistkümnendsüsteemis (base-16), mis on inimeste jaoks lihtsam lugeda kui pikad binaarjadad.
+  - **Kuueteistkümnendsüsteemi näide:** Binaararv `1010` on kuueteistkümnendsüsteemis `A`.
 
-  ![Binary](/lectures/images/binary.png)
+  ![Binaar](/lectures/images/binary.png)
 
-### 2. The Data Link Layer: Ensuring Data Gets Where It Needs to Go
-- **Purpose of the Data Link Layer:**
-  - This layer makes sure data moves smoothly from one device to another.  It handles the packaging of data into chunks called frames and checks for errors that might occur during transmission.
+### 2. Andmekiht: Tagades, et andmed jõuavad sinna, kuhu vaja
+- **Andmekihi eesmärk:**
+  - See kiht tagab, et andmed liiguvad sujuvalt ühest seadmest teise. See tegeleb andmete pakkimisega nn kaadriteks ja kontrollib vigade esinemist edastuse ajal.
 
-- **Network Topologies:**
-  - A **topology** is like a map showing how different devices (like computers, printers, and servers) are connected in a network.
-    - **Bus Topology:** All devices share a single communication line. It’s simple but can slow down if too many devices are connected.
-    - **Star Topology:** All devices are connected to a central hub. If the hub fails, the whole network goes down.
-    - **Ring Topology:** Devices are connected in a circle. Data travels in one direction, reducing the chance of collisions.
-    - **Mesh Topology:** Every device is connected to every other device. It’s super reliable but requires lots of cables and connections.
+- **Võrgutopoloogiad:**
+  - **Topoloogia** on nagu kaart, mis näitab, kuidas erinevad seadmed (näiteks arvutid, printerid ja serverid) on võrgus ühendatud.
+    - **Buss-topoloogia:** Kõik seadmed jagavad ühte sideliini. See on lihtne, kuid võib aeglustuda, kui liiga palju seadmeid on ühendatud.
+    - **Täht-topoloogia:** Kõik seadmed on ühendatud keskse jaoturiga. Kui jaotur ebaõnnestub, läheb kogu võrk maha.
+    - **Ringtopoloogia:** Seadmed on ühendatud ringis. Andmed liiguvad ühes suunas, mis vähendab kokkupõrgete tõenäosust.
+    - **Võrgusilm-topoloogia:** Iga seade on ühendatud iga teise seadmega. See on väga usaldusväärne, kuid nõuab palju kaableid ja ühendusi.
 
-![Topology](/lectures/images/topology.png)
+![Topoloogia](/lectures/images/topology.png)
 
-- **Data Link Frame Structure:**
-  - Data is broken down into **frames** before being sent across the network. A frame has three parts:
-    - **Header:** Contains information like the MAC address (a unique identifier for each device).
-    - **Payload:** The actual data being sent (like an email or a webpage).
-    - **Trailer:** Contains error-checking information to ensure the data arrives correctly.
+- **Andmekihi kaadri struktuur:**
+  - Enne võrgu kaudu saatmist jagatakse andmed **kaadriteks**. Kaader koosneb kolmest osast:
+    - **Päis:** Sisaldab teavet nagu MAC-aadress (iga seadme unikaalne identifikaator).
+    - **Sisu:** Tegelik saadetav teave (näiteks e-kiri või veebileht).
+    - **Sabad:** Sisaldab veakontrolli teavet, et tagada andmete õige kohalejõudmine.
 
-![Data Link Frame](/lectures/images/data_link.png)
+![Andmekihi kaader](/lectures/images/data_link.png)
 
-- **Ethernet and MAC Addresses:**
-  - **Ethernet** is the most common technology used in wired networks. It defines how data is transmitted over cables.
-  - **MAC Address:** Every device on a network has a unique identifier called a MAC address. It’s like a postal address, ensuring data gets to the right place.
+- **Ethernet ja MAC-aadressid:**
+  - **Ethernet** on kõige levinum tehnoloogia, mida kasutatakse juhtmega võrkudes. See määratleb, kuidas andmeid kaablite kaudu edastatakse.
+  - **MAC-aadress:** Igal võrguseadmel on unikaalne identifikaator, mida nimetatakse MAC-aadressiks. See on nagu postiaadress, mis tagab, et andmed jõuavad õigesse kohta.
 
- ![MAC Address](/lectures/images/mac.png)
+ ![MAC-aadress](/lectures/images/mac.png)

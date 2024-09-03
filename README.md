@@ -1,56 +1,53 @@
 # Arvutivõrkude alused / Fundamentals of Computer Networks (3 EKAP)
 
-**Enhance Your Networking Skills for the Digital Age**  
-Networking is the backbone of the modern digital world. Whether you’re pursuing a career in cybersecurity, software development, or IT management, understanding how networks function, how to configure them, and how to protect them is essential.
+**Valmistu tuleviku IT-võrkudeks**  
+Võrgundus on kaasaegse digimaailma alus. Kui soovid karjääri küberjulgeolekus, tarkvaraarenduses või IT-halduse valdkonnas, on oluline mõista, kuidas võrgud toimivad, kuidas neid seadistada ja kaitsta.
 
-## Overview
+## Ülevaade
 
-This course introduces students to the foundational concepts of computer networks, covering network architectures, models, protocols, and essential networking components. 
-As networks are critical to various business operations, from data management to cybersecurity, 
-this course will equip you with the skills needed to perform basic configurations on routers and switches and develop a solid understanding of IP addressing schemes, both IPv4 and IPv6.
+See kursus tutvustab tudengitele arvutivõrkude põhimõisteid, hõlmates võrgustikuarhitektuure, mudeleid, protokolle ja olulisi võrgukomponente. Kursus annab vajalikke oskusi ruuterite ja lülitite põhikonfiguratsioonide tegemiseks ning IPv4 ja IPv6 aadressiskeemide mõistmiseks.
 
-By the end of this course, you will be prepared to configure and troubleshoot small networks, making it an excellent starting point in HKHK.
+Kursuse lõpuks oskate seadistada ja tõrkeotsingut teha väikestes võrkudes. Suurepärane algus IT-õpingutele HKHK-s.
 
-## You'll Learn These Core Skills:
-- Build simple LANs, perform basic configurations for routers and switches, and implement IPv4 and IPv6 addressing schemes.
-- Configure routers, switches, and end devices to provide access to local and remote network resources, ensuring end-to-end connectivity between remote devices.
-- Develop critical thinking and problem-solving skills using real equipment and Cisco Packet Tracer.
-- Configure and troubleshoot connectivity in a small network using security best practices.
+## Õpite Need Põhioskused:
+- Luua lihtsaid LAN-e, teha põhikonfiguratsioone ruuteritel ja lülititel ning rakendada IPv4 ja IPv6 aadressskeeme.
+- Seadistada ruutereid, lüliteid ja lõppseadmeid, tagades ühenduse kaugseadmete vahel.
+- Arendada kriitilist mõtlemist ja probleemide lahendamise oskusi, kasutades Cisco Packet Tracerit.
+- Seadistada ja tõrkeotsingut teha väikestes võrkudes, rakendades turvameetmeid.
 
 ## Õppejõud / Teachers
 - [Maria Talvik](mailto:maria.talvik@hkhk.edu.ee)
 
-## Schedule
-- Week 1: Introduction to Networks and Basic Configurations
-- Week 2: OSI Model - Part 1 (Physical and Data Link Layers)
-- Week 3: OSI Model - Part 2 (Network Layer and Subnetting)
-- Week 4: OSI Model - Part 3 (Transport, Session, Presentation, and Application Layers)
-- Week 5: Network Devices and Their Management
-- Week 6: Final Project - Comprehensive Network Design
+## Ajakava
+- 1. Nädal: Sissejuhatus võrkudesse ja põhikonfiguratsioonid
+- 2. Nädal: OSI mudel - 1. osa (Füüsiline ja andmelülikihi kihid)
+- 3. Nädal: OSI mudel - 2. osa (Võrgukiht ja alavõrgutamine)
+- 4. Nädal: OSI mudel - 3. osa (Transpordi-, seansi-, esitlus- ja rakenduskiht)
+- 5. Nädal: Võrguseadmed ja nende haldamine
+- 6. Nädal: Lõppprojekt - Tervikliku võrgukujundus
 
-## Labs
-- All labs can be completed in the classroom or at home using Cisco Packet Tracer.
+## Laborid
+- Kõik laborid saab läbida klassis või kodus kasutades Cisco Packet Tracerit.
 
-## Participation
-- Active participation in all labs and discussions is expected.
+## Osalemine
+- Aktiivne osalemine kõigis laborites ja aruteludes on oodatud.
 
-## Final Project
-- A comprehensive project where students design, configure, and secure a small network, applying all the concepts learned throughout the course.
+## Lõppprojekt
+- Terviklik projekt, kus tudengid kujundavad, seadistavad ja turvavad väikese võrgu, kasutades kursusel õpitud kontseptsioone.
 
-## Assessment Points
-- **Participation:** 10%
-- **Labs:** 30%
-- **Quizzes:** 20%
-- **Assignments:** 20%
-- **Final Project:** 20%
+## Hindepunktid
+- **Osalemine:** 10%
+- **Laborid:** 30%
+- **Viktoriinid:** 20%
+- **Ülesanded:** 20%
+- **Lõppprojekt:** 20%
 
-# Resources for Networking Studies
+# Võrgustikuõpingute Ressursid
 
-- [CCNA Course from Jeremy's IT Lab](https://www.youtube.com/playlist?list=PLxbwE86jKRgMpuZuLBivzlM8s2Dk5lXBQ)
-- [CCNA 200-301 Notes](https://github.com/laaraujo/ccna-notes)
-- TÜ Võrgutehnoloogia/Network Technology I (LTAT.06.004, 6 ECTS)
+- [CCNA kursus Jeremy IT Labist](https://www.youtube.com/playlist?list=PLxbwE86jKRgMpuZuLBivzlM8s2Dk5lXBQ)
+- [CCNA 200-301 märkmed](https://github.com/laaraujo/ccna-notes)
+- TÜ Võrgutehnoloogia/Network Technology I (LTAT.06.004, 6 EAP)
 - [eucip](https://github.com/eucip/eucip/blob/master/oppematerjalid/c_haldus_03_side_ja_vorgud.md)
-- [[CCNA 200-301 Notes]](./resources/Laaneoks_VÕRG.pdf)
-
+- [[CCNA 200-301 märkmed]](./resources/Laaneoks_VÕRG.pdf)
 
 ![Networking](/lectures/images/main_networking.png)
