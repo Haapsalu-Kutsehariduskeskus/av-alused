@@ -1,5 +1,7 @@
 # Arvutivõrkude alused / Fundamentals of Computer Networks (3 EKAP)
 
+![Networking](/lectures/images/main_networking.png)
+
 **Valmistu tuleviku IT-võrkudeks**  
 Võrgundus on kaasaegse digimaailma alus. Kui soovid karjääri küberjulgeolekus, tarkvaraarenduses või IT-halduse valdkonnas, on oluline mõista, kuidas võrgud toimivad, kuidas neid seadistada ja kaitsta.
 
@@ -49,5 +51,3 @@ Kursuse lõpuks oskate seadistada ja tõrkeotsingut teha väikestes võrkudes. S
 - TÜ Võrgutehnoloogia/Network Technology I (LTAT.06.004, 6 EAP)
 - [eucip](https://github.com/eucip/eucip/blob/master/oppematerjalid/c_haldus_03_side_ja_vorgud.md)
 - [[CCNA 200-301 märkmed]](./resources/Laaneoks_VÕRG.pdf)
-
-![Networking](/lectures/images/main_networking.png)
