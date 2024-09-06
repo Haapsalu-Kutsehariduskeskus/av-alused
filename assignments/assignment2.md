@@ -1,28 +1,23 @@
-## Assignment 2: Subnetting and IP Addressing
+# Assignment 2: OSI Model and Network Protocols
+**Title**: Understanding the OSI Model and Network Protocols
 
-**Title**: Subnetting and IP Addressing
+**Objective**:  
+Identify and explain the layers of the OSI model and the role of key network protocols.
 
-**Objective**:
-- Demonstrate understanding of IPv4 addressing and subnetting.
-- Calculate and apply subnetting to a given network scenario.
+**Instructions**:  
+1. Research the 7 layers of the OSI model.
+2. Identify at least one common protocol used at each layer (e.g., TCP, UDP, HTTP, etc.).
+3. Describe how data is transmitted through the OSI model from Layer 7 (Application) to Layer 1 (Physical).
+4. Document the research and explain the role of the identified protocols in network communication.
 
-**Instructions**:
-1. Given an IP address range, calculate the necessary subnets to support a network with multiple departments (e.g., Admin, Sales, IT).
-2. Design a network in Packet Tracer that uses your calculated subnets.
-3. Assign IP addresses to all devices according to your subnetting plan.
-4. Verify connectivity between devices in different subnets using Ping.
-
-**Deliverables**:
-- A written report with your subnet calculations and explanation.
-- A Packet Tracer file (`.pkt`) of your network design.
-- A brief video (optional) demonstrating connectivity testing between subnets.
-
+**Deliverables**:  
+- A written report explaining the OSI model and protocols at each layer.
+  
 **Assessment Criteria**:
-- Accuracy of subnetting calculations (40%).
-- Correct IP configuration and connectivity (50%).
-- Quality of the report (10%).
+- Understanding of the OSI model (30%).
+- Correct identification and explanation of protocols (50%).
+- Clarity and completeness of the report (20%).
 
-**Submission Details**:
-- Submit your report, Packet Tracer file, and video (if included) to the GitHub repository under `/assignments/assignment2/` by the due date.
-
+**Submission Details**:  
+Submit your report to the GitHub repository under `/assignments/assignment2/` by the due date.  
 **Deadline**: [Insert Date]
