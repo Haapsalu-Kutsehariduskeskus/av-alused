@@ -48,4 +48,4 @@ Kursuse lõpuks oskate seadistada ja tõrkeotsingut teha väikestes võrkudes. S
 - [CCNA 200-301 märkmed](https://github.com/laaraujo/ccna-notes)
 - TÜ Võrgutehnoloogia/Network Technology I (LTAT.06.004, 6 EAP)
 - [eucip](https://github.com/eucip/eucip/blob/master/oppematerjalid/c_haldus_03_side_ja_vorgud.md)
-- [[CCNA 200-301 märkmed]](./resources/Laaneoks_VÕRG.pdf)
+- [[Laaneoks]](./resources/Laaneoks_VÕRG.pdf)
