@@ -1,28 +1,24 @@
-## Assignment 3: Network Security Configuration
+# Assignment 3: Introduction to Network Topologies
+**Title**: Basic Network Topologies and Their Use Cases
 
-**Title**: Securing a Small Network
+**Objective**:  
+Understand common network topologies and their use cases in real-world scenarios.
 
-**Objective**:
-- Apply network security best practices to protect a small network.
-- Configure secure access to network devices using SSH.
+**Instructions**:  
+1. Research the different types of network topologies (e.g., Star, Ring, Bus, Mesh).
+2. Identify a real-world use case for each topology.
+3. Use a diagramming tool (e.g., Lucidchart, draw.io) to create a visual representation of each topology.
+4. Document the pros and cons of each topology and explain why a particular topology might be used in a specific situation.
 
-**Instructions**:
-1. Using the network from Assignment 1, configure SSH access to your router and switch.
-2. Implement basic security measures, such as setting strong passwords, disabling unused ports, and configuring access control lists (ACLs).
-3. Test the security by attempting to access the devices using both secure and insecure methods.
-4. Document the security configurations and results of your testing.
-
-**Deliverables**:
-- A written report detailing the security configurations and testing results.
-- A Packet Tracer file (`.pkt`) showing the secured network.
-- Screenshots or terminal output demonstrating successful SSH configuration.
+**Deliverables**:  
+- A written report explaining each topology and its use case.
+- Diagrams representing each topology.
 
 **Assessment Criteria**:
-- Implementation of security best practices (50%).
-- Successful configuration of SSH and ACLs (30%).
-- Clarity and thoroughness of the report (20%).
+- Understanding of network topologies (40%).
+- Accuracy and clarity of diagrams (40%).
+- Clarity and completeness of the report (20%).
 
-**Submission Details**:
-- Submit your report, Packet Tracer file, and screenshots to the GitHub repository under `/assignments/assignment3/` by the due date.
-
+**Submission Details**:  
+Submit your report and diagrams to the GitHub repository under `/assignments/assignment3/` by the due date.  
 **Deadline**: [Insert Date]
