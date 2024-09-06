@@ -2,8 +2,6 @@
 
 ![Networking](/lectures/images/main_networking.png)
 
-**Valmistu tuleviku IT-võrkudeks**  
-Võrgundus on kaasaegse digimaailma alus. Kui soovid karjääri küberjulgeolekus, tarkvaraarenduses või IT-halduse valdkonnas, on oluline mõista, kuidas võrgud toimivad, kuidas neid seadistada ja kaitsta.
 
 ## Ülevaade
 
