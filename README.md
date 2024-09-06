@@ -42,7 +42,7 @@ Kursuse lõpuks oskate seadistada ja tõrkeotsingut teha väikestes võrkudes. S
 - **Ülesanded:** 20%
 - **Lõppprojekt:** 20%
 
-# Võrgustikuõpingute Ressursid
+### Võrgustikuõpingute Ressursid
 
 - [CCNA kursus Jeremy IT Labist](https://www.youtube.com/playlist?list=PLxbwE86jKRgMpuZuLBivzlM8s2Dk5lXBQ)
 - [CCNA 200-301 märkmed](https://github.com/laaraujo/ccna-notes)
