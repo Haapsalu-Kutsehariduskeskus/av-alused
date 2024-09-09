@@ -173,7 +173,6 @@ Iga kiht OSI mudelis täidab oma osa andmete töötlemisel ja saatmisel.
 ![OSI kihtide protokollide andmeüksuste nimetused](/lectures/images/osimudel.png)
 ![Iga kihis enda metaandmed](/lectures/images/metaandmed.png)
 
-
 ### 3. Kahendarvutus ja arvutus
 
 Arvutid ja võrgud kasutavad **kahendsüsteemi**, seega on oluline sellest natuke rääkida.
@@ -182,7 +181,8 @@ Arvutid ja võrgud kasutavad **kahendsüsteemi**, seega on oluline sellest natuk
 - Erinevus on selles, et kahendsüsteemis on ainult **kaks numbrit**: 0 ja 1, samas kui kümnendsüsteemis on **kümme numbrit** (0-9).
 - Paljud asjad kahendsüsteemis on samad, mõned tegevused on isegi **lihtsamad**.
 
-Arvutid kasutavad binaarsüsteemi aadresside ja **suhtluse** jaoks. Näiteks IPv4 aadress koosneb 32 bitist, mis on jagatud **4 gruppi** (oktetid). Iga oktett on 8 bitti (1 bait).
+Arvutid kasutavad binaarsüsteemi aadresside ja **suhtluse** jaoks. Näiteks IPv4 aadress koosneb 32 bitist, mis on jagatud **4 gruppi** (oktetid).
+Iga oktett on 8 bitti (1 bait).
 
 IP-aadresse nagu `10101000` teisendatakse kümnendsüsteemi nagu `192.168.0.1`.
 Teisendamiseks kasutatakse **positsioonilist märkimist**, kus iga binaarne koht kahekordistab oma väärtust (1, 2, 4, 8 jne).
