@@ -1,15 +1,13 @@
-<div class="small-grey-box">
-  ## Module 1: Networking Today
-  - [Networking Today](https://www.youtube.com/watch?v=TBAvNZIcdVQ&list=PLk4NQNr6-L8onI6MaPcfsRZJOvFO3S5D6&index=2)
+## Module 1: Networking Today
+- [Networking Today](https://www.youtube.com/watch?v=TBAvNZIcdVQ&list=PLk4NQNr6-L8onI6MaPcfsRZJOvFO3S5D6&index=2)
 
-  ## Module 2: Basic Switch and End Device Configuration
-  - [Basic Switch and End Device Configuration - Part 1](https://www.youtube.com/watch?v=4fMoxkiTEjc&list=PLk4NQNr6-L8onI6MaPcfsRZJOvFO3S5D6&index=2)
-  - [Basic Switch and End Device Configuration - Part 2](https://www.youtube.com/watch?v=ruainw-2Y28&list=PLk4NQNr6-L8onI6MaPcfsRZJOvFO3S5D6&index=3)
+## Module 2: Basic Switch and End Device Configuration
+- [Basic Switch and End Device Configuration - Part 1](https://www.youtube.com/watch?v=4fMoxkiTEjc&list=PLk4NQNr6-L8onI6MaPcfsRZJOvFO3S5D6&index=2)
+- [Basic Switch and End Device Configuration - Part 2](https://www.youtube.com/watch?v=ruainw-2Y28&list=PLk4NQNr6-L8onI6MaPcfsRZJOvFO3S5D6&index=3)
 
-  ## Module 3: Protocols and Models
-  - [Protocols and Models - Part 1](https://www.youtube.com/watch?v=VqGIeL0jRJI&list=PLk4NQNr6-L8onI6MaPcfsRZJOvFO3S5D6&index=4)
-  - [Protocols and Models - Part 2](https://www.youtube.com/watch?v=agX0G-9JTpM&list=PLk4NQNr6-L8onI6MaPcfsRZJOvFO3S5D6&index=5)
-</div>
+## Module 3: Protocols and Models
+- [Protocols and Models - Part 1](https://www.youtube.com/watch?v=VqGIeL0jRJI&list=PLk4NQNr6-L8onI6MaPcfsRZJOvFO3S5D6&index=4)
+- [Protocols and Models - Part 2](https://www.youtube.com/watch?v=agX0G-9JTpM&list=PLk4NQNr6-L8onI6MaPcfsRZJOvFO3S5D6&index=5)
 
 # Week 1: Sissejuhatus võrkudesse
 
