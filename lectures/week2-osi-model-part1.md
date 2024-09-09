@@ -45,13 +45,92 @@ Selles sessioonis keskendume kahele kihile:
 
 ![Füüsiline kiht](/lectures/images/physical_layer.png)
 
-- **Binaar- ja kuueteistkümnendjärgu mõistmine:**
-  - Arvutid suhtlevad binaarkoodis (1-d ja 0-d). Iga andmeühik, olgu see tekstisõnum või YouTube'i video, on jaotatud binaariks.
-  - **Binaari näide:** Number 2 binaaris on `10`.
-  - Mõnikord esitatakse andmeid ka kuueteistkümnendsüsteemis (base-16), mis on inimeste jaoks lihtsam lugeda kui pikad binaarjadad.
-  - **Kuueteistkümnendsüsteemi näide:** Binaararv `1010` on kuueteistkümnendsüsteemis `A`.
+Sidevõrkudes kasutatakse füüsiliste ja loogiliste struktuuride loomiseks erinevaid sideüksusi. Saadaval on kolme gruppi sideüksusi:
 
-  ![Binaar](/lectures/images/binary.png)
+**Passiivsed üksused**
+
+assiivsed üksused on sidevõrgu ühenduspunktid, mis ei muuda sisendisse saabuva signaali parameetreid. See üksuste grupp sisaldab:
+
+Ühenduspistikud (Jack couplers) on passiivsed üksused, mida kasutatakse võrgukaabli pikendamiseks.
+ ![Ühenduspistiku pesad](/lectures/images/jackcouplers.png)
+  Seinapistik (wall plate) on ühenduspaneel ühe tööjaama jaoks, millel on tavaliselt üks või kaks porti. Portidesse on võimalik asetada pesasid RJ-45 või RJ-11 tüüpi otsadele.
+
+Juhtmepaneel (Patch panel) on ühendus- ja jaotuspunkt kaablite korraldamiseks.
+
+Passiivne kontsentraator/jaotur (passive concentrator/hub) (Joonis 3.5, paremal) on keskne ühenduskolmik, mille abil luuakse ühendus hulga tööjaamade vahel. See ei sisalda elektroonilisi komponente ega vaja seega elektritoidet. Suvalisse porti saabuv sisendsignaal edastatakse kõigisse teistesse portidesse.
+ ![Passivne jaotur](/lectures/images/patchpanel.png)
+ 
+ **Aktiivsed seadmed**
+
+Aktiivsed seadmed võimendavad ja muudavad signaale, et need saaksid liikuda pikematel vahemaadel või erinevatel kaablitel.
+
+- **Ülekandemeediumi konverterid** (näiteks adapterid): Need seadmed ühendavad kaks erinevat tüüpi kaableid, näiteks ühendavad UTP-kaablivõrgu valguskaablivõrguga.
+
+- **Repiiter**: 
+  - See töötab füüsilisel tasandil ja aitab signaale võimendada, et need jõuaksid kaugemale.
+  - Repiiter ei vali, milliseid signaale võimendada – see taastab nii kasulikud andmed kui ka müra.
+  - Seda kasutatakse kahe sama tüüpi võrgusegmendi ühendamiseks ja signaalide tugevdamiseks.
+
+- **Hub (jaotur)**:
+  - See on seade, millel on mitu sisendit ja mis ühendab tööjaamad (arvutid) omavahel.
+  - **Olulised omadused:**
+    - See ühendab mitu tööjaama ja moodustab neist ühe võrgu.
+    - Hube kasutatakse UTP-kaablivõrkudes.
+    - Hub ei salvesta andmeid, nii et andmevahetuskiirus võib olla madalam.
+    - Kui port on rikkis, võib hub selle välja lülitada.
+    - Kõik ühendatud pordid on võrdse prioriteediga ja hub ei suuda kohandada kiirust, kui seadmed töötavad erinevatel kiirustel.
+
+![Jaotur](/lectures/images/hub.png)
+
+**Seadmed võrgu, segmentide ja alamvõrkude struktureerimiseks**
+
+Seadmeid nagu sillad, switchid, ruuterid ja lüüsid kasutatakse sidevõrkude loogiliseks struktureerimiseks (Joonis 3.6).
+
+**Sild (bridge)**
+Sild jagab võrgu loogilisteks segmentideks. Sõnumid edastatakse ühest segmendist teise üle silla pordi, kui vastuvõtja unikaalne võrguaadress (MAC) kuulub vastavasse segmenti. Silla tegevus toimub järgmiste sammude kaudu:
+
+1. Andmepaketi vastuvõtmisel kontrollitakse lähteaadressi ja sihtaadressi.
+2. Kui sihtaadressi ei ole tabelis, edastatakse pakett kõikidesse segmentidesse ning lisatakse sihtaadress tabelisse.
+3. Sild edastab paketi vastavale segmendile, kui sihtaadress on tabelis.
+4. Kui lähteaadress ja sihtaadress on samas segmendis, ei edastata paketti teise segmenti.
+
+Sildade peamine eesmärk on filtreerida segmentidevahelist liiklust, et vähendada ummikuid suuremates kohtvõrkudes. Sillad tegutsevad OSI võrgumudeli kanalikihis ja neid kasutatakse näiteks hubidega ehitatud võrkudes.
+
+**Switch (kommutaator)**
+Switch on uuema generatsiooni sild, mis võimaldab informatsiooni paralleelset töötlemist ja suurendab võrgu andmevahetuskiirust. Switch töötab järgmiselt:
+
+1. Switchi saabumisel kontrollitakse paketti ja viidatakse tabelile, et kindlaks teha, kas vastuvõtja MAC aadress on kirjas.
+2. Kui MAC aadress puudub, saadetakse pakett kõigisse portidesse, kuni sihtseadmelt saadakse vastus.
+3. Seejärel tehakse kirje, mis näitab, milline väljundport sobitati konkreetse MAC aadressiga.
+4. Kõik järgnevad sama aadressi paketid edastatakse otse vastavasse porti.
+
+Switch eristab kolme tüüpi vastuvõtja aadresse:
+- **Leviedastus (broadcast)**: Pakett saadetakse kõigisse portidesse.
+- **Multiedastus (multicast)**: Pakett saadetakse eelnevalt kindlaks määratud portidesse.
+- **Üksikedastus (unicast)**: Pakett saadetakse ainult ühte porti, mis tõstab võrgu turvalisust ja mahtu.
+
+Switchid töötavad tavaliselt OSI mudeli teise kihi baasil, kuid kõrgema klassi kommutaatorid võivad töötada ka kolmanda ja neljanda kihi baasil.
+
+Switchi spetsiifilised tunnused:
+- Iga pordi jaoks on spetsiaalne protsessor sissetulevate andmepakettide töötlemiseks.
+- Iga tööjaam saab edastada andmeid ilma teiste tööjaamadega konkureerimata.
+- Kontrollib ühendatud seadmete MAC aadresse.
+- Võimaldab tõlgendada andmepakette ühest standardist teise.
+- Puhverdab andmeid enne vastuvõtja ühendusparameetrite tuvastamist.
+- Suhtleb täisdupleks-režiimis, võimaldades samaaegset andmeedastust ja vastuvõttu.
+
+**Ruuter**
+Ruuter on eraldiseisev seade, mida kasutatakse infopakettide jaotamiseks erinevate võrkude või võrgusegmentide vahel. Erinevalt hubidest ja sildadest töötab ruuter OSI mudeli võrgukihis ja kasutab IP aadresse. Ruuter kasutab marsruutimistabelit, kuhu on salvestatud teiste ruuterite IP aadressid, et määrata parim tee andmepakettide edastamiseks.
+
+Näide:
+- Võrgus A asuvad seadmed A1 ja A2, võrgus B asuvad seadmed B1 ja B2. Kui andmed saadetakse A1-lt A2-le, ei edasta ruuter neid võrku B. Kui aga andmed saadetakse A1-lt B1-le, edastab ruuter need võrku B.
+
+Ruuterid vähendavad võrguliiklust ja parandavad kohtvõrgu turvalisust.
+
+**Lüüsid (gateways)**network
+Lüüs ühendab kahte kohtvõrku või kohtvõrgu ja globaalse võrgu, mis kasutavad erinevaid protokolle ja ligipääsuprotseduure. Lüüs eristab ja tuvastab liiklust ning kasutatakse näiteks kohtvõrgu ühendamiseks globaalsesse võrku.
+
+![Võrguseadmed](/lectures/images/netowrkdevices.png)
 
 ### 2. Andmekihi kaadri struktuur
 
@@ -69,7 +148,8 @@ OSI mudeli kasutamisest on mitmeid eeliseid, näiteks:
 	•	Õppimise lihtsustamine.
 
 Ülemise kihi andmed muutuvad siis, kui need liiguvad läbi teiste kihtide, ja igal kihil on oma roll andmete töötlemisel.
-
+![OSI kihtide protokollide andmeüksuste nimetused](/lectures/images/osimudel.png)
+![Iga kihis enda metaandmed](/lectures/images/metaandmed.png)
 
 
 
