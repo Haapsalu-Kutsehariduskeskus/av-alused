@@ -13,7 +13,7 @@
 
 </div>
 
-# Nädal 2: OSI mudeli mõistmine - Osa 1 (Füüsiline ja andmekiht)
+# Nädal 2: OSI mudeli mõistmine - Osa 1 (Füüsiline ja kanalikiht (data link layer))
 
 ### Sissejuhatus OSI mudelisse
 OSI mudel (Open Systems Interconnection Model) on nagu kaart, mis aitab mõista, kuidas andmed liiguvad üle võrgu. See jagab protsessi seitsmeks kihiks, millest igaühel on oma ülesanne. Võite seda võrrelda meeskonnaga, kus iga mängija täidab konkreetset rolli. OSI mudelist sai peamine mudel, mida ettevõtted järgivad toodete ja protokollide (reeglid, kuidas võrgud töötavad) loomisel.
@@ -172,3 +172,71 @@ Iga kiht OSI mudelis täidab oma osa andmete töötlemisel ja saatmisel.
 
 ![OSI kihtide protokollide andmeüksuste nimetused](/lectures/images/osimudel.png)
 ![Iga kihis enda metaandmed](/lectures/images/metaandmed.png)
+
+
+### 3. Kahendarvutus ja arvutus
+
+Arvutid ja võrgud kasutavad **kahendsüsteemi**, seega on oluline sellest natuke rääkida.
+
+- **Kahendsüsteem** on sarnane kümnendsüsteemile, mida me igapäevaselt kasutame. 
+- Erinevus on selles, et kahendsüsteemis on ainult **kaks numbrit**: 0 ja 1, samas kui kümnendsüsteemis on **kümme numbrit** (0-9).
+- Paljud asjad kahendsüsteemis on samad, mõned tegevused on isegi **lihtsamad**.
+
+Arvutid kasutavad binaarsüsteemi aadresside ja **suhtluse** jaoks. Näiteks IPv4 aadress koosneb 32 bitist, mis on jagatud **4 gruppi** (oktetid). Iga oktett on 8 bitti (1 bait).
+
+IP-aadresse nagu `10101000` teisendatakse kümnendsüsteemi nagu `192.168.0.1`.
+Teisendamiseks kasutatakse **positsioonilist märkimist**, kus iga binaarne koht kahekordistab oma väärtust (1, 2, 4, 8 jne).
+
+![Binaarsüsteem](/lectures/images/binar.png)
+
+Binaarsüsteemis määrab numbri **positsioon** selle väärtuse. Näiteks 8-bitises arvus on vasakpoolseim bitt 128, järgmine 64 jne.
+Binaararv `11000000` teisendatakse kümnendsüsteemi kui `128 + 64 = 192`.
+
+**Kuueteistkümnendsüsteem** kasutab **baasi 16**. Selleks kasutatakse numbreid 0-9 ja tähti **A-F** (A=10, B=11 jne).
+**IPv6** aadressid koosnevad 128 bitist ja neid esitatakse heksadesimaalis lihtsamaks lugemiseks.
+Iga osa IPv6 aadressist on nimetatud **heksatetiks**, mis koosneb neljast heksadesimaalsest märgist.
+
+![Kuueteistkümnendsüsteem](/lectures/images/16.png)
+
+**Teisendamine arvusüsteemide vahel**
+
+- **Binaarsete arvude teisendamine kümnenditeks**: Lisa need väärtused kokku, kus on 1.
+- **Kümnendite teisendamine binaariks**: Jaga arv 2-ga ja jälgi jääke.
+- **Kuueteistkümnendite teisendamine kümnendiks/binaariks**: Esmalt teisenda heksadesimaal binaariks, siis binaar kümnendiks.
+- **Tööriistad**: Windowsi **kalkulaator** aitab teisendustega .
+
+![IPv4 to Binary](/lectures/images/binary2.png)
+
+### 4. Kanalikiht (Data Link Layer)
+
+Kui kaks arvutit omavahel räägivad, peab keegi aitama neil üksteist mõista. Kanalikiht teebki seda, pakkides andmed nii, et mõlemad arvutid teavad, kuidas neid lugeda. Lisaks kontrollib see kiht, kas andmed on õiged või kahjustatud. Kui andmed on katki, saadetakse need tagasi. Arvutiga paralleele tuues võib kanalikihti vaadelda ka seadmedraiverina.
+
+Selle kihi töö on aidata arvutitel andmeid edastada ja vastu võtta võrgu kaudu.
+
+Kanalikiht jaguneb kaheks oluliseks osaks:
+- **LLC (Loogilise lingi kontroll)**: Aitab arvutil suhelda oma tarkvara ja riistvaraga.
+- **MAC (Meediumipöörduse juhtimine)**: Kontrollib, kuidas andmed saadetakse ja vastuvõetakse. Igal seadmel on oma **MAC-aadress**, mis on nagu seadme unikaalne nimi võrgus.
+
+Võrgu topoloogiat võib mõelda kui kaarti sellest, kuidas arvutid on ühendatud:
+- **Füüsiline topoloogia**: Näitab, kuidas arvutid ja seadmed (nt ruuterid ja kommutaatorid) on kaablite või traadita ühendustega seotud.
+- **Loogiline topoloogia**: Näitab, kuidas andmed liiguvad, milliseid teid nad kasutavad.
+
+**Levinumad võrguseaded**
+
+- **Punkt-punkt**: Kaks seadet on omavahel otse ühendatud. Kujuta ette, et need on nagu kaks inimest, kes räägivad teineteisega läbi otse telefoni.
+- **Tsentraalne ühendus (Hub-and-Spoke)**: Üks kesksõlm (näiteks ruuter) ühendab mitmeid teisi seadmeid. Mõtle sellele kui klassiruumile, kus õpetaja räägib korraga kõigile õpilastele.
+- **Võrgustik (Mesh)**: Iga seade on ühendatud iga teise seadmega. See on väga usaldusväärne, kuid keeruline ja kallis seadistada. Mõtle sellele kui väga keerulisele veebile.
+
+- **Pooldupleks**: Seadmed saavad korraga kas ainult saata või vastu võtta, mitte mõlemat korraga. See on nagu raadiosaatja, kus saab ainult rääkida või kuulata, kuid mitte korraga.
+- **Täisdupleks**: Seadmed saavad korraga andmeid saata ja vastu võtta. See on nagu telefonikõne, kus mõlemad pooled saavad samaaegselt rääkida ja kuulata.
+
+Kui mitu seadet proovivad korraga andmeid saata, võib tekkida "kokkupõrge", nagu kaks inimest, kes üritavad korraga rääkida.
+- **CSMA/CD**: Kui kokkupõrge tuvastatakse, seadmed ootavad ja proovivad hiljem uuesti.
+- **CSMA/CA**: Seda kasutatakse Wi-Fi võrkudes, kus seadmed üritavad vältida kokkupõrget, oodates oma järjekorda.
+
+Arvutivõrkudes saadetakse infot väikestes pakikestes, mida kutsutakse **kaadriteks** (frame). Need kaadrid on nagu kastid, mis hoiavad bitid (väiksed andmetükid) sees. Mõnikord lisatakse kaadrisse erilisi bitte, et arvuti teaks, millal kaader algab ja lõpeb.
+Kui kaadri sees on liiga palju järjestikuseid sarnaseid bitte, võib arvuti ära segi minna. Seepärast lisatakse mõned lisa-bitid, et arvuti teaks kindlalt, kus kaadri lõpp on. Nii nagu salakirjas lisatakse vahel tähti, et sõnum oleks arusaadav.
+
+Kaadriga saadetavatele andmetele lisatakse juurde **päis** (header) ja olenevalt protokollist võibolla ka **saba** (trailer). Päis sisaldab **väljasid**, mis annavad andmete kohta informatsiooni, näiteks kaadri puhul **sihtaadress**, **lähteaadress**, üle kantavate andmete hulk, kaadri kontrollsumma jms.
+
+![OSI kanalikiht](/lectures/images/datalink.png)

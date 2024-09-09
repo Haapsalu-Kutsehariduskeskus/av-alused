@@ -20,7 +20,7 @@ Kursuse lõpuks oskate seadistada ja tõrkeotsingut teha väikestes võrkudes. S
 
 ## Ajakava
 - 1. Nädal: Sissejuhatus võrkudesse ja põhikonfiguratsioonid
-- 2. Nädal: OSI mudel - 1. osa (Füüsiline ja andmelülikihi kihid)
+- 2. Nädal: OSI mudel - 1. osa (Füüsiline ja kanalikihid)
 - 3. Nädal: OSI mudel - 2. osa (Võrgukiht ja alavõrgutamine)
 - 4. Nädal: OSI mudel - 3. osa (Transpordi-, seansi-, esitlus- ja rakenduskiht)
 - 5. Nädal: Võrguseadmed ja nende haldamine

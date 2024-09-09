@@ -29,10 +29,10 @@ Kursuse lõpuks on tudengid võimelised:
   - Ethernet-kaabli ehitamine.
   - Juhtmega ja juhtmevaba NIC-teabe vaatamine.
 
-### **2. Nädal: OSI mudel - 1. osa (Füüsiline ja andmelülikihi kihid) (Moodulid 4-7)**
+### **2. Nädal: OSI mudel - 1. osa (Füüsiline ja kanalikihid) (Moodulid 4-7)**
 - **Teemad**:
   - Füüsiline kiht: Ülekandemeedia ja signaali edastamine.
-  - Andmelülikihi kiht: Etherneti protokoll ja MAC-aadressid.
+  - Kanalilikihi kiht: Etherneti protokoll ja MAC-aadressid.
 - **Laborid**:
   - 2labs
   - 3labs
