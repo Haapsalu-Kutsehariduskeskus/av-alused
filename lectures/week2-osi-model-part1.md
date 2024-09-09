@@ -21,7 +21,7 @@ OSI mudel (Open Systems Interconnection Model) on nagu kaart, mis aitab mõista,
 
 Selles sessioonis keskendume kahele kihile:
 1. **Füüsiline kiht**
-2. **Andmekiht**
+2. **Kanalikiht**
 
 ### 1. Füüsiline kiht: Võrgu aluspõhi
 
