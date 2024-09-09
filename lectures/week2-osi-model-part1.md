@@ -130,7 +130,7 @@ Ruuterid vähendavad võrguliiklust ja parandavad kohtvõrgu turvalisust.
 **Lüüsid (gateways)**network
 Lüüs ühendab kahte kohtvõrku või kohtvõrgu ja globaalse võrgu, mis kasutavad erinevaid protokolle ja ligipääsuprotseduure. Lüüs eristab ja tuvastab liiklust ning kasutatakse näiteks kohtvõrgu ühendamiseks globaalsesse võrku.
 
-![Võrguseadmed](/lectures/images/netoworkdevices.png)
+![Võrguseadmed](/lectures/images/networkdevices.png)
 
 ### 2. Andmekihi kaadri struktuur
 
