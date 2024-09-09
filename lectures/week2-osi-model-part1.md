@@ -53,26 +53,32 @@ Selles sessioonis keskendume kahele kihile:
 
   ![Binaar](/lectures/images/binary.png)
 
-### 2. Andmekiht: Tagades, et andmed jõuavad sinna, kuhu vaja
-- **Andmekihi eesmärk:**
-  - See kiht tagab, et andmed liiguvad sujuvalt ühest seadmest teise. See tegeleb andmete pakkimisega nn kaadriteks ja kontrollib vigade esinemist edastuse ajal.
+### 2. Andmekihi kaadri struktuur
 
-- **Võrgutopoloogiad:**
-  - **Topoloogia** on nagu kaart, mis näitab, kuidas erinevad seadmed (näiteks arvutid, printerid ja serverid) on võrgus ühendatud.
-    - **Buss-topoloogia:** Kõik seadmed jagavad ühte sideliini. See on lihtne, kuid võib aeglustuda, kui liiga palju seadmeid on ühendatud.
-    - **Täht-topoloogia:** Kõik seadmed on ühendatud keskse jaoturiga. Kui jaotur ebaõnnestub, läheb kogu võrk maha.
-    - **Ringtopoloogia:** Seadmed on ühendatud ringis. Andmed liiguvad ühes suunas, mis vähendab kokkupõrgete tõenäosust.
-    - **Võrgusilm-topoloogia:** Iga seade on ühendatud iga teise seadmega. See on väga usaldusväärne, kuid nõuab palju kaableid ja ühendusi.
+OSI mudeli alumine kiht pakub teenuseid ülemisele kihile. See tähendab, et alumised kihid tegelevad üldisemate asjadega, samas kui ülemised kihid tegelevad spetsiifilisemate probleemidega. Võib öelda, et alumine kiht loob aluse ülemisele kihile. Näiteks esimene kiht, füüsiline kiht, vastutab bittide (väikseimad andmeüksused) liikumise eest kanalikihti, mis tegeleb juba edasi nende andmete edastamisega. Kanalikiht ei pea enam muretsema bittide kujutamise pärast, sest füüsiline kiht on selle töö ära teinud.
 
-![Topoloogia](/lectures/images/topology.png)
+Kui andmed liiguvad arvutiprogrammist võrku, läbivad need OSI mudeli kihid ükshaaval. See tähendab, et iga kiht lisab andmetele oma spetsiaalse info, mida nimetatakse päiseks. Näiteks rakenduskiht valmistab andmed ette, kodeerides need sobivasse vormi. Siis lisab seansikiht info seansi kohta ja saadab need transpordikihile, mis jagab andmed vajadusel väiksemateks osadeks ja lisab päisesse aadressid. Järgmisena võtab võrgu kiht andmed vastu, pakib need kokku ja saadab füüsilisele kihile, mis muundab andmed signaalideks ja saadab need füüsilist teed pidi kohale.
 
-- **Andmekihi kaadri struktuur:**
-  - Enne võrgu kaudu saatmist jagatakse andmed **kaadriteks**. Kaader koosneb kolmest osast:
-    - **Päis:** Sisaldab teavet nagu MAC-aadress (iga seadme unikaalne identifikaator).
-    - **Sisu:** Tegelik saadetav teave (näiteks e-kiri või veebileht).
-    - **Sabad:** Sisaldab veakontrolli teavet, et tagada andmete õige kohalejõudmine.
+Kui andmed jõuavad sihtkohta, võtavad kihid need vastu vastupidises järjekorras, iga kiht eemaldab oma päise, kuni andmed jõuavad rakenduseni. Selle protsessi käigus nimetatakse andmeid protokolli andmeüksuseks (PDU).
 
-![Andmekihi kaader](/lectures/images/data_link.png)
+OSI mudeli kasutamisest on mitmeid eeliseid, näiteks:
+
+	•	Keerukuse vähenemine.
+	•	Tehnoloogiate koostalitlusvõime tagamine.
+	•	Kiirem areng ja standardiseerimine.
+	•	Õppimise lihtsustamine.
+
+Ülemise kihi andmed muutuvad siis, kui need liiguvad läbi teiste kihtide, ja igal kihil on oma roll andmete töötlemisel.
+
+
+
+
+
+
+
+
+
+
 
 - **Ethernet ja MAC-aadressid:**
   - **Ethernet** on kõige levinum tehnoloogia, mida kasutatakse juhtmega võrkudes. See määratleb, kuidas andmeid kaablite kaudu edastatakse.
