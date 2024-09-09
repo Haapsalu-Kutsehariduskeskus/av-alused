@@ -243,7 +243,9 @@ Kui mitu seadet proovivad korraga andmeid saata, võib tekkida "kokkupõrge", na
 - **CSMA/CD**: Kui kokkupõrge tuvastatakse, seadmed ootavad ja proovivad hiljem uuesti.
 - **CSMA/CA**: Seda kasutatakse Wi-Fi võrkudes, kus seadmed üritavad vältida kokkupõrget, oodates oma järjekorda.
 
-Arvutivõrkudes saadetakse infot väikestes pakikestes, mida kutsutakse **kaadriteks** (frame). Need kaadrid on nagu kastid, mis hoiavad bitid (väiksed andmetükid) sees. Mõnikord lisatakse kaadrisse erilisi bitte, et arvuti teaks, millal kaader algab ja lõpeb.
+**Pakkimine kaadriks**
+
+Arvutivõrkudes saadetakse infot väikestes **pakikestes**, mida kutsutakse **kaadriteks** (frame). Need kaadrid on nagu kastid, mis hoiavad bitid (väiksed andmetükid) sees. Mõnikord lisatakse kaadrisse erilisi bitte, et arvuti teaks, millal kaader algab ja lõpeb.
 Kui kaadri sees on liiga palju järjestikuseid sarnaseid bitte, võib arvuti ära segi minna. Seepärast lisatakse mõned lisa-bitid, et arvuti teaks kindlalt, kus kaadri lõpp on. Nii nagu salakirjas lisatakse vahel tähti, et sõnum oleks arusaadav.
 
 Kaadriga saadetavatele andmetele lisatakse juurde **päis** (header) ja olenevalt protokollist võibolla ka **saba** (trailer). Päis sisaldab **väljasid**, mis annavad andmete kohta informatsiooni, näiteks kaadri puhul **sihtaadress**, **lähteaadress**, üle kantavate andmete hulk, kaadri kontrollsumma jms.
