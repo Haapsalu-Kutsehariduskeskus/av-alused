@@ -218,17 +218,26 @@ Kanalikiht jaguneb kaheks oluliseks osaks:
 - **MAC (Meediumipöörduse juhtimine)**: Kontrollib, kuidas andmed saadetakse ja vastuvõetakse. Igal seadmel on oma **MAC-aadress**, mis on nagu seadme unikaalne nimi võrgus.
 
 Võrgu topoloogiat võib mõelda kui kaarti sellest, kuidas arvutid on ühendatud:
+
 - **Füüsiline topoloogia**: Näitab, kuidas arvutid ja seadmed (nt ruuterid ja kommutaatorid) on kaablite või traadita ühendustega seotud.
 - **Loogiline topoloogia**: Näitab, kuidas andmed liiguvad, milliseid teid nad kasutavad.
 
-**Levinumad võrguseaded**
+**Levinumad topoloogiad**
 
 - **Punkt-punkt**: Kaks seadet on omavahel otse ühendatud. Kujuta ette, et need on nagu kaks inimest, kes räägivad teineteisega läbi otse telefoni.
 - **Tsentraalne ühendus (Hub-and-Spoke)**: Üks kesksõlm (näiteks ruuter) ühendab mitmeid teisi seadmeid. Mõtle sellele kui klassiruumile, kus õpetaja räägib korraga kõigile õpilastele.
 - **Võrgustik (Mesh)**: Iga seade on ühendatud iga teise seadmega. See on väga usaldusväärne, kuid keeruline ja kallis seadistada. Mõtle sellele kui väga keerulisele veebile.
 
-- **Pooldupleks**: Seadmed saavad korraga kas ainult saata või vastu võtta, mitte mõlemat korraga. See on nagu raadiosaatja, kus saab ainult rääkida või kuulata, kuid mitte korraga.
-- **Täisdupleks**: Seadmed saavad korraga andmeid saata ja vastu võtta. See on nagu telefonikõne, kus mõlemad pooled saavad samaaegselt rääkida ja kuulata.
+![Võrgutopoloogiad ](/lectures/images/networktopology.png)
+
+**Andmete edastus sideliinis**
+
+- **Pooldupleks**: Seadmed saavad korraga kas ainult saata või vastu võtta, mitte mõlemat korraga.
+- **Täisdupleks**: Seadmed saavad korraga andmeid saata ja vastu võtta.
+
+Pooldupleks on nagu kõndimine kitsal sillal, kus üks inimene peab teisele teed andma. Täisdupleks on aga nagu lai tee, kus kaks autot saavad mõlemad korraga sõita.
+
+![Pooldupleks ja täisdupleks ](/lectures/images/dupleks.png)
 
 Kui mitu seadet proovivad korraga andmeid saata, võib tekkida "kokkupõrge", nagu kaks inimest, kes üritavad korraga rääkida.
 - **CSMA/CD**: Kui kokkupõrge tuvastatakse, seadmed ootavad ja proovivad hiljem uuesti.
