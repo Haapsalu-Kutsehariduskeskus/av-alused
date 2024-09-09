@@ -82,86 +82,93 @@ Aktiivsed seadmed võimendavad ja muudavad signaale, et need saaksid liikuda pik
 
 ![Jaotur](/lectures/images/hub.png)
 
-**Seadmed võrgu, segmentide ja alamvõrkude struktureerimiseks**
+### Seadmed võrgu struktuurimiseks
 
-Seadmeid nagu sillad, switchid, ruuterid ja lüüsid kasutatakse sidevõrkude loogiliseks struktureerimiseks (Joonis 3.6).
+Seadmed nagu **sillad**, **switchid**, **ruuterid** ja **lüüsid** aitavad võrke organiseerida ja juhtida, kuidas erinevad osad omavahel suhtlevad.
 
-**Sild (bridge)**
-Sild jagab võrgu loogilisteks segmentideks. Sõnumid edastatakse ühest segmendist teise üle silla pordi, kui vastuvõtja unikaalne võrguaadress (MAC) kuulub vastavasse segmenti. Silla tegevus toimub järgmiste sammude kaudu:
+---
 
-1. Andmepaketi vastuvõtmisel kontrollitakse lähteaadressi ja sihtaadressi.
-2. Kui sihtaadressi ei ole tabelis, edastatakse pakett kõikidesse segmentidesse ning lisatakse sihtaadress tabelisse.
-3. Sild edastab paketi vastavale segmendile, kui sihtaadress on tabelis.
-4. Kui lähteaadress ja sihtaadress on samas segmendis, ei edastata paketti teise segmenti.
+**Sild**
 
-Sildade peamine eesmärk on filtreerida segmentidevahelist liiklust, et vähendada ummikuid suuremates kohtvõrkudes. Sillad tegutsevad OSI võrgumudeli kanalikihis ja neid kasutatakse näiteks hubidega ehitatud võrkudes.
+Sild aitab võrku jagada väiksemateks osadeks, mida nimetatakse segmentideks. Sild saadab sõnumeid ühest segmendist teise, aga ainult siis, kui vastuvõtja on õigel segmendil. Kuidas see töötab:
 
-**Switch (kommutaator)**
-Switch on uuema generatsiooni sild, mis võimaldab informatsiooni paralleelset töötlemist ja suurendab võrgu andmevahetuskiirust. Switch töötab järgmiselt:
+1. Sild võtab sõnumi vastu ja kontrollib, kust see tuli ja kuhu see läheb.
+2. Kui sild ei tea, kuhu sõnum läheb, saadab ta selle kõigile osadele ja õpib ära, kus sihtkoht on.
+3. Kui sild teab sihtkohta, saadab ta sõnumi õigesse kohta.
+4. Kui saatja ja vastuvõtja on samas segmendis, ei saada sild sõnumit mujale.
 
-1. Switchi saabumisel kontrollitakse paketti ja viidatakse tabelile, et kindlaks teha, kas vastuvõtja MAC aadress on kirjas.
-2. Kui MAC aadress puudub, saadetakse pakett kõigisse portidesse, kuni sihtseadmelt saadakse vastus.
-3. Seejärel tehakse kirje, mis näitab, milline väljundport sobitati konkreetse MAC aadressiga.
-4. Kõik järgnevad sama aadressi paketid edastatakse otse vastavasse porti.
+Sillad aitavad vähendada liiklust ja tagavad, et info jõuab ainult sinna, kuhu vaja.
 
-Switch eristab kolme tüüpi vastuvõtja aadresse:
-- **Leviedastus (broadcast)**: Pakett saadetakse kõigisse portidesse.
-- **Multiedastus (multicast)**: Pakett saadetakse eelnevalt kindlaks määratud portidesse.
-- **Üksikedastus (unicast)**: Pakett saadetakse ainult ühte porti, mis tõstab võrgu turvalisust ja mahtu.
+---
 
-Switchid töötavad tavaliselt OSI mudeli teise kihi baasil, kuid kõrgema klassi kommutaatorid võivad töötada ka kolmanda ja neljanda kihi baasil.
+**Switch**
 
-Switchi spetsiifilised tunnused:
-- Iga pordi jaoks on spetsiaalne protsessor sissetulevate andmepakettide töötlemiseks.
-- Iga tööjaam saab edastada andmeid ilma teiste tööjaamadega konkureerimata.
-- Kontrollib ühendatud seadmete MAC aadresse.
-- Võimaldab tõlgendada andmepakette ühest standardist teise.
-- Puhverdab andmeid enne vastuvõtja ühendusparameetrite tuvastamist.
-- Suhtleb täisdupleks-režiimis, võimaldades samaaegset andmeedastust ja vastuvõttu.
+Switch on nagu targem sild. See aitab seadmetel võrgu sees kiiremini suhelda. Kuidas see töötab:
+
+1. Switch võtab sõnumi vastu ja kontrollib, kas ta teab, kuhu see läheb.
+2. Kui switch ei tea, saadab ta sõnumi kõigile seadmetele, kuni saab vastuse.
+3. Kui switch teab sihtkohta, ta jätab selle meelde.
+4. Edaspidi saadab switch sõnumi otse õigesse kohta.
+
+On kolme tüüpi sõnumeid:
+- **Leviedastus**: Saadetakse kõigile.
+- **Multiedastus**: Saadetakse kindlale grupile.
+- **Üksikedastus**: Saadetakse ainult ühele seadmele.
+
+Switchid teevad võrgu kiiremaks ja turvalisemaks.
+
+---
 
 **Ruuter**
-Ruuter on eraldiseisev seade, mida kasutatakse infopakettide jaotamiseks erinevate võrkude või võrgusegmentide vahel. Erinevalt hubidest ja sildadest töötab ruuter OSI mudeli võrgukihis ja kasutab IP aadresse. Ruuter kasutab marsruutimistabelit, kuhu on salvestatud teiste ruuterite IP aadressid, et määrata parim tee andmepakettide edastamiseks.
 
-Näide:
-- Võrgus A asuvad seadmed A1 ja A2, võrgus B asuvad seadmed B1 ja B2. Kui andmed saadetakse A1-lt A2-le, ei edasta ruuter neid võrku B. Kui aga andmed saadetakse A1-lt B1-le, edastab ruuter need võrku B.
+Ruuter on seade, mis aitab saata infot erinevate võrkude vahel. See kasutab IP-aadresse (nagu majanumbrid arvutite jaoks) ja valib parima tee info saatmiseks. Näide:
 
-Ruuterid vähendavad võrguliiklust ja parandavad kohtvõrgu turvalisust.
+- **Võrgus A** on seadmed A1 ja A2, **võrgus B** on seadmed B1 ja B2. Kui A1 saadab sõnumi A2-le, hoiab ruuter selle sõnumi võrgus A. Kui aga A1 saadab sõnumi B1-le, aitab ruuter sõnumi saata võrku B.
 
-**Lüüsid (gateways)**network
-Lüüs ühendab kahte kohtvõrku või kohtvõrgu ja globaalse võrgu, mis kasutavad erinevaid protokolle ja ligipääsuprotseduure. Lüüs eristab ja tuvastab liiklust ning kasutatakse näiteks kohtvõrgu ühendamiseks globaalsesse võrku.
+Ruuterid aitavad vähendada liiklust ja muuta võrgud turvalisemaks.
+
+---
+
+**Lüüs**
+
+Lüüs ühendab kahte erinevat võrku. Näiteks võib see ühendada väikese võrgu majas suure võrguga nagu internet. Lüüs aitab tõlkida infot nii, et mõlemad võrgud saavad üksteisest aru.
+
+---
 
 ![Võrguseadmed](/lectures/images/networkdevices.png)
 
 ### 2. Andmekihi kaadri struktuur
 
-OSI mudeli alumine kiht pakub teenuseid ülemisele kihile. See tähendab, et alumised kihid tegelevad üldisemate asjadega, samas kui ülemised kihid tegelevad spetsiifilisemate probleemidega. Võib öelda, et alumine kiht loob aluse ülemisele kihile. Näiteks esimene kiht, füüsiline kiht, vastutab bittide (väikseimad andmeüksused) liikumise eest kanalikihti, mis tegeleb juba edasi nende andmete edastamisega. Kanalikiht ei pea enam muretsema bittide kujutamise pärast, sest füüsiline kiht on selle töö ära teinud.
+OSI mudelis aitab iga kiht ülemist kihti. Alumised kihid tegelevad lihtsamate asjadega, ja kui need on tehtud, liiguvad andmed järgmisele kihile, mis tegeleb keerulisemate ülesannetega.
 
-Kui andmed liiguvad arvutiprogrammist võrku, läbivad need OSI mudeli kihid ükshaaval. See tähendab, et iga kiht lisab andmetele oma spetsiaalse info, mida nimetatakse päiseks. Näiteks rakenduskiht valmistab andmed ette, kodeerides need sobivasse vormi. Siis lisab seansikiht info seansi kohta ja saadab need transpordikihile, mis jagab andmed vajadusel väiksemateks osadeks ja lisab päisesse aadressid. Järgmisena võtab võrgu kiht andmed vastu, pakib need kokku ja saadab füüsilisele kihile, mis muundab andmed signaalideks ja saadab need füüsilist teed pidi kohale.
+Näide:
+- Esimene kiht, füüsiline kiht, tegeleb bittide (väga väikeste andmeüksuste) liigutamisega.
+- Järgmine, kanalikiht, hoolitseb juba nende andmete edasi liikumise eest, ilma et peaks muretsema, kuidas need bitid välja näevad, sest füüsiline kiht on selle töö ära teinud.
 
-Kui andmed jõuavad sihtkohta, võtavad kihid need vastu vastupidises järjekorras, iga kiht eemaldab oma päise, kuni andmed jõuavad rakenduseni. Selle protsessi käigus nimetatakse andmeid protokolli andmeüksuseks (PDU).
+---
 
-OSI mudeli kasutamisest on mitmeid eeliseid, näiteks:
+Kui andmed liiguvad arvutist võrku, läbivad need kõik OSI mudeli kihid järjest. Iga kiht lisab oma info andmetele, mida kutsutakse **päiseks**. Näiteks:
 
-	•	Keerukuse vähenemine.
-	•	Tehnoloogiate koostalitlusvõime tagamine.
-	•	Kiirem areng ja standardiseerimine.
-	•	Õppimise lihtsustamine.
+1. **Rakenduskiht** kodeerib andmed sobivasse vormi.
+2. **Seansikiht** lisab info seansi kohta.
+3. **Transpordikiht** jagab andmed vajadusel väiksemateks osadeks ja lisab aadressid.
+4. **Võrgukiht** pakib andmed kokku ja saadab need füüsilisele kihile, mis muudab need signaalideks ja saadab teele.
 
-Ülemise kihi andmed muutuvad siis, kui need liiguvad läbi teiste kihtide, ja igal kihil on oma roll andmete töötlemisel.
+---
+
+Kui andmed jõuavad kohale, võtavad kihid need vastu vastupidises järjekorras. Iga kiht eemaldab oma päise, kuni andmed jõuavad tagasi rakenduseni.
+
+---
+
+OSI mudelil on palju eeliseid, näiteks:
+- **Keerukuse vähenemine**: Lihtsam hallata, sest igal kihil on oma kindel ülesanne.
+- **Koostalitlusvõime**: Seadmed ja programmid saavad paremini koos töötada.
+- **Kiirem areng**: Uute tehnoloogiate loomine on lihtsam.
+- **Lihtsam õppida**: Mudeleid on kergem õppida ja mõista.
+
+---
+
+Iga kiht OSI mudelis täidab oma osa andmete töötlemisel ja saatmisel.
+
 ![OSI kihtide protokollide andmeüksuste nimetused](/lectures/images/osimudel.png)
 ![Iga kihis enda metaandmed](/lectures/images/metaandmed.png)
-
-
-
-
-
-
-
-
-
-
-- **Ethernet ja MAC-aadressid:**
-  - **Ethernet** on kõige levinum tehnoloogia, mida kasutatakse juhtmega võrkudes. See määratleb, kuidas andmeid kaablite kaudu edastatakse.
-  - **MAC-aadress:** Igal võrguseadmel on unikaalne identifikaator, mida nimetatakse MAC-aadressiks. See on nagu postiaadress, mis tagab, et andmed jõuavad õigesse kohta.
-
- ![MAC-aadress](/lectures/images/mac.png)
