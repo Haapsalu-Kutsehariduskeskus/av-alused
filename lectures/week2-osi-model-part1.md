@@ -65,9 +65,12 @@ Selles sessioonis keskendume kahele kihile:
 
 ![Võrguseadmed](/lectures/images/networkdevices.png)
 
+
 ---
 
+
 ### 2. Andmekihi kaadri struktuur
+
 
 Andmekiht aitab seadmetel omavahel suhelda. See jaguneb kaheks osaks:
 - **LLC (Loogilise lingi kontroll):** Suhtlus tarkvara ja riistvara vahel.
