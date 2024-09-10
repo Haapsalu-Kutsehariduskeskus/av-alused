@@ -1,15 +1,13 @@
-## Module 1: Networking Today
-- [Networking Today](https://www.youtube.com/watch?v=TBAvNZIcdVQ&list=PLk4NQNr6-L8onI6MaPcfsRZJOvFO3S5D6&index=2)
+> [!TIP]
+>[Networking Today](https://www.youtube.com/watch?v=TBAvNZIcdVQ&list=PLk4NQNr6-L8onI6MaPcfsRZJOvFO3S5D6&index=2)
+>[Basic Switch and End Device Configuration - Part 1](https://www.youtube.com/watch?v=4fMoxkiTEjc&list=PLk4NQNr6-L8onI6MaPcfsRZJOvFO3S5D6&index=2)
+>[Basic Switch and End Device Configuration - Part 2](https://www.youtube.com/watch?v=ruainw-2Y28&list=PLk4NQNr6-L8onI6MaPcfsRZJOvFO3S5D6&index=3)
+>[Protocols and Models - Part 1](https://www.youtube.com/watch?v=VqGIeL0jRJI&list=PLk4NQNr6-L8onI6MaPcfsRZJOvFO3S5D6&index=4)
+>[Protocols and Models - Part 2](https://www.youtube.com/watch?v=agX0G-9JTpM&list=PLk4NQNr6-L8onI6MaPcfsRZJOvFO3S5D6&index=5)
 
-## Module 2: Basic Switch and End Device Configuration
-- [Basic Switch and End Device Configuration - Part 1](https://www.youtube.com/watch?v=4fMoxkiTEjc&list=PLk4NQNr6-L8onI6MaPcfsRZJOvFO3S5D6&index=2)
-- [Basic Switch and End Device Configuration - Part 2](https://www.youtube.com/watch?v=ruainw-2Y28&list=PLk4NQNr6-L8onI6MaPcfsRZJOvFO3S5D6&index=3)
-
-## Module 3: Protocols and Models
-- [Protocols and Models - Part 1](https://www.youtube.com/watch?v=VqGIeL0jRJI&list=PLk4NQNr6-L8onI6MaPcfsRZJOvFO3S5D6&index=4)
-- [Protocols and Models - Part 2](https://www.youtube.com/watch?v=agX0G-9JTpM&list=PLk4NQNr6-L8onI6MaPcfsRZJOvFO3S5D6&index=5)
 
 # Week 1: Sissejuhatus võrkudesse
+
 
 Kas oled kunagi mõelnud, kuidas saad oma sõpradega internetis rääkida, mängida mänge inimestega, kes on kaugel, või vaadata videoid kogu maailmast? Kõik see on võimalik tänu millelegi, mida nimetatakse **võrguks**!
 
@@ -194,11 +192,15 @@ Võrkude tundmaõppimine võib tulevikus viia lahedate töökohtadeni. On olemas
 
 ## Põhilised võrgu protokollid ja standardid
 
+
 ### Mis on võrgu protokollid?
+
 
 Mõtle võrgu protokollidele kui liikluseeskirjadele, mida andmed järgivad. Need määratlevad, kuidas andmeid pakitakse, saadetakse, vastuvõetakse ja mõistetakse. Ilma nende reegliteta ei teaks seadmed, kuidas üksteisega suhelda.
 
+
 ### Olulised protokollid, mida peaksid teadma
+
 
 - **TCP/IP**: See on interneti selgroog. TCP (Transmission Control Protocol) tagab, et andmed saadetakse usaldusväärselt, samas kui IP (Internet Protocol) tegeleb andmepakettide aadressimise ja marsruutimisega, et need jõuaksid õigesse sihtkohta.
   
@@ -206,7 +208,9 @@ Mõtle võrgu protokollidele kui liikluseeskirjadele, mida andmed järgivad. Nee
 
 ![Protokollide vooskeem](/lectures/images/protocol_flowchart.png)
 
+
 ### Standardiorganisatsioonid
+
 
 Selleks, et võrgud ja seadmed saaksid suhelda globaalselt, on meil standardiorganisatsioonid:
 
@@ -218,13 +222,17 @@ Selleks, et võrgud ja seadmed saaksid suhelda globaalselt, on meil standardiorg
 
 ## Võrguseadmete kasutamine; põhiline lüliti ja seadmete seadistamine
 
+
 ### Mis on Cisco IOS?
+
 
 * [Sissejuhatus Cisco IOS CLI-sse](/lectures/contents/intro_to_cisco_cli/README.md)
 
 Cisco IOS on operatsioonisüsteem (OS) spetsiaalsete seadmete, nagu ruuterid ja lülitid, jaoks, mis aitavad internetti ühendada. Nii nagu sinu arvutil on Windows või telefonil iOS või Android, on võrguseadmetel Cisco IOS.
 
+
 ### Erinevad võrgu operatsioonisüsteemid
+
 
 Võrgu operatsioonisüsteemid (NOS) haldavad võrguseadmete, nagu ruuterid ja lülitid, riistvara ja tarkvara ressursse. Siin on mõned näited:
 
@@ -234,13 +242,17 @@ Võrgu operatsioonisüsteemid (NOS) haldavad võrguseadmete, nagu ruuterid ja l�
 
 - **MikroTiki RouterOS**: Tuntud oma paindlikkuse ja kulutõhususe poolest, kasutatakse RouterOS-i MikroTiki seadmetes. See pakub täiustatud funktsioone, nagu tulemüürid, VPN ja ribalaiuse haldamine, muutes selle populaarseks väikestes ja keskmise suurusega võrkudes.
 
+
 ### Kuidas see toimib
+
 
 - **Shell** on nagu ekraan, mida näed mängides mängu. See võimaldab sul seadet juhtida.
 - **Kernel** on nagu aju, mis paneb kõik kulisside taga tööle.
 - **Riistvara** on tegelik seade, nagu ruuter või lüliti, mille sees on osad, nagu emaplaat ja mälu.
 
+
 ### Riistvaraspetsifikatsioonide mõistmine
+
 
 Võrguseadmete, nagu ruuterid, lülitid ja serverid, puhul mängivad riistvaraspetsifikatsioonid olulist rolli nende jõudluse ja võimekuse määramisel. Olulised spetsifikatsioonid hõlmavad protsessorit (CPU), mälu ja liideste tüüpe, millest igaüks mõjutab, kui hästi seade suudab andmeid töödelda, liiklust hallata ja ühendusi tagada.
 
@@ -249,25 +261,31 @@ Esimene kaubanduslik Etherneti kiirus oli 10 Mbps, kuid tänapäeva täiustatud 
 ![Cisco IOS-i juurdepääs](/lectures/images/cisco_ios_access.png)
 
 ---
-
-## Käsurea kasutamine
+> [!NOTE]
+> Käsurea kasutamine
 
 Cisco seadmetel ei ole ilusat ikoonidega ekraani nagu sinu arvutil. Selle asemel kasutad spetsiaalset käsurida, mis on nagu salakoodide kirjutamine, et asjad juhtuksid.
 
+
 ### Käsureale juurdepääsu viisid:
+
 
 - **Konsoolikaabel**: See on nagu spetsiaalne kaabel, mille ühendad otse seadistamiseks.
 - **Secure Shell (SSH)**: See võimaldab sul seadet eemalt, kuid turvaliselt juhtida.
 - **Telnet**: See võimaldab samuti eemalt juhtimist, kuid see pole turvaline, seega ei kasutata seda enam eriti.
 
+
 ### Liikumine käsusüsteemis
+
 
 On kaks peamist režiimi, mida kasutad:
 - **User Exec Mode**: See on põhirežiim, kus saad teha lihtsaid asju. Näed `>` sümbolit.
 - **Privileged Exec Mode**: See režiim võimaldab teha keerukamaid asju. Näed `#` sümbolit.
 - **Global Configuration Mode**: See on koht, kus saad muuta seadme toimimist. Näed `#` koos mõne lisasõnaga, nagu `Switch(config)#`.
 
+
 ### Käskude sisestamine
+
 
 Kui sisestad käske, pead olema täpne. Näiteks, kui tahad kontrollida, kas seade töötab, võid kirjutada:
 
@@ -276,12 +294,16 @@ ping 192.168.10.5
 ```
 See ütleb seadmele, et kontrollida, kas teine seade sellel aadressil on saavutatav.
 
+
 ### Abi ja otseteed:
+
 
 - Kui unustad käsu, võid pärast sõna kirjutada `?`, ja see näitab sulle, mida saad edasi teha.
 - Samuti saad kasutada otseteid, et säästa aega. Näiteks, `configure` asemel võid lihtsalt kirjutada `conf`!
 
+
 ### Klaviatuuri kasutamine
+
 
 - **Tabulaator (Tab)**: Aitab käskude täitmist, kui oled neid juba alustanud.
 - **Nooleklahvid**: Liiguta kursorit vigade parandamiseks või käskude kordamiseks.
@@ -290,23 +312,32 @@ See ütleb seadmele, et kontrollida, kas teine seade sellel aadressil on saavuta
 
 ---
 
+
 ## Oma võrguseadmete seadistamine; põhiline seadmete seadistamine
+
 
 ### Seadmete nimetamine
 
+
 Iga võrguseade, nagu ruuter või lüliti, vajab spetsiaalset nime, et saaksid selle hõlpsasti leida. Ära nimeta oma seadmeid "Mickey" või "Goofy" – kasuta nimesid, mis ütlevad, kus need asuvad, näiteks "SW-Floor-1" (Lüliti 1. korrusel).
 
+
 ### Nimetamisreeglid:
+
 
 - Nimi peab algama tähega, mitte numbriga.
 - Selles ei tohiks olla tühikuid, kuid võid kasutada sidekriipsu (-).
 - Nimi peaks olema vähem kui 64 tähemärki pikk.
 
+
 ### Standardne nimetamise konventsioon
+
 
 - Standardne nimetamise konventsioon on suurtes võrkudes ühtsuse ja lihtsa haldamise jaoks oluline. See aitab kõigil seadmeid ja nende rolle kiiresti tuvastada, muutes tõrkeotsingu ja hoolduse tõhusamaks. Näiteks, lüliti nimetamine "TLN-SW1" viitab sellele, et see on esimene lüliti Tallinnas, muutes selle asukoha ja eesmärgi selgeks.
 
+
 ### Tugevate paroolide seadistamine
+
 
 Paroolid hoiavad sinu seadmeid turvalisena inimeste eest, kes ei peaks neid kasutama.
 
@@ -314,22 +345,29 @@ Paroolid hoiavad sinu seadmeid turvalisena inimeste eest, kes ei peaks neid kasu
 
 ---
 
+
 ## Võrguprotokollide õppimine; protokollide ja mudelite mõistmine
 
+
 ### Miks on suhtlemiseks vaja reegleid?
+
 
 Nii nagu inimesed peavad rääkima sama keelt, et üksteisest aru saada, peavad ka arvutid järgima konkreetseid reegleid, mida nimetatakse **protokollideks**, et suhelda.
 
 Kujuta ette, kui üks inimene räägib inglise keelt ja teine prantsuse keelt – nad ei mõistaks üksteist, kui nad ei lepiks kokku, et räägivad sama keelt!
 
+
 ### Suhtlemise põhitõed
+
 
 Iga suhtluse jaoks on vaja:
 - **Saatjat** (isik või seade, mis sõnumi saadab).
 - **Vastuvõtjat** (isik või seade, mis sõnumi saab).
 - **Meediumit** (kuidas sõnum edastatakse, näiteks kaablite või Wi-Fi kaudu).
 
+
 ### Andmeedastusmeetodid
+
 
 Andmeedastusmeetodid määravad, kuidas andmed seadmete vahel liiguvad. Siin on kiire ülevaade kolmest peamisest tüübist:
 
@@ -341,9 +379,12 @@ Andmeedastusmeetodid määravad, kuidas andmed seadmete vahel liiguvad. Siin on 
 
 ---
 
+
 ## Mis on protokollid?
 
+
 **Protokollid** on reeglid, mida seadmed järgivad, et omavahel rääkida.
+
 
 Need aitavad:
 - **Kodeerimisel**: Sõnumi muutmine vorminguks, mida saab saata, näiteks sõnade muutmine digitaalseteks signaalideks.
@@ -351,7 +392,9 @@ Need aitavad:
 - **Ajastamisel**: Tagades, et sõnumeid saadetakse ja võetakse vastu õige kiirusega.
 - **Kohaletoimetamisel**: Otsustades, kas sõnum läheb ühele seadmele, rühmale või kõigile.
 
+
 ### Vigade tuvastamine ja parandamine
+
 
 Vigade tuvastamine ja parandamine on võtmetähtsusega, et andmed edastataks võrgus täpselt. Kui andmed liiguvad, võivad need saada häirete tõttu vigu.  
 Nende vigade avastamiseks kasutavad protokollid meetodeid nagu kontrollsummad või CRC, mis aitavad avastada probleeme andmetes.
@@ -360,17 +403,23 @@ Kui viga leitakse, saab süsteem kas küsida andmete uuesti saatmist või proovi
 
 Vigade tuvastamise meetodeid, nagu Hamming-koodid, on kasutatud alates 1940. aastatest ja need on endiselt olulised tänapäeva tehnoloogias!
 
+
 ### Sõnumite edastamise tüübid
+
 
 - **Unicast**: Sõnumi saatmine ühelt seadmelt ühele teisele seadmele.
 - **Multicast**: Sõnumi saatmine ühelt seadmelt mitmele seadmele.
 - **Broadcast**: Sõnumi saatmine kõigile võrgu seadmetele.
 
+
 ### Anycast-suhtlus
+
 
 Anycast-suhtlus on meetod, kus üks sõnum saadetakse mitmele vastuvõtjale, kuid see jõuab ainult lähima või optimaalseima sihtkohani. Seda kasutatakse sageli koormuse tasakaalustamiseks ja võrgu jõudluse parandamiseks.
 
+
 ### Erinevad protokollide tüübid
+
 
 On palju erinevaid protokolle, millest igaühel on oma ülesanne:
 - **Võrgu suhtlusprotokollid**: Aitavad seadmetel võrgu kaudu suhelda.
@@ -378,7 +427,9 @@ On palju erinevaid protokolle, millest igaühel on oma ülesanne:
 - **Marsruutimisprotokollid**: Aitavad leida parima tee, mida mööda andmed saavad liikuda.
 - **Teenuste avastamise protokollid**: Aitavad seadmetel leida üksteist võrgus.
 
+
 ### Levinud võrgu protokollid
+
 
 | **Protokoll** | **Täisnimi**                        | **Eesmärk**                                                                 |
 |---------------|-------------------------------------|------------------------------------------------------------------------------|
@@ -389,7 +440,9 @@ On palju erinevaid protokolle, millest igaühel on oma ülesanne:
 
 **Lõbus fakt**: DNS-süsteemi nimetatakse sageli interneti "telefoniraamatuks", kuna see seob domeeninimed vastavate IP-aadressidega!
 
+
 ### Kuidas protokollid koos töötavad
+
 
 Paljud protokollid töötavad koos, et tagada sujuv toimimine.
 
@@ -399,23 +452,31 @@ Näiteks:
 - **IP**: Leiab parima marsruudi, mida mööda andmed saavad liikuda.
 - **Ethernet**: Ühendab seadmeid kaablite või Wi-Fi kaudu.
 
+
 ### Mis on protokollikomplekt?
+
 
 **Protokollikomplekt** on rühm protokolle, mis töötavad koos suhtlusülesannete täitmiseks.
 
 Kõige levinum on **TCP/IP**, mis on interneti selgroog.
 
+
 ### TCP/IP areng
+
 
 Arutlege TCP/IP ajaloo ja arengu üle, sealhulgas selle rolli üle kaasaegse interneti arengus.
 
+
 ### Andmete saatmine võrgu kaudu
+
 
 Kui saadad sõnumi, näiteks laadid veebilehte, jagatakse andmed väikesteks tükkideks, pakitakse kokku ja saadetakse üle võrgu.
 
 Vastuvõttev seade paneb need siis uuesti kokku, et saaksid veebilehte näha.
 
+
 ### Kes teeb reeglid?
+
 
 On palju organisatsioone, kes loovad ja hooldavad neid reegleid (protokolle), tagades, et kõik toimib koos.
 
@@ -432,15 +493,20 @@ IETF-i töö avaldatakse dokumentides, mida nimetatakse "RFC-deks" (Request for 
 
 ---
 
+
 ## Võrgukihtide ja -mudelite mõistmine; kihid ja mudelid
 
+
 ### Miks me kasutame kihte?
+
 
 Võrgud võivad olla keerulised, kuid kihid aitavad meil jagada suure andmete saatmise ülesande väiksemateks, lihtsamateks ülesanneteks.
 
 Igal kihil on konkreetne ülesanne, nagu koogi küpsetamine, glasuuri lisamine ja kaunistamine!
 
+
 ### Kihilise arhitektuuri eelised
+
 
 Kihiline arhitektuur võrkudes on kasulik mitmel põhjusel:
 
@@ -450,7 +516,9 @@ Kihiline arhitektuur võrkudes on kasulik mitmel põhjusel:
   
 - **Lihtne tõrkeotsing**: Kui midagi on sinu võileivas valesti, näiteks halb salatileht, saad selle hõlpsasti leida ja parandada. Võrkudes, kui on probleem, on lihtsam leida ja parandada see vaid ühes kihis.
 
+
 ### OSI mudel (7 kihti):
+
 
 1. **Füüsiline**: Saadab elektrisignaale (nagu tulede sisse ja välja lülitamine).
 2. **Andmeside**: Tagab, et andmed on õiges vormingus.
@@ -460,14 +528,18 @@ Kihiline arhitektuur võrkudes on kasulik mitmel põhjusel:
 6. **Esitluskiht**: Valmistab andmed ette, et rakendus saaks neid kasutada.
 7. **Rakenduskiht**: Suhtleb otse tarkvaraga, mida kasutad, nagu veebibrauserid.
 
+
 ### TCP/IP mudel (4 kihti):
+
 
 1. **Võrgujuurdepääs**: Ühendab füüsilise ja andmesidekihid (hõlmab riistvara).
 2. **Internet**: Hõlmab võrgu kihi ülesandeid (suunab andmed võrkude kaudu).
 3. **Transpordi**: Sama mis OSI transpordikiht.
 4. **Rakenduskiht**: Ühendab kolm ülemist OSI kihti (rakenduste ja tarkvara jaoks).
 
+
 ### OSI ja TCP/IP mudelite võrdlus
+
 
 * [OSI mudel ja TCP/IP komplekt](/lectures/contents/osi_model_and_tcp_ip_suite/README.md)
 
@@ -478,23 +550,31 @@ Kihiline arhitektuur võrkudes on kasulik mitmel põhjusel:
 | **Kihid**           | Füüsiline, andmeside, võrk, transport, seanss, esitlus, rakendus | Link, Internet, Transport, Rakendus |
 | **Rakendamine**     | Pole praktikas täielikult rakendatud           | Interneti ja enamiku võrkude alus              |
 
+
 ### OSI mudeli meeldejätmine
+
 
 Lõbus viis OSI kihtide meeldejätmiseks on lause: **"Palun Ära Too Soolast Pizza Ära."** Iga sõna aitab sul kihte järjekorras meelde jätta.
 
+
 ### Kuidas andmed kihtides liiguvad?
+
 
 Kui andmeid saadetakse võrgus, jagatakse need väiksemateks osadeks, mida nimetatakse segmentideks.
 
 Need segmendid pannakse kokku (või multipleksitakse) teiste andmetega, et need kiiremini liiguksid.
 
+
 ### Andmete kapseldamine
+
 
 Kui andmed liiguvad kihtide kaudu alla, lisab iga kiht oma teabe juurde. Seda nimetatakse kapseldamiseks.
 
 Kui andmed jõuavad sihtkohta, eemaldatakse kihid, nagu kingituse lahtipakkimine, kuni algsed andmed on nähtavad.
 
+
 ### Andmete adresseerimine võrgus
+
 
 Igal andmel on vaja aadressi, et teada, kuhu see läheb. On kaks peamist tüüpi:
 - **IP-aadress (3. kiht)**: Näitab võrgule, kuhu andmed peaksid globaalsetes mastaapides minema (nagu postiaadress).
@@ -505,7 +585,9 @@ Igal andmel on vaja aadressi, et teada, kuhu see läheb. On kaks peamist tüüpi
 * [Ethernet LAN-i lülitamine](/lectures/contents/ethernet_lan_switching/README.md)
 * [IPv4 aadressimine](/lectures/contents/ipv4_addressing/README.md)
 
+
 ### IPv4 vs. IPv6
+
 
 IPv4 ja IPv6 on mõlemad versioonid Interneti protokollist (IP), mida kasutatakse seadmete tuvastamiseks võrgus, kuid neil on olulised erinevused:
 
@@ -518,7 +600,9 @@ IPv4 ja IPv6 on mõlemad versioonid Interneti protokollist (IP), mida kasutataks
 
 IPv4 4,3 miljardit aadressi tundus 1980. aastatel küllaldasena, kuid nutitelefonide, IoT-seadmete ja muu plahvatusliku kasvuga loodi IPv6, et käsitleda internetti ühendatud seadmete arvu tohutut kasvu!
 
+
 ### Mis toimub erinevates võrkudes?
+
 
 Kui kaks seadet, nagu sinu arvuti ja printer, asuvad samas kohalikus võrgus (näiteks sinu kodus), suhtlevad nad üksteisega kasutades MAC-aadresse. Mõtle MAC-aadressile kui maja numbrile – see aitab seadmetel üksteist kiiresti leida, kui need on lähedal.
 
@@ -528,9 +612,10 @@ IP-aadress on nagu tänava aadress, mis aitab sinu andmetel leida tee õigele v�
 
 ![OSI vs TCP/IP mudelid](/lectures/images/osi_vs_tcpip_models.png)
 
-* [Switch liidesed](/lectures/contents/switch_interfaces/README.md)
-* [IPv4 päis](/lectures/contents/ipv4_header/README.md)
-* [Marsruutimise alused](/lectures/contents/routing_fundamentals/README.md)
-* [Staatiline marsruutimine](/lectures/contents/static_routing/README.md)
+> [!TIP]
+>  [Switch liidesed](/lectures/contents/switch_interfaces/README.md)
+>  [IPv4 päis](/lectures/contents/ipv4_header/README.md)
+> [Marsruutimise alused](/lectures/contents/routing_fundamentals/README.md)
+>  [Staatiline marsruutimine](/lectures/contents/static_routing/README.md)
 
 ---
