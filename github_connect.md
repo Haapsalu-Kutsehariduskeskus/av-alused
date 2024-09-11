@@ -56,11 +56,11 @@ Kasutame **GitHub Classroomit** kõigi tehniliste ülesannete jaoks, sealhulgas 
 
 ## Workflow näide:
 
-**1. samm**: Kontrolli Google Classroomist ülesande linki.
-**2. samm**: Klõpsa GitHub Classroomi linki ja loo oma privaatne repo.
-**3. samm**: Klooni repo ja tee ülesanne oma arvutis.
-**4. samm**: Pushi muudatused GitHubi, kui töö on valmis.
-**5. samm**: Vaata üle õppejõu tagasiside repost või pull requestidest/issues sektsioonist.
+- **1. samm**: Kontrolli Google Classroomist ülesande linki.
+- **2. samm**: Klõpsa GitHub Classroomi linki ja loo oma privaatne repo.
+- **3. samm**: Klooni repo ja tee ülesanne oma arvutis.
+- **4. samm**: Pushi muudatused GitHubi, kui töö on valmis.
+- **5. samm**: Vaata üle õppejõu tagasiside repost või pull requestidest/issues sektsioonist.
 
 ---
 
