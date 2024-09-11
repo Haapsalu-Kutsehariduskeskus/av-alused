@@ -54,7 +54,7 @@ Kasutame **GitHub Classroomit** kõigi tehniliste ülesannete jaoks, sealhulgas 
 
 ---
 
-## Workglow näide:
+## Workflow näide:
 
 1. **1. samm**: Kontrolli Google Classroomist ülesande linki.
 2. **2. samm**: Klõpsa GitHub Classroomi linki ja loo oma privaatne repo.
