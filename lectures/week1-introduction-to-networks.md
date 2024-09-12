@@ -180,18 +180,26 @@ Võrgu töökindluse ja pideva toimimise tagamiseks kasutatakse kahte olulist st
 
 Võrkude kaitsmine ohtude, nagu viirused, pahavara ja häkkerid, on äärmiselt oluline, et tagada andmete ja teenuste turvalisus.
 
+### Turvalahendused
 
-- **Turvalahendused**: Võrguturvalisuse tagamiseks kasutatakse erinevaid meetmeid. Tulemüürid toimivad kaitsebarjääridena, blokeerides volitamata juurdepääsu võrgule ja lubades ainult usaldusväärseid ühendusi. Paroolid ja muud autentimismeetodid, nagu kahefaktoriline autentimine (2FA), tagavad, et ainult volitatud kasutajad saavad võrgule või tundlikele andmetele ligi pääseda.
+Võrguturvalisuse tagamiseks kasutatakse erinevaid meetmeid:
+
+- **Tulemüürid**: Tulemüürid toimivad kaitsebarjääridena, blokeerides volitamata juurdepääsu võrgule ja lubades ainult usaldusväärseid ühendusi.
+- **Paroolid ja autentimine**: Paroolid ja muud autentimismeetodid, nagu kahefaktoriline autentimine (2FA), tagavad, et ainult volitatud kasutajad saavad võrgule või tundlikele andmetele ligi pääseda.
 
 Kaitsmaks võrke keerukamate ja püsivamate ohtude eest, on vajalikud arenenud turvameetmed, mis suudavad reageerida erinevatele rünnakutele ja kaitsta tundlikke andmeid.
 
-**Sissetungimise tuvastussüsteemid (IDS)** IDS-id jälgivad pidevalt võrgu liiklust, et tuvastada kahtlasi või ebatavalisi tegevusi, mis võivad viidata küberrünnakule. Need süsteemid hoiatavad administraatoreid võimalikest turvarikkumistest, võimaldades neil kiiresti reageerida ja ennetada kahju.
+### Täiustatud turvameetmed
 
-**Virtuaalsed privaatvõrgud (VPN-id)** VPN-id loovad turvalised ja krüpteeritud ühendused interneti kaudu, mis võimaldavad kasutajatel kaugjuurdepääsu ettevõtte või organisatsiooni võrgule ilma tundlikke andmeid ohtu seadmata. VPN-id tagavad, et kõik andmed on kaitstud, isegi kui neid edastatakse avalike võrkude kaudu.
+- **Sissetungimise tuvastussüsteemid (IDS)**: IDS-id jälgivad pidevalt võrgu liiklust, et tuvastada kahtlasi või ebatavalisi tegevusi, mis võivad viidata küberrünnakule. Need süsteemid hoiatavad administraatoreid võimalikest turvarikkumistest, võimaldades neil kiiresti reageerida ja ennetada kahju.
 
-**Krüpteerimistehnikad** Krüpteerimine kaitseb andmeid, muutes need koodiks, mida saavad lugeda ja dešifreerida ainult volitatud osapooled. See kaitseb teavet volitamata juurdepääsu eest, eriti kui andmeid edastatakse üle interneti või hoitakse pilveteenustes. Krüpteerimine on üks kõige tõhusamaid viise tundliku teabe turvaliseks hoidmiseks.
+- **Virtuaalsed privaatvõrgud (VPN-id)**: VPN-id loovad turvalised ja krüpteeritud ühendused interneti kaudu, mis võimaldavad kasutajatel kaugjuurdepääsu ettevõtte või organisatsiooni võrgule ilma tundlikke andmeid ohtu seadmata. VPN-id tagavad, et kõik andmed on kaitstud, isegi kui neid edastatakse avalike võrkude kaudu.
 
-**Esimene teadaolev krüpteerimissüsteem** Krüpteerimist on kasutatud juba tuhandeid aastaid. Üks varasemaid teadaolevaid krüpteerimismeetodeid oli Caesari šiffer, mida kasutas Julius Caesar oma sõnumite salastamiseks. See meetod asendas kirjad tähestikus kindla arvu positsioonidega, muutes sõnumi arusaamatuks, kui saaja ei teadnud nihet.
+- **Krüpteerimistehnikad**: Krüpteerimine kaitseb andmeid, muutes need koodiks, mida saavad lugeda ja dešifreerida ainult volitatud osapooled. See kaitseb teavet volitamata juurdepääsu eest, eriti kui andmeid edastatakse üle interneti või hoitakse pilveteenustes. Krüpteerimine on üks kõige tõhusamaid viise tundliku teabe turvaliseks hoidmiseks.
+
+### Ajalooline fakt
+
+- **Esimene teadaolev krüpteerimissüsteem**: Krüpteerimist on kasutatud juba tuhandeid aastaid. Üks varasemaid teadaolevaid krüpteerimismeetodeid oli *Caesari šiffer*, mida kasutas Julius Caesar oma sõnumite salastamiseks. See meetod asendas kirjad tähestikus kindla arvu positsioonidega, muutes sõnumi arusaamatuks, kui saaja ei teadnud nihet.
 
 ![Võrgu turvalisuse näide](/lectures/images/Network-Security.jpg)
 
