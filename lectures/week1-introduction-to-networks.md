@@ -166,13 +166,13 @@ Hea võrk on rohkem kui lihtsalt seadmete kogum – sellel on omadusi, mis tagav
 - **Teenuse kvaliteet**: (QoS) Võrk tagab, et olulised asjad, nagu videokõned, toimivad sujuvalt.
 - **Turvalisus**: Võrgu turvalisuse tagamine pahatahtlike isikute eest, kes võivad soovida teavet varastada.
 
-### Redundantsus ja kõrge saadavus
+### Käideldavus (redundancy) ja kõrge saadavus
 
-Võrgu töökindluse ja pideva toimimise tagamiseks kasutatakse kahte olulist strateegiat: redundantsust ja kõrge saadavusega süsteeme. Need aitavad vältida võrgu seisakuid ja tagavad teenuste kättesaadavuse ka rikete korral.
+Võrgu töökindluse ja pideva toimimise tagamiseks kasutatakse kahte olulist strateegiat: käideldavus ja kõrge saadavusega süsteeme. Need aitavad vältida võrgu seisakuid ja tagavad teenuste kättesaadavuse ka rikete korral.
 
-**Redundantsus** Redundantsus tähendab mitme tee või varusüsteemide loomist, et andmed saaksid liikuda ka siis, kui üks ühendus või komponent ebaõnnestub. Näiteks võib võrguühenduses olla mitu marsruuterit või serverit, mis suudavad vajadusel üksteist asendada. Kui üks komponent lakkab töötamast, võtab teine üle, hoides võrgu toiminguid katkestusteta.
+**Käideldavus** tähendab mitme tee või varusüsteemide loomist, et andmed saaksid liikuda ka siis, kui üks ühendus või komponent ebaõnnestub. Näiteks võib võrguühenduses olla mitu marsruuterit või serverit, mis suudavad vajadusel üksteist asendada. Kui üks komponent lakkab töötamast, võtab teine üle, hoides võrgu toiminguid katkestusteta.
 
-**Kõrge saadavuse süsteemid** Kõrge saadavuse süsteemid on loodud tagama, et teenused jäävad kättesaadavaks ka rikke või hoolduse ajal. Need süsteemid kasutavad sageli failover-mehhanisme, mis suunavad liikluse automaatselt töötavale varusüsteemile, ja koormuse tasakaalustamist, et jaotada töökoormus mitme serveri või ressursi vahel. Klastrite moodustamine võimaldab mitme süsteemi töötamist koos, tagades kõrge saadavuse ja töökindluse ka ootamatute probleemide korral.
+**Kõrge saadavuse süsteemid** (availability) Kõrge saadavuse süsteemid on loodud tagama, et teenused jäävad kättesaadavaks ka rikke või hoolduse ajal. Need süsteemid kasutavad sageli failover-mehhanisme, mis suunavad liikluse automaatselt töötavale varusüsteemile, ja koormuse tasakaalustamist, et jaotada töökoormus mitme serveri või ressursi vahel. Klastrite moodustamine võimaldab mitme süsteemi töötamist koos, tagades kõrge saadavuse ja töökindluse ka ootamatute probleemide korral.
 
 ---
 
