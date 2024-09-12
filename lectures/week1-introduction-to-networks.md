@@ -274,11 +274,11 @@ Erinevad võrgu operatsioonisüsteemid pakuvad lahendusi erinevate võrguvajadus
 
 Võrgu operatsioonisüsteemi toimimist saab mõista, jagades selle kolmeks oluliseks kihiks:
 
-- **Shell** Shell on kasutajaliides, mis võimaldab sul seadmega suhelda ja seda juhtida. Kui sa sisestad käske või annad süsteemile juhiseid (näiteks seadistad IP-aadressi või kontrollid võrguühendusi), siis toimub see shelli kaudu. Shell on nagu mängu ekraan, mis võimaldab sul näha ja teha toiminguid.
+- **Shell** on kasutajaliides, mis võimaldab sul seadmega suhelda ja seda juhtida. Kui sa sisestad käske või annad süsteemile juhiseid (näiteks seadistad IP-aadressi või kontrollid võrguühendusi), siis toimub see shelli kaudu. Shell on nagu mängu ekraan, mis võimaldab sul näha ja teha toiminguid.
 
-- **Kernel** Kernel on süsteemi süda ehk aju, mis juhib kogu toimimist kulisside taga. See haldab suhtlust riistvara ja tarkvara vahel, korraldab ressursse ning tagab, et kõik protsessid toimivad tõhusalt ja sujuvalt. Kernel on vastutav süsteemi jõudluse ja stabiilsuse eest.
+- **Kernel** on süsteemi süda ehk aju, mis juhib kogu toimimist kulisside taga. See haldab suhtlust riistvara ja tarkvara vahel, korraldab ressursse ning tagab, et kõik protsessid toimivad tõhusalt ja sujuvalt. Kernel on vastutav süsteemi jõudluse ja stabiilsuse eest.
 
-- **Riistvara** Riistvara on füüsiline seade ise, näiteks ruuter või lüliti, mille sees on komponendid nagu emaplaat, protsessor ja mälu. Riistvara vastutab seadme tegeliku töö eest, nagu andmete edastamine ja võrguliikluse suunamine. Kernel suhtleb otse riistvaraga, et juhtida ja optimeerida selle toimimist.
+- **Riistvara** on füüsiline seade ise, näiteks ruuter või lüliti, mille sees on komponendid nagu emaplaat, protsessor ja mälu. Riistvara vastutab seadme tegeliku töö eest, nagu andmete edastamine ja võrguliikluse suunamine. Kernel suhtleb otse riistvaraga, et juhtida ja optimeerida selle toimimist.
 
 Need kolm komponenti töötavad koos, et tagada võrgu operatsioonisüsteemi sujuv toimimine ja seadmete tõhus haldamine.
 
@@ -286,7 +286,7 @@ Need kolm komponenti töötavad koos, et tagada võrgu operatsioonisüsteemi suj
 
 Võrguseadmete, nagu ruuterid, lülitid ja serverid, puhul mängivad riistvaraspetsifikatsioonid olulist rolli nende jõudluse ja võimekuse määramisel. Siin on mõned olulised spetsifikatsioonid ja nende tähendused:
 
-- **Protsessor (CPU)**: Protsessor on seadme "aju", mis juhib kõiki toiminguid. Võimsam CPU võimaldab seadmel kiiremini andmeid töödelda, hallata rohkem ühendusi ja tõhusamalt lahendada keerukaid võrgutoiminguid.
+- **Protsessor (CPU)**: on seadme "aju", mis juhib kõiki toiminguid. Võimsam CPU võimaldab seadmel kiiremini andmeid töödelda, hallata rohkem ühendusi ja tõhusamalt lahendada keerukaid võrgutoiminguid.
 
 - **Mälu (RAM ja Flash)**: Mälu suurus määrab, kui palju andmeid ja konfiguratsioone seade korraga käsitleb. Rohkem mälu võimaldab seadmel töötada suurema andmemahuga ja hallata keerulisemaid ülesandeid, nagu suurte andmepakettide töötlemine või mitu võrguühendust korraga.
 
