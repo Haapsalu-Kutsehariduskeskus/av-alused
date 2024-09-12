@@ -1,4 +1,4 @@
-> [!Youtube]
+> [!TIP]
 >[Networking Today](https://www.youtube.com/watch?v=TBAvNZIcdVQ&list=PLk4NQNr6-L8onI6MaPcfsRZJOvFO3S5D6&index=2)
 >[Basic Switch and End Device Configuration - Part 1](https://www.youtube.com/watch?v=4fMoxkiTEjc&list=PLk4NQNr6-L8onI6MaPcfsRZJOvFO3S5D6&index=2)
 >[Basic Switch and End Device Configuration - Part 2](https://www.youtube.com/watch?v=ruainw-2Y28&list=PLk4NQNr6-L8onI6MaPcfsRZJOvFO3S5D6&index=3)
@@ -614,7 +614,7 @@ Kui aga kaks seadet asuvad erinevates võrkudes (näiteks sinu koduarvuti ja ser
 
 ![OSI vs TCP/IP mudelid](/lectures/images/osi_vs_tcpip_models.png)
 
-> [!Allikad]
+> [!TIP]
 > [Switch liidesed](/lectures/contents/switch_interfaces/README.md)
 > [IPv4 päis](/lectures/contents/ipv4_header/README.md)
 > [Marsruutimise alused](/lectures/contents/routing_fundamentals/README.md)
