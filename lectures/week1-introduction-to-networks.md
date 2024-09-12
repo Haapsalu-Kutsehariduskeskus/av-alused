@@ -50,7 +50,7 @@ Mõtle sellele, et saad saata sõnumi või video kellegile teisel pool maailma v
 
 ## Võrgu osad
 
-õrgud on seadmete kogumid, mis võimaldavad teabe jagamist ja suhtlemist. Kõik võrgus olevad seadmed, olgu need siis arvutid, nutitelefonid või muud tehnilised vahendid, moodustavad terviku, kus iga komponent täidab kindlat rolli.
+Võrgud on seadmete kogumid, mis võimaldavad teabe jagamist ja suhtlemist. Kõik võrgus olevad seadmed, olgu need siis arvutid, nutitelefonid või muud tehnilised vahendid, moodustavad terviku, kus iga komponent täidab kindlat rolli.
 
 - **Hostid**: Iga seade, nagu arvutid, telefonid või tahvelarvutid, võrgus nimetatakse hostiks.
 - **Serverid ja kliendid**:
