@@ -276,9 +276,6 @@ Need kolm komponenti töötavad koos, et tagada võrgu operatsioonisüsteemi suj
 
 ### Riistvaraspetsifikatsioonide mõistmine
 
-
-### Riistvaraspetsifikatsioonide mõistmine
-
 Võrguseadmete, nagu ruuterid, lülitid ja serverid, puhul mängivad riistvaraspetsifikatsioonid olulist rolli nende jõudluse ja võimekuse määramisel. Siin on mõned olulised spetsifikatsioonid ja nende tähendused:
 
 - **Protsessor (CPU)**: Protsessor on seadme "aju", mis juhib kõiki toiminguid. Võimsam CPU võimaldab seadmel kiiremini andmeid töödelda, hallata rohkem ühendusi ja tõhusamalt lahendada keerukaid võrgutoiminguid.
