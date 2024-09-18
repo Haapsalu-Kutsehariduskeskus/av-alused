@@ -6,7 +6,6 @@
 >[IPv6 Configuration](https://www.youtube.com/watch?v=fS6jt7D33N8&list=PLk4NQNr6-L8onI6MaPcfsRZJOvFO3S5D6&index=14)
 >[Routing Basics](https://www.youtube.com/watch?v=_P5Mm11_o7k&list=PLk4NQNr6-L8onI6MaPcfsRZJOvFO3S5D6&index=15)
 
-
 # Nädal 3: OSI mudeli mõistmine - Osa 2 (Võrgukiht ja alavõrgutamine)
 
 # Võrgukiht ja marsruutimine
@@ -18,6 +17,7 @@ See osa põhineb Cisco "Sissejuhatus võrkudesse" seerial ja käsitleb OSI mudel
 ## Võrgukihi omadused
 
 Võrgukiht vastutab marsruutimise ja lõppseadmete aadresside määramise eest. Marsruutimine tähendab seda, et kui andmepakett peab liikuma ühest võrgust teise, siis võrgukiht otsustab, kuidas see pakett liigub ja kuhu see läheb. Peamised ülesanded selles kihis on:
+
 - **Seadmete aadressimine**: Iga võrgus olev seade peab omama unikaalset aadressi, et andmepaketid teaksid, kuhu nad peavad jõudma.
 - **Pakettide kapseldamine ja dekapseldamine**: Kui andmepakett liigub ühest kohast teise, lisatakse sellele võrgukihi päis, mis sisaldab infot, kuhu pakett läheb ja kust see tuleb.
 - **Pakettide marsruutimine**: Võrgukiht otsustab, millist teed mööda pakett liigub, et jõuda sihtkohta, mis võib olla erinev võrk.
@@ -39,6 +39,7 @@ IPv4 ja IPv6 on kaks peamist protokolli, mida kasutatakse võrgukihis. **IPv4** 
 ## IPv4 paketi struktuur
 
 IPv4 paketi päises on mitmeid olulisi välju:
+
 - **Lähteaadress ja sihtaadress**: Need määravad, kust pakett tuleb ja kuhu see läheb.
 - **Aegumisväärtus (TTL)**: See väli näitab, kui kaua paketti võib edasi saata enne, kui see "aegub".
 - **Kontrollsumma**: See väli aitab kontrollida, kas andmed on saatmise käigus kahjustada saanud.
@@ -46,6 +47,7 @@ IPv4 paketi päises on mitmeid olulisi välju:
 ## IPv6 paketi struktuur
 
 IPv6 pakettide päis on küll pikem kui IPv4 oma, kuid see on samas lihtsam ja fikseeritud suurusega (40 baiti). IPv6 olulised väljad sisaldavad:
+
 - **Aadressid**: IPv6 kasutab 128-bitiseid aadresse, mis võimaldavad palju rohkem seadmeid võrku ühendada.
 - **TTL asendaja (Hop Limit)**: See asendab IPv4-s kasutatava aegumisväärtuse ja määrab, mitu "hüpet" ehk marsruuterit pakett võib läbida.
 - **NAT vajaduse kaotamine**: Kuna IPv6-l on nii palju aadresse, ei ole enam vajadust NAT (Network Address Translation) tehnoloogia järele, mida IPv4-s kasutatakse aadresside kokkuhoidmiseks.
@@ -66,6 +68,7 @@ Teine osa keskendub sellele, kuidas võrgus olevad seadmed ja marsruuterid teeva
 ## Hosti marsruutimisotsused
 
 Igal võrgus oleval seadmel ehk hostil on oma marsruutimistabel, mis aitab otsustada, kuidas andmepakette edasi saata. Host võib saata pakette:
+
 - **Endale**: Näiteks aadress 127.0.0.1 IPv4 puhul ja ::1 IPv6 puhul.
 - **Teisele seadmele samas kohalikus võrgus**: Kui sihtkoht asub samas LAN-is.
 - **Kaugele seadmele**: Kui sihtkoht on väljaspool kohalikku võrku.
@@ -85,6 +88,7 @@ Kui liiklus peab minema väljapoole kohalikku võrku, kasutatakse selleks **vaik
 ## Marsruutimistabeli tüübid
 
 Marsruuteritel on tabelid, mis aitavad otsustada, kuhu pakette saata. Seal on erinevad marsruuditüübid:
+
 - **Otseselt ühendatud marsruudid**: Need lisatakse automaatselt, kui seadme liides on aktiivne.
 - **Kaugmarsruudid**: Neid saab lisada käsitsi (staatilised marsruudid) või õppida dünaamiliselt, kasutades marsruutimisprotokolle.
 - **Vaikemarsruut**: Kasutatakse siis, kui ükski teine marsruut sihtkohta ei sobi.
@@ -101,7 +105,7 @@ See teema annab olulise ülevaate, kuidas andmed liiguvad võrgus ja kuidas sead
 
 Kui erinevad seadmed – nagu arvutid, telefonid ja printerid – omavahel võrgus suhtlevad, kasutavad nad selleks erinevaid aadresse. Siin on kaks peamist tüüpi aadresse, mida seadmed kasutavad: MAC-aadressid ja IP-aadressid. Need on hädavajalikud, et võrgus liikuvad andmed jõuaksid õige seadmeni.
 
-### MAC ja IP aadressid
+## MAC ja IP aadressid
 
 MAC-aadress on seadme "füüsiline aadress", mis on unikaalne ja seotud seadme riistvaraga. Seda võiks võrrelda inimese sõrmejäljega – igal seadmel on oma kordumatu jälg, mida ei saa muuta. Kui kaks seadet on samas võrgus, suhtlevad nad omavahel MAC-aadresside kaudu.
 
@@ -153,11 +157,12 @@ Ruuter on nagu kuller, kes toimetab andmeid ühest kohast teise. Kui ta ei tea, 
 
 ![Ruuteri seadistamise sammud](/lectures/images/router_setup_steps.png)
 
-### Esimesed sammud:
+### Esimesed sammud
 
 1. **Ühenda ruuter vooluvõrku ja arvutiga.**
 2. **Sisenemine ruuteri seadistamisliidesesse** – IP-aadressi kaudu (`192.168.1.1`).
 3. **Esimesed käsud:**
+
     ```bash
     Router(config)# hostname MinuRuuter
     Router(config)# ip address 192.168.1.1 255.255.255.0
@@ -171,19 +176,22 @@ Liidesed on ruuteri "käed ja jalad". Iga liides võimaldab ruuteril suhelda eri
 
 ![Liideste seadistamise näide](/lectures/images/interface_setup.png)
 
-### Liideste seadistamine:
+### Liideste seadistamine
 
 1. **IP-aadressi määramine liidesele:**
+
     ```bash
     Router(config-if)# ip address 192.168.1.2 255.255.255.0
     ```
 
 2. **Liidese aktiveerimine:**
+
     ```bash
     Router(config-if)# no shutdown
     ```
 
 3. **Kontrolli liideste seadistust:**
+
     ```bash
     Router# show ip interface brief
     ```
@@ -196,9 +204,10 @@ Vaikelüüs on nagu "uks", mis viib sind kohalikust võrgust välja suuremasse i
 
 ![Vaikelüüsi määramine](/lectures/images/default_gateway_setup.png)
 
-### Vaikelüüsi seadistamine:
+### Vaikelüüsi seadistamine
 
 1. **Vaikelüüsi määramine ruuterile:**
+
     ```bash
     Router(config)# ip default-gateway 192.168.1.1
     ```
@@ -219,7 +228,8 @@ Ruuteri põhiseadistused, liideste seadistamine ja vaikelüüsi määramine on k
 
 Interneti kasutamiseks vajavad kõik seadmed unikaalset aadressi, mida kutsutakse **IP-aadressiks**. **IPv4** (Internet Protocol version 4) on üks peamisi protokolle, mille kaudu seadmed internetis omavahel suhtlevad. IPv4 aadress koosneb neljast numbrist, mida eraldavad punktid, ja igal numbril on väärtus vahemikus 0–255. See aadress määrab seadme asukoha võrgus, võimaldades tal andmeid saata ja vastu võtta.
 
-#### Näide IPv4 aadressist:
+#### Näide IPv4 aadressist
+
 - **192.168.1.1** – see on tavaline IPv4 aadress, mida näeme koduvõrkudes.
 
 ---
@@ -227,12 +237,14 @@ Interneti kasutamiseks vajavad kõik seadmed unikaalset aadressi, mida kutsutaks
 ### IPv4 Aadressi Struktuur
 
 IPv4 aadress koosneb kahest osast:
+
 1. **Võrgu osa** (Network) – määrab, millisesse võrku seade kuulub.
 2. **Hosti osa** (Host) – määrab konkreetse seadme võrgus.
 
 See sarnaneb tavalise postiaadressiga: võrguaadress on nagu linna ja tänava nimi ning hostiaadress on maja number. Võrgumask aitab eristada, milline osa aadressist kuulub võrgule ja milline seadmele.
 
-#### Näide:
+#### Näide
+
 - **IP-aadress:** 192.168.1.10
 - **Võrgumask:** 255.255.255.0  
 See tähendab, et võrguaadress on **192.168.1.0** ja hostide aadressid selles võrgus on vahemikus **192.168.1.1** kuni **192.168.1.254**.
@@ -243,7 +255,8 @@ See tähendab, et võrguaadress on **192.168.1.0** ja hostide aadressid selles v
 
 **Avalikud IP-aadressid** on need, mida kasutavad seadmed, et suhelda ülemaailmses internetis, ja need peavad olema unikaalsed. **Privaatvõrgu IP-aadressid** on mõeldud kasutamiseks ainult kohalikus võrgus, näiteks kodus või kontoris.
 
-#### Privaatsete IP-aadresside vahemikud:
+#### Privaatsete IP-aadresside vahemikud
+
 - **192.168.x.x**
 - **10.x.x.x**
 - **172.16.x.x – 172.31.x.x**
@@ -255,6 +268,7 @@ Neid privaatseid aadresse ei kasutata internetis, vaid ainult kohalikus võrgus.
 ### Unicast, Broadcast ja Multicast
 
 IPv4 aadresse saab kasutada andmete saatmiseks kolmel viisil:
+
 1. **Unicast** – andmed saadetakse ühele seadmele.
 2. **Broadcast** – andmed saadetakse kõigile seadmetele võrgus.
 3. **Multicast** – andmed saadetakse kindlale seadmete grupile.
@@ -267,13 +281,15 @@ Näiteks kui saadad e-kirja ühele sõbrale, kasutad **unicast**-aadressimist. K
 
 Suurte võrkude efektiivseks haldamiseks jagatakse neid tihti **alavõrkudeks**. Alavõrkude loomine põhineb võrgumaskidel. See võimaldab võrguressursse paremini hallata ja tagab tõhusama andmevahetuse.
 
-#### Näide:
+#### Näide
+
 Kui sul on võrguaadress **192.168.1.0/24** (255.255.255.0), võid jagada selle kaheks alavõrguks kasutades võrgumaski **255.255.255.128**. See jagab võrguaadressid kaheks alavõrguks, millest mõlemas saab olla kuni 126 seadet.
 
 - **Alavõrk 1:** 192.168.1.0 – 192.168.1.127
 - **Alavõrk 2:** 192.168.1.128 – 192.168.1.255
 
-#### Võrguseadistuse sammud:
+#### Võrguseadistuse sammud
+
 1. Ava oma ruuteri või switchi konfiguratsioonitööriist (veebipõhine või CLI).
 2. Määra seadmele IP-aadress (nt **192.168.1.1**).
 3. Määra võrgumask (nt **255.255.255.128**).
@@ -285,22 +301,28 @@ Kui sul on võrguaadress **192.168.1.0/24** (255.255.255.0), võid jagada selle 
 
 Iga võrguseade vajab algseadistamist, et suhelda võrguga. **Ruuteri seadistamine** on üks esimesi samme, kui ehitad võrku.
 
-#### Sammud ruuteri seadistamiseks:
+#### Sammud ruuteri seadistamiseks
+
 1. **Ava CLI** (Command Line Interface) – enamasti saad sellele ligi kaabelühenduse kaudu või veebiliidese kaudu.
 2. **Sisene ruuteri konsooli**:
+
    ```bash
    enable
    ```
+
    See lülitab CLI administratiivrežiimi.
 3. **Määra ruuteri IP-aadress** (ruuteri LAN-pordile):
+
    ```bash
    configure terminal
    interface gigabitethernet 0/1
    ip address 192.168.1.1 255.255.255.0
    no shutdown
    ```
+
    Siin määrame ruuteri LAN-aadressiks **192.168.1.1** ja võrgumaskiks **255.255.255.0**.
 4. **Salvesta konfiguratsioon**:
+
    ```bash
    write memory
    ```
@@ -311,17 +333,22 @@ Iga võrguseade vajab algseadistamist, et suhelda võrguga. **Ruuteri seadistami
 
 Peale ruuteri algseadistamist tuleb seadistada **liidesed** (interfaces), et ruuter saaks ühendust luua võrguga.
 
-#### Näide liideste seadistusest:
+#### Näide liideste seadistusest
+
 Kui ruuteril on kaks võrku (nt üks koduvõrk ja teine internetiühendus), peab kummalegi võrgule määrama oma liidese.
 
-#### Sammud:
+#### Sammud
+
 1. **Sisene liidese seadistusse** (näiteks internetiühenduse jaoks):
+
    ```bash
    interface gigabitethernet 0/0
    ip address 10.0.0.1 255.255.255.252
    no shutdown
    ```
+
 2. **Seadista teine liides koduvõrgu jaoks**:
+
    ```bash
    interface gigabitethernet 0/1
    ip address 192.168.1.1 255.255.255.0
@@ -332,22 +359,4 @@ Nüüd on ruuter ühendatud nii koduvõrgu kui ka internetiga, ja võrguliiklus 
 
 ---
 
-### Praktiline Ülesanne
 
-#### Ülesanne 1: Alavõrkude loomine
-1. Oletame, et sul on aadress **192.168.1.0/24**. Jaga see kaheks alavõrguks, kasutades võrgumaski **255.255.255.128**.
-2. Määra ruuterile alavõrgu aadress **192.168.1.1** ja testimisseadmele (näiteks arvutile) aadress **192.168.1.2**.
-
-#### Ülesanne 2: Ruuteri konfigureerimine
-1. Kasuta CLI-d ja määra ruuteri liidesele **192.168.1.1** IP-aadress.
-2. Kontrolli, kas seadmed saavad omavahel suhelda, kasutades **ping** käsku.
-
----
-
-### Kokkuvõte
-
-Nüüd oskad sa aru saada, kuidas IPv4-aadressid töötavad ja kuidas seadistada seadmeid, et nad saaksid omavahel suhelda. Sa õppisid, kuidas luua alavõrke ja konfigureerida ruuteri liideseid, mis on olulised oskused igas võrguhalduses. 
-
----
-
-**Järgmine samm:** Proovi seadistada oma koduvõrk ja katseta erinevate seadmetega IP-aadresside ja liideste määramist.
