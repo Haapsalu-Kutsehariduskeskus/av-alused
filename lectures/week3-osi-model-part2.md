@@ -143,9 +143,9 @@ IPv6-s on võimalik luua 340 undecillion aadressi. See tähendab, et iga liivate
 
 Kui soovid seadistada IPv6-aadressi, võib see välja näha nii:
 
-    ```bash
-    sudo ip -6 addr add 2001:db8::1/64 dev eth0
-    ```
+```bash
+sudo ip -6 addr add 2001:db8::1/64 dev eth0
+```
 
 ---
 
@@ -163,10 +163,10 @@ Ruuter on nagu kuller, kes toimetab andmeid ühest kohast teise. Kui ta ei tea, 
 2. **Sisenemine ruuteri seadistamisliidesesse** – IP-aadressi kaudu (`192.168.1.1`).
 3. **Esimesed käsud:**
 
-    ```bash
-    Router(config)# hostname MinuRuuter
-    Router(config)# ip address 192.168.1.1 255.255.255.0
-    ```
+```bash
+Router(config)# hostname MinuRuuter
+Router(config)# ip address 192.168.1.1 255.255.255.0
+```
 
 Esimene interneti ruuter loodi 1981. aastal, ja selle töö kiirus oli umbes **56 kbit/s** – rohkem kui **1000 korda aeglasem** kui kiirus, mida täna kodus kasutad!
 
@@ -178,23 +178,23 @@ Liidesed on ruuteri "käed ja jalad". Iga liides võimaldab ruuteril suhelda eri
 
 ### Liideste seadistamine
 
-1. **IP-aadressi määramine liidesele:**
+1.**IP-aadressi määramine liidesele:**
 
-    ```bash
-    Router(config-if)# ip address 192.168.1.2 255.255.255.0
-    ```
+```bash
+Router(config-if)# ip address 192.168.1.2 255.255.255.0
+```
 
-2. **Liidese aktiveerimine:**
+2.**Liidese aktiveerimine:**
 
-    ```bash
-    Router(config-if)# no shutdown
-    ```
+```bash
+Router(config-if)# no shutdown
+```
 
-3. **Kontrolli liideste seadistust:**
+3.**Kontrolli liideste seadistust:**
 
-    ```bash
-    Router# show ip interface brief
-    ```
+```bash
+Router# show ip interface brief
+```
 
 Suurettevõtetes võib ühel ruuteril olla **sadu liideseid**, samas kui koduruuteril on tavaliselt ainult üks või kaks.
 
@@ -208,9 +208,9 @@ Vaikelüüs on nagu "uks", mis viib sind kohalikust võrgust välja suuremasse i
 
 1. **Vaikelüüsi määramine ruuterile:**
 
-    ```bash
-    Router(config)# ip default-gateway 192.168.1.1
-    ```
+```bash
+Router(config)# ip default-gateway 192.168.1.1
+```
 
 Vaikelüüs on nii oluline, et kui see on seadistamata, siis pole võimalik internetti saada – justkui uks oleks igaveseks lukku pandud!
 
@@ -224,11 +224,11 @@ Ruuteri põhiseadistused, liideste seadistamine ja vaikelüüsi määramine on k
 
 # IPv4 Aadressimine ja Seadmete Konfiguratsioonid
 
-### Sissejuhatus IPv4
+## Sissejuhatus IPv4
 
 Interneti kasutamiseks vajavad kõik seadmed unikaalset aadressi, mida kutsutakse **IP-aadressiks**. **IPv4** (Internet Protocol version 4) on üks peamisi protokolle, mille kaudu seadmed internetis omavahel suhtlevad. IPv4 aadress koosneb neljast numbrist, mida eraldavad punktid, ja igal numbril on väärtus vahemikus 0–255. See aadress määrab seadme asukoha võrgus, võimaldades tal andmeid saata ja vastu võtta.
 
-#### Näide IPv4 aadressist
+### Näide IPv4 aadressist
 
 - **192.168.1.1** – see on tavaline IPv4 aadress, mida näeme koduvõrkudes.
 
@@ -277,18 +277,16 @@ Näiteks kui saadad e-kirja ühele sõbrale, kasutad **unicast**-aadressimist. K
 
 ---
 
-### Alavõrkude Konfigureerimine (Subnetting)
+## Alavõrkude Konfigureerimine (Subnetting)
 
 Suurte võrkude efektiivseks haldamiseks jagatakse neid tihti **alavõrkudeks**. Alavõrkude loomine põhineb võrgumaskidel. See võimaldab võrguressursse paremini hallata ja tagab tõhusama andmevahetuse.
-
-#### Näide
 
 Kui sul on võrguaadress **192.168.1.0/24** (255.255.255.0), võid jagada selle kaheks alavõrguks kasutades võrgumaski **255.255.255.128**. See jagab võrguaadressid kaheks alavõrguks, millest mõlemas saab olla kuni 126 seadet.
 
 - **Alavõrk 1:** 192.168.1.0 – 192.168.1.127
 - **Alavõrk 2:** 192.168.1.128 – 192.168.1.255
 
-#### Võrguseadistuse sammud
+### Võrguseadistuse sammud
 
 1. Ava oma ruuteri või switchi konfiguratsioonitööriist (veebipõhine või CLI).
 2. Määra seadmele IP-aadress (nt **192.168.1.1**).
@@ -297,35 +295,35 @@ Kui sul on võrguaadress **192.168.1.0/24** (255.255.255.0), võid jagada selle 
 
 ---
 
-### Ruuteri Algseadistuse Näide
+### Ruuteri Algseadistus
 
 Iga võrguseade vajab algseadistamist, et suhelda võrguga. **Ruuteri seadistamine** on üks esimesi samme, kui ehitad võrku.
 
-#### Sammud ruuteri seadistamiseks
+1.**Ava CLI** (Command Line Interface) – enamasti saad sellele ligi kaabelühenduse kaudu või veebiliidese kaudu.
+2.**Sisene ruuteri konsooli**:
 
-1. **Ava CLI** (Command Line Interface) – enamasti saad sellele ligi kaabelühenduse kaudu või veebiliidese kaudu.
-2. **Sisene ruuteri konsooli**:
-
-   ```bash
-   enable
-   ```
+```bash
+enable
+```
 
    See lülitab CLI administratiivrežiimi.
-3. **Määra ruuteri IP-aadress** (ruuteri LAN-pordile):
 
-   ```bash
-   configure terminal
-   interface gigabitethernet 0/1
-   ip address 192.168.1.1 255.255.255.0
-   no shutdown
-   ```
+3.**Määra ruuteri IP-aadress** (ruuteri LAN-pordile):
+
+```bash
+configure terminal
+interface gigabitethernet 0/1
+ip address 192.168.1.1 255.255.255.0
+no shutdown
+```
 
    Siin määrame ruuteri LAN-aadressiks **192.168.1.1** ja võrgumaskiks **255.255.255.0**.
-4. **Salvesta konfiguratsioon**:
 
-   ```bash
-   write memory
-   ```
+4.**Salvesta konfiguratsioon**:
+
+```bash
+write memory
+```
 
 ---
 
@@ -339,24 +337,22 @@ Kui ruuteril on kaks võrku (nt üks koduvõrk ja teine internetiühendus), peab
 
 #### Sammud
 
-1. **Sisene liidese seadistusse** (näiteks internetiühenduse jaoks):
+1.**Sisene liidese seadistusse** (näiteks internetiühenduse jaoks):
 
-   ```bash
-   interface gigabitethernet 0/0
-   ip address 10.0.0.1 255.255.255.252
-   no shutdown
-   ```
+```bash
+interface gigabitethernet 0/0
+ip address 10.0.0.1 255.255.255.252
+no shutdown
+```
 
-2. **Seadista teine liides koduvõrgu jaoks**:
+2.**Seadista teine liides koduvõrgu jaoks**:
 
-   ```bash
-   interface gigabitethernet 0/1
-   ip address 192.168.1.1 255.255.255.0
-   no shutdown
-   ```
+```bash
+interface gigabitethernet 0/1
+ip address 192.168.1.1 255.255.255.0
+no shutdown
+```
 
 Nüüd on ruuter ühendatud nii koduvõrgu kui ka internetiga, ja võrguliiklus saab hakata liikuma.
 
 ---
-
-
