@@ -1,4 +1,4 @@
-# Nädal 5: Võrguseadmed ja nende haldamine (Moodulid 16-17)**
+# Nädal 5: Võrguseadmed ja nende haldamine (Moodulid 16-17)
 
 # Võrguseadmete Ülevaade
 
@@ -17,7 +17,8 @@ Lülitid on seadmed, mis ühendavad võrgus erinevaid seadmeid, nagu arvutid ja 
 ![Switchi pordid ja LED-id](/lectures/images/switch_ports_and_leds.png)
 
 **Täiendav info**:
-- [Artikkel lülitite lähtestamisest ja pordide tähendustest](https://robots.net/news/how-do-you-reset-a-network-switch)&#8203;:contentReference[oaicite:0]{index=0}
+- [Artikkel lülitite lähtestamisest ja pordide tähendustest](https://robots.net/news/how-do-you-reset-a-network-switch)
+
 
 ## 2. Ruuterid
 Ruuterid suunavad andmepakette erinevate võrkude vahel, näiteks sisevõrgu ja interneti vahel.
@@ -29,7 +30,7 @@ Ruuterid suunavad andmepakette erinevate võrkude vahel, näiteks sisevõrgu ja 
 ![Ruuteri pordid ja nupud 1](/lectures/images/router_ports_buttons1.png)
 ![Ruuteri pordid ja nupud 2](/lectures/images/router_ports_buttons2.png)
 **Täiendav info**:
-- [Artikkel ruuteri lähtestamisest ja LED-tulede tähendustest](https://www.softhandtech.com/decoding-ethernet-port-lights)&#8203;:contentReference[oaicite:1]{index=1}
+- [Artikkel ruuteri lähtestamisest ja LED-tulede tähendustest](https://www.softhandtech.com/decoding-ethernet-port-lights)
 
 ## 3. 3-kihi (Layer 3) switch
 
@@ -53,13 +54,13 @@ See kolmekihiline mudel tagab, et andmed liiguvad kiiresti ja tõhusalt läbi ko
 
 - **Lüliti lähtestamine CLI kaudu**:
   1. Ühenda konsoolipordiga ja logi CLI-sse sisse.
-  2. Kasuta käsku `erase startup-config` ja seejärel `reload`, et seade lähtestada tehase seadetele&#8203;:contentReference[oaicite:2]{index=2}.
+  2. Kasuta käsku `erase startup-config` ja seejärel `reload`, et seade lähtestada tehase seadetele.
 
 - **Ruuteri lähtestamine nuppu kasutades**:
-  - Vajuta ja hoia reset-nuppu 10-30 sekundit, kuni LED hakkab vilkuma&#8203;:contentReference[oaicite:3]{index=3}.
+  - Vajuta ja hoia reset-nuppu 10-30 sekundit, kuni LED hakkab vilkuma.
 
 ---
 
 Selle põhjalikuma ülevaate ja lisainfo saamiseks tutvu täiendavate ressurssidega:
-- [Robots.net - Lüliti lähtestamine](https://robots.net/news/how-do-you-reset-a-network-switch)&#8203;:contentReference[oaicite:4]{index=4}
-- [Cisco Documentation - Etherneti porditulede tähendused näide](https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst9500/hardware/install/b_catalyst_9500_hig/9500-leds.pdf)&#8203;:contentReference[oaicite:5]{index=5}
+- [Robots.net - Lüliti lähtestamine](https://robots.net/news/how-do-you-reset-a-network-switch)
+- [Cisco Documentation - Etherneti porditulede tähendused näide](https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst9500/hardware/install/b_catalyst_9500_hig/9500-leds.pdf)
