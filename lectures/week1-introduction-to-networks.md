@@ -364,7 +364,7 @@ Iga võrguseade, näiteks ruuter või kommutaator, vajab unikaalset ja tähendus
 
 ### Standardne nimetamise konventsioon
 
-Suuremates võrkudes on standardne nimetamise süsteem oluline, et tagada ühtsus ja lihtne haldamine. Ühtselt nimetatud seadmed teevad võrgu haldamise ja tõrkeotsingu palju lihtsamaks. Näiteks, kui nimetad kommutaator "TLN-SW1", viitab see sellele, et tegemist on esimese lülitiga Tallinnas, andes selge ettekujutuse selle asukohast ja rollist.
+Suuremates võrkudes on standardne nimetamise süsteem oluline, et tagada ühtsus ja lihtne haldamine. Ühtselt nimetatud seadmed teevad võrgu haldamise ja tõrkeotsingu palju lihtsamaks. Näiteks, kui nimetad kommutaator "TLN-SW1", viitab see sellele, et tegemist on esimese kommutaatoriga Tallinnas, andes selge ettekujutuse selle asukohast ja rollist.
 
 
 ### Tugevate paroolide seadistamine
@@ -581,7 +581,7 @@ Andmete liikumiseks võrgus on vajalik aadressimine. Kaks peamist tüüpi aadres
 
 Need kontseptsioonid moodustavad võrkude töö alustalad ja aitavad andmeid usaldusväärselt sihtkohta viia.
 
-* [Ethernet LAN-i lülitamine](/lectures/contents/ethernet_lan_switching/README.md)
+* [Ethernet LAN-i kommutatsioon](/lectures/contents/ethernet_lan_switching/README.md)
 * [IPv4 aadressimine](/lectures/contents/ipv4_addressing/README.md)
 
 

@@ -161,9 +161,9 @@ Kaadrite struktuur ja nende kontrollmehhanismid aitavad tagada, et edastatud and
 
 ---
 
-### 3. Etherneti Lülitamine (Switching)
+### 3. Etherneti Kommutatsioon (Switching)
 
-Etherneti lülitamine keskendub mitmele olulisele aspektile, sealhulgas Ethernet-raami struktuurile, MAC-aadressidele ja MAC-aadresside tabelitele. Lisaks käsitletakse kommutaator kiiruseid ja edastamisviise. Ethernet töötab OSI mudeli kahes kihis – andmelingi kihis (kiht 2) ja füüsilises kihis (kiht 1). Seda tehnoloogiat reguleerivad IEEE 802 standardid.
+Etherneti kommutatsioon keskendub mitmele olulisele aspektile, sealhulgas Ethernet-raami struktuurile, MAC-aadressidele ja MAC-aadresside tabelitele. Lisaks käsitletakse kommutaator kiiruseid ja edastamisviise. Ethernet töötab OSI mudeli kahes kihis – andmelingi kihis (kiht 2) ja füüsilises kihis (kiht 1). Seda tehnoloogiat reguleerivad IEEE 802 standardid.
 
 ![Ethernet kommutaatori struktuur](/lectures/images/ethernet_switch_structure.png)
 
@@ -192,9 +192,9 @@ Etherneti võrkudes võib side toimuda erineval viisil:
 
 kommutaatorid kasutavad MAC-aadresse, et otsustada, kuhu andmepakett suunata. Kui kommutaator saab raami, kontrollib see oma MAC-aadresside tabelit ja määrab, millise pordi kaudu raam edastada. Kui sihtaadress pole teada, saadetakse raam kõigile portidele, välja arvatud sellele, kust see tuli.
 
-![MAC-aadresside tabel lülitis](/lectures/images/mac_address_table.png)
+![MAC-aadresside tabel](/lectures/images/mac_address_table.png)
 
-### Lülitusmeetodid
+### Kommutatsiooni meetodid
 
 Etherneti kommutaatorid kasutavad erinevaid meetodeid andmete edastamiseks. Üks neist on **Store-and-Forward**, kus kommutaator loeb terve raami, kontrollib vigu ja alles siis edastab selle sihtkohta. Teine meetod on **Cut-Through**, mille puhul kommutaator edastab raami enne, kui kogu pakett on vastu võetud. Cut-Through meetodil on kaks varianti:
 - **Fast Forward**: edastamine algab kohe pärast sihtaadressi lugemist, mis tagab madala latentsuse.
@@ -214,7 +214,7 @@ Etherneti seadmed saavad töötada kas täisdupleksis või pooldupleksis. **Täi
 
 ### Auto-MDIX Funktsioon
 
-Kaasaegsetel lülititel on funktsioon nimega **Auto-MDIX**, mis tuvastab automaatselt, kas kasutatakse sirget või ristkaablit, ning kohandab oma seaded vastavalt. See aitab vältida käsitsi sekkumise vajadust ja lihtsustab kaabelduse õiget toimimist.
+Kaasaegsetel kommutaatoritel on funktsioon nimega **Auto-MDIX**, mis tuvastab automaatselt, kas kasutatakse sirget või ristkaablit, ning kohandab oma seaded vastavalt. See aitab vältida käsitsi sekkumise vajadust ja lihtsustab kaabelduse õiget toimimist.
 
 ![Auto-MDIX funktsioon](/lectures/images/auto_mdix_feature.png)
 

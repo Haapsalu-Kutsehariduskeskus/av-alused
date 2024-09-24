@@ -42,7 +42,7 @@ Võrguseadmed paigutatakse kolme peamise kihi järgi:
 
 1. **Core kiht** on võrgu keskne osa, mis ühendab kõik võrgu osad ja võimaldab kiiret andmevahetust. Siin asuvad võimsad 3-kihi switchid, mis suunavad andmepakette erinevate alamvõrkude vahel.
 
-2. **Distribution kiht** koondab liikluse väiksematest võrgusegmentidest ja suunab selle core kihile. Siin kasutatakse L2 ja L3 switch'e, mis suudavad nii lülitada kui marsruutida.
+2. **Distribution kiht** koondab liikluse väiksematest võrgusegmentidest ja suunab selle core kihile. Siin kasutatakse L2 ja L3 switch'e, mis suudavad nii kommuteerida kui marsruutida.
 
 3. **Access kiht** ühendab lõppkasutajate seadmed võrku, näiteks arvutid ja printerid. Sellel kihil kasutatakse tavalisi switch'e ja ruutereid.
 

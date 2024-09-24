@@ -6,7 +6,7 @@
 
 # Nädal 4: OSI mudel - 3. osa (Transpordi-, seansi-, esitlus- ja rakenduskiht) (Moodulid 12-15)
 
-Eelmistel tundidel oleme juba vaadanud füüsilisi ja andmelülikihte, nüüd keskendume järgmistele, kõrgematele kihtidele: transpordikiht ning seansi-, esitlus- ja rakenduskiht. Need kihid on võtmetähtsusega tagamaks, et andmed liiguvad võrgus õigesti ja rakendused saavad töötada ootuspäraselt.
+Eelmistel tundidel oleme juba vaadanud füüsilisi ja kanalikihte, nüüd keskendume järgmistele, kõrgematele kihtidele: transpordikiht ning seansi-, esitlus- ja rakenduskiht. Need kihid on võtmetähtsusega tagamaks, et andmed liiguvad võrgus õigesti ja rakendused saavad töötada ootuspäraselt.
 
 ## IPv6 aadressimine
 
