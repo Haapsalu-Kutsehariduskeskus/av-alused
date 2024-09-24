@@ -1,4 +1,4 @@
-# Nädal 6: Final Project**
+# Nädal 6: Final Project
 
 Lõpuprojekti ülesandeid lahendades pead kasutama **Cisco Packet Tracer** programmi ja töölehel (PKA-failis) saad ülesanded mugavalt täita ühes aknas. Kontrollimaks oma lahenduste korrektsust, kasuta funktsiooni **Check Results**, mis annab vahetu tagasiside sinu seadistustele ja vastustele.
 
