@@ -135,7 +135,7 @@ Need seadmed on nagu võrgu liikluspolitseinikud. Nad tagavad, et sinu andmed li
 
 - **Ruuterid:** Need otsustavad parima tee, mida mööda sinu andmed võrgu või interneti kaudu liiguvad.
   
-- **Lülitid:** Need ühendavad omavahel mitmeid seadmeid samas võrgus, näiteks kõik arvutid LAN-is, ja tagavad, et andmed jõuavad sinna, kuhu need peavad.
+- **Kommutaatorid:** Need ühendavad omavahel mitmeid seadmeid samas võrgus, näiteks kõik arvutid LAN-is, ja tagavad, et andmed jõuavad sinna, kuhu need peavad.
 
 - **Tulemüürid:** Tulemüürid on võrgu turvamehed, kes hoiavad soovimatu liikluse eemal ja kaitsevad sinu andmeid häkkerite eest.
 
@@ -244,7 +244,7 @@ Need standardiorganisatsioonid mängivad olulist rolli globaalse võrgu toimimis
 
 ---
 
-## Võrguseadmete kasutamine; põhiline lüliti ja seadmete seadistamine
+## Võrguseadmete kasutamine; põhiline kommutaator ja seadmete seadistamine
 
 
 ### Mis on Cisco IOS?
@@ -252,7 +252,7 @@ Need standardiorganisatsioonid mängivad olulist rolli globaalse võrgu toimimis
 
 * [Sissejuhatus Cisco IOS CLI-sse](/lectures/contents/intro_to_cisco_cli/README.md)
 
-Cisco IOS (Internetwork Operating System) on Cisco võrguseadmete, nagu ruuterid ja lülitid, operatsioonisüsteem. Nii nagu arvutil on operatsioonisüsteem, näiteks Windows või macOS, ja nutitelefonidel iOS või Android, toimivad võrguseadmed spetsiaalsete operatsioonisüsteemidega, nagu Cisco IOS.
+Cisco IOS (Internetwork Operating System) on Cisco võrguseadmete, nagu ruuterid ja kommutaatorid, operatsioonisüsteem. Nii nagu arvutil on operatsioonisüsteem, näiteks Windows või macOS, ja nutitelefonidel iOS või Android, toimivad võrguseadmed spetsiaalsete operatsioonisüsteemidega, nagu Cisco IOS.
 
 Cisco IOS pakub käsurealiidest (CLI), mille kaudu saavad võrguadministraatorid seadistada ja hallata võrguühendusi, seadistada turvalisust ja jälgida võrgu jõudlust.
 
@@ -260,7 +260,7 @@ Cisco IOS pakub käsurealiidest (CLI), mille kaudu saavad võrguadministraatorid
 ### Erinevad võrgu operatsioonisüsteemid
 
 
-Võrgu operatsioonisüsteemid (NOS) haldavad ja kontrollivad võrguseadmete, nagu ruuterite ja lülitite, riistvara ja tarkvara ressursse. Need süsteemid pakuvad tööriistu, mis võimaldavad võrke tõhusalt seadistada, hallata ja turvata. Siin on mõned tuntud võrgu operatsioonisüsteemid:
+Võrgu operatsioonisüsteemid (NOS) haldavad ja kontrollivad võrguseadmete, nagu ruuterite ja kommutaatorite, riistvara ja tarkvara ressursse. Need süsteemid pakuvad tööriistu, mis võimaldavad võrke tõhusalt seadistada, hallata ja turvata. Siin on mõned tuntud võrgu operatsioonisüsteemid:
 
 - **Juniperi JUNOS**: JUNOS-i kasutatakse Juniper Networksi seadmetes ja see on tuntud oma stabiilsuse, modulaarse disaini ja tugeva turvalisuse poolest. Kasutajasõbralik liides ja võimas funktsionaalsus muudavad selle populaarseks suuremate ja keerukamate võrkude haldamisel.
 
@@ -278,13 +278,13 @@ Võrgu operatsioonisüsteemi toimimist saab mõista, jagades selle kolmeks oluli
 
 - **Kernel** on süsteemi süda ehk aju, mis juhib kogu toimimist kulisside taga. See haldab suhtlust riistvara ja tarkvara vahel, korraldab ressursse ning tagab, et kõik protsessid toimivad tõhusalt ja sujuvalt. Kernel on vastutav süsteemi jõudluse ja stabiilsuse eest.
 
-- **Riistvara** on füüsiline seade ise, näiteks ruuter või lüliti, mille sees on komponendid nagu emaplaat, protsessor ja mälu. Riistvara vastutab seadme tegeliku töö eest, nagu andmete edastamine ja võrguliikluse suunamine. Kernel suhtleb otse riistvaraga, et juhtida ja optimeerida selle toimimist.
+- **Riistvara** on füüsiline seade ise, näiteks ruuter või kommutaator, mille sees on komponendid nagu emaplaat, protsessor ja mälu. Riistvara vastutab seadme tegeliku töö eest, nagu andmete edastamine ja võrguliikluse suunamine. Kernel suhtleb otse riistvaraga, et juhtida ja optimeerida selle toimimist.
 
 Need kolm komponenti töötavad koos, et tagada võrgu operatsioonisüsteemi sujuv toimimine ja seadmete tõhus haldamine.
 
 ### Riistvaraspetsifikatsioonide mõistmine
 
-Võrguseadmete, nagu ruuterid, lülitid ja serverid, puhul mängivad riistvaraspetsifikatsioonid olulist rolli nende jõudluse ja võimekuse määramisel. Siin on mõned olulised spetsifikatsioonid ja nende tähendused:
+Võrguseadmete, nagu ruuterid, kommutaatorid ja serverid, puhul mängivad riistvaraspetsifikatsioonid olulist rolli nende jõudluse ja võimekuse määramisel. Siin on mõned olulised spetsifikatsioonid ja nende tähendused:
 
 - **Protsessor (CPU)**: on seadme "aju", mis juhib kõiki toiminguid. Võimsam CPU võimaldab seadmel kiiremini andmeid töödelda, hallata rohkem ühendusi ja tõhusamalt lahendada keerukaid võrgutoiminguid.
 
@@ -353,7 +353,7 @@ Need otseteed ja tööriistad aitavad tööd lihtsustada, võimaldades võrguadm
 
 ### Seadmete nimetamine
 
-Iga võrguseade, näiteks ruuter või lüliti, vajab unikaalset ja tähendusrikast nime, et saaksid seadmeid hõlpsasti hallata ja tuvastada. Selle asemel, et nimetada seadmeid juhuslikult (nt "Mickey" või "Goofy"), kasuta nimesid, mis annavad teavet seadme asukoha või funktsiooni kohta, näiteks "SW-Floor-1" (lüliti esimesel korrusel).
+Iga võrguseade, näiteks ruuter või kommutaator, vajab unikaalset ja tähendusrikast nime, et saaksid seadmeid hõlpsasti hallata ja tuvastada. Selle asemel, et nimetada seadmeid juhuslikult (nt "Mickey" või "Goofy"), kasuta nimesid, mis annavad teavet seadme asukoha või funktsiooni kohta, näiteks "SW-Floor-1" (kommutaator esimesel korrusel).
 
 ### Nimetamisreeglid:
 
@@ -364,7 +364,7 @@ Iga võrguseade, näiteks ruuter või lüliti, vajab unikaalset ja tähendusrika
 
 ### Standardne nimetamise konventsioon
 
-Suuremates võrkudes on standardne nimetamise süsteem oluline, et tagada ühtsus ja lihtne haldamine. Ühtselt nimetatud seadmed teevad võrgu haldamise ja tõrkeotsingu palju lihtsamaks. Näiteks, kui nimetad lüliti "TLN-SW1", viitab see sellele, et tegemist on esimese lülitiga Tallinnas, andes selge ettekujutuse selle asukohast ja rollist.
+Suuremates võrkudes on standardne nimetamise süsteem oluline, et tagada ühtsus ja lihtne haldamine. Ühtselt nimetatud seadmed teevad võrgu haldamise ja tõrkeotsingu palju lihtsamaks. Näiteks, kui nimetad kommutaator "TLN-SW1", viitab see sellele, et tegemist on esimese lülitiga Tallinnas, andes selge ettekujutuse selle asukohast ja rollist.
 
 
 ### Tugevate paroolide seadistamine

@@ -81,7 +81,7 @@ IPv4 puhul kasutatakse hosti IP-aadressi ja alamvõrgu maski, et otsustada, kas 
 
 ## Vaikelüüs
 
-Kui liiklus peab minema väljapoole kohalikku võrku, kasutatakse selleks **vaikelüüsi**. Vaikelüüs on tavaliselt ruuter või kolmanda kihi lüliti, mis edastab andmed teistesse võrkudesse.
+Kui liiklus peab minema väljapoole kohalikku võrku, kasutatakse selleks **vaikelüüsi**. Vaikelüüs on tavaliselt ruuter või kolmanda kihi kommutaator, mis edastab andmed teistesse võrkudesse.
 
 ---
 

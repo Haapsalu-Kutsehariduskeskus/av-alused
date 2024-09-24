@@ -5,13 +5,13 @@
 
 ## Ülevaade
 
-See kursus tutvustab tudengitele arvutivõrkude põhimõisteid, hõlmates võrgustikuarhitektuure, mudeleid, protokolle ja olulisi võrgukomponente. Kursus annab vajalikke oskusi ruuterite ja lülitite põhikonfiguratsioonide tegemiseks ning IPv4 ja IPv6 aadressiskeemide mõistmiseks.
+See kursus tutvustab tudengitele arvutivõrkude põhimõisteid, hõlmates võrgustikuarhitektuure, mudeleid, protokolle ja olulisi võrgukomponente. Kursus annab vajalikke oskusi ruuterite ja kommutaatorite põhikonfiguratsioonide tegemiseks ning IPv4 ja IPv6 aadressiskeemide mõistmiseks.
 
 Kursuse lõpuks oskate seadistada ja tõrkeotsingut teha väikestes võrkudes. Suurepärane algus IT-õpingutele HKHK-s.
 
 ## Õpid Need Põhioskused:
-- Luua lihtsaid LAN-e, teha põhikonfiguratsioone ruuteritel ja lülititel ning rakendada IPv4 ja IPv6 aadressskeeme.
-- Seadistada ruutereid, lüliteid ja lõppseadmeid, tagades ühenduse kaugseadmete vahel.
+- Luua lihtsaid LAN-e, teha põhikonfiguratsioone ruuteritel ja kommutaatoritel ning rakendada IPv4 ja IPv6 aadressskeeme.
+- Seadistada ruutereid, kommutaatoreid ja lõppseadmeid, tagades ühenduse kaugseadmete vahel.
 - Arendada kriitilist mõtlemist ja probleemide lahendamise oskusi, kasutades Cisco Packet Tracerit.
 - Seadistada ja tõrkeotsingut teha väikestes võrkudes, rakendades turvameetmeid.
 

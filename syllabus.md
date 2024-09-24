@@ -13,7 +13,7 @@ Võrgustikud on digitaalse transformatsiooni keskmes. See kursus pakub põhitead
 
 Kursuse lõpuks on tudengid võimelised:
 - Mõistma ja selgitama erinevaid võrgustikuarhitektuure, suurusi ja komponente.
-- Seadistama ja haldama võrguseadmeid nagu ruuterid ja lülitid.
+- Seadistama ja haldama võrguseadmeid nagu ruuterid ja kommutaatorid.
 - Rakendama ja tõrkeotsingut tegema IPv4 ja IPv6 aadressiskeemide puhul.
 - Rakendama võrguturbe parimaid tavasid väikeste võrkude kaitsmiseks.
 - Arendama kriitilist mõtlemist ja probleemide lahendamise oskusi reaalmaailma võrgustikustsenaariumide abil.
@@ -55,7 +55,7 @@ Kursuse lõpuks on tudengid võimelised:
 - **Teemad**:
   - Võrguseadmed: Switch, ruuterid, tulemüürid.
   - Sissejuhatus Cisco IOS CLI-sse.
-  - Ethernet LAN-i lülitamise ja marsruutimise alused.
+  - Ethernet LAN-i marsruutimise alused.
 - **Laborid**:
   - 7labs
 

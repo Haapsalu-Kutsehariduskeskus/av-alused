@@ -2,10 +2,10 @@
 
 # Võrguseadmete Ülevaade
 
-Võrguseadmed on võrgu infrastruktuuri olulised osad, mis tagavad andmete liikumise, turvalisuse ja haldamise. Selles ülevaates käsitleme kolme peamist võrguseadmete tüüpi: **lülitid (switchid)**, **ruuterid** ja **3-kihi (Layer 3) switch**. Lisaks selgitame nende füüsilisi omadusi, valgusdioodide (LED) tähendusi ja seadmete lähtestamise meetodeid.
+Võrguseadmed on võrgu infrastruktuuri olulised osad, mis tagavad andmete liikumise, turvalisuse ja haldamise. Selles ülevaates käsitleme kolme peamist võrguseadmete tüüpi: **kommutaatorid (switchid)**, **ruuterid** ja **3-kihi (Layer 3) switch**. Lisaks selgitame nende füüsilisi omadusi, valgusdioodide (LED) tähendusi ja seadmete lähtestamise meetodeid.
 
-## 1. Lülitid (Switchid)
-Lülitid on seadmed, mis ühendavad võrgus erinevaid seadmeid, nagu arvutid ja printerid, ning suunavad andmeid nende vahel.
+## 1. Kommutaatorid (Switch)
+Kommutaatorid on seadmed, mis ühendavad võrgus erinevaid seadmeid, nagu arvutid ja printerid, ning suunavad andmeid nende vahel.
 
 - **Ethernet-pordid (RJ45)**: Kasutatakse seadmete ühendamiseks võrku.
 - **Konsoolport**: Kasutatakse seadme lokaalseks seadistamiseks CLI kaudu.
@@ -17,7 +17,7 @@ Lülitid on seadmed, mis ühendavad võrgus erinevaid seadmeid, nagu arvutid ja 
 ![Switchi pordid ja LED-id](/lectures/images/switch_ports_and_leds.png)
 
 **Täiendav info**:
-- [Artikkel lülitite lähtestamisest ja pordide tähendustest](https://robots.net/news/how-do-you-reset-a-network-switch)
+- [Artikkel kommutaatorite lähtestamisest ja pordide tähendustest](https://robots.net/news/how-do-you-reset-a-network-switch)
 
 
 ## 2. Ruuterid
@@ -34,7 +34,7 @@ Ruuterid suunavad andmepakette erinevate võrkude vahel, näiteks sisevõrgu ja 
 
 ## 3. 3-kihi (Layer 3) switch
 
-Switch, mis suudab teha nii võrgu lülitamise (Layer 2) kui ka marsruutimise (Layer 3) ülesandeid. Näiteks Cisco Catalyst 3560 on populaarne 3-kihi switch, mis ühendab VLAN-e ja suudab marsruutida andmepakette erinevate võrkude vahel, ilma et oleks vaja eraldi ruuterit. See on kasulik suuremates ettevõttevõrkudes, kus on vaja kiiret andmeedastust ja ühenduse suunamist erinevate alamvõrkude vahel.
+Switch, mis suudab teha nii võrgu kommutatsiooni (Layer 2) kui ka marsruutimise (Layer 3) ülesandeid. Näiteks Cisco Catalyst 3560 on populaarne 3-kihi switch, mis ühendab VLAN-e ja suudab marsruutida andmepakette erinevate võrkude vahel, ilma et oleks vaja eraldi ruuterit. See on kasulik suuremates ettevõttevõrkudes, kus on vaja kiiret andmeedastust ja ühenduse suunamist erinevate alamvõrkude vahel.
 
 ## 4. Võrguseadmete Paigutus
 
@@ -52,7 +52,7 @@ See kolmekihiline mudel tagab, et andmed liiguvad kiiresti ja tõhusalt läbi ko
 
 ## 5. Seadmete Lähtestamine
 
-- **Lüliti lähtestamine CLI kaudu**:
+- **Kommutaatori lähtestamine CLI kaudu**:
   1. Ühenda konsoolipordiga ja logi CLI-sse sisse.
   2. Kasuta käsku `erase startup-config` ja seejärel `reload`, et seade lähtestada tehase seadetele.
 
@@ -62,5 +62,5 @@ See kolmekihiline mudel tagab, et andmed liiguvad kiiresti ja tõhusalt läbi ko
 ---
 
 Selle põhjalikuma ülevaate ja lisainfo saamiseks tutvu täiendavate ressurssidega:
-- [Robots.net - Lüliti lähtestamine](https://robots.net/news/how-do-you-reset-a-network-switch)
+- [Robots.net - Kommutaatori lähtestamine](https://robots.net/news/how-do-you-reset-a-network-switch)
 - [Cisco Documentation - Etherneti porditulede tähendused näide](https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst9500/hardware/install/b_catalyst_9500_hig/9500-leds.pdf)

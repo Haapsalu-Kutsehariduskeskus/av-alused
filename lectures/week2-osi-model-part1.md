@@ -163,9 +163,9 @@ Kaadrite struktuur ja nende kontrollmehhanismid aitavad tagada, et edastatud and
 
 ### 3. Etherneti Lülitamine (Switching)
 
-Etherneti lülitamine keskendub mitmele olulisele aspektile, sealhulgas Ethernet-raami struktuurile, MAC-aadressidele ja MAC-aadresside tabelitele. Lisaks käsitletakse lüliti kiiruseid ja edastamisviise. Ethernet töötab OSI mudeli kahes kihis – andmelingi kihis (kiht 2) ja füüsilises kihis (kiht 1). Seda tehnoloogiat reguleerivad IEEE 802 standardid.
+Etherneti lülitamine keskendub mitmele olulisele aspektile, sealhulgas Ethernet-raami struktuurile, MAC-aadressidele ja MAC-aadresside tabelitele. Lisaks käsitletakse kommutaator kiiruseid ja edastamisviise. Ethernet töötab OSI mudeli kahes kihis – andmelingi kihis (kiht 2) ja füüsilises kihis (kiht 1). Seda tehnoloogiat reguleerivad IEEE 802 standardid.
 
-![Ethernet lüliti struktuur](/lectures/images/ethernet_switch_structure.png)
+![Ethernet kommutaatori struktuur](/lectures/images/ethernet_switch_structure.png)
 
 ### Etherneti Kapseldamine
 
@@ -190,22 +190,22 @@ Etherneti võrkudes võib side toimuda erineval viisil:
 
 ### MAC-aadresside Tabel
 
-Lülitid kasutavad MAC-aadresse, et otsustada, kuhu andmepakett suunata. Kui lüliti saab raami, kontrollib see oma MAC-aadresside tabelit ja määrab, millise pordi kaudu raam edastada. Kui sihtaadress pole teada, saadetakse raam kõigile portidele, välja arvatud sellele, kust see tuli.
+kommutaatorid kasutavad MAC-aadresse, et otsustada, kuhu andmepakett suunata. Kui kommutaator saab raami, kontrollib see oma MAC-aadresside tabelit ja määrab, millise pordi kaudu raam edastada. Kui sihtaadress pole teada, saadetakse raam kõigile portidele, välja arvatud sellele, kust see tuli.
 
 ![MAC-aadresside tabel lülitis](/lectures/images/mac_address_table.png)
 
 ### Lülitusmeetodid
 
-Etherneti lülitid kasutavad erinevaid meetodeid andmete edastamiseks. Üks neist on **Store-and-Forward**, kus lüliti loeb terve raami, kontrollib vigu ja alles siis edastab selle sihtkohta. Teine meetod on **Cut-Through**, mille puhul lüliti edastab raami enne, kui kogu pakett on vastu võetud. Cut-Through meetodil on kaks varianti:
+Etherneti kommutaatorid kasutavad erinevaid meetodeid andmete edastamiseks. Üks neist on **Store-and-Forward**, kus kommutaator loeb terve raami, kontrollib vigu ja alles siis edastab selle sihtkohta. Teine meetod on **Cut-Through**, mille puhul kommutaator edastab raami enne, kui kogu pakett on vastu võetud. Cut-Through meetodil on kaks varianti:
 - **Fast Forward**: edastamine algab kohe pärast sihtaadressi lugemist, mis tagab madala latentsuse.
-- **Fragment-Free**: lüliti kontrollib esimese 64 baiti jooksul vigu enne edastamist.
+- **Fragment-Free**: kommutaator kontrollib esimese 64 baiti jooksul vigu enne edastamist.
 
 
-### Lüliti Mälu Puhverdamine
+### kommutaator Mälu Puhverdamine
 
-Lülitid kasutavad raamide hoidmiseks kahte meetodit: **pordipõhine mälu**, kus raamid salvestatakse iga pordi jaoks eraldi järjekorda, ja **jagatud mälu**, kus raamid paigutatakse jagatud mälupuhvrisse, mida seotakse dünaamiliselt sihtportidega.
+kommutaatorid kasutavad raamide hoidmiseks kahte meetodit: **pordipõhine mälu**, kus raamid salvestatakse iga pordi jaoks eraldi järjekorda, ja **jagatud mälu**, kus raamid paigutatakse jagatud mälupuhvrisse, mida seotakse dünaamiliselt sihtportidega.
 
-![Lüliti mälu puhverdamine](/lectures/images/switch_memory_buffering.png)
+![kommutaator mälu puhverdamine](/lectures/images/switch_memory_buffering.png)
 
 ### Dupleksseaded ja Automaatne Läbirääkimine
 
