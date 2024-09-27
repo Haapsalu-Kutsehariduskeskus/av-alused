@@ -1,206 +1,200 @@
-# Final Project: Answer Key
 
-## 1. Addressing Table (Completed)
+# Cisco Packet Tracer – Skills Integration Challenge: Full Lab Manual
 
-| Device   | Interface | IP Address / Prefix       | Default Gateway   | IPv6 Address / Prefix      |
-|----------|-----------|---------------------------|-------------------|----------------------------|
-| R1       | G0/0      | 192.168.0.1 /25           | N/A               | 2001:db8:acad::1/64        |
-| R1       | G0/1      | 192.168.0.129 /26         | N/A               | 2001:db8:acad:1::1/64      |
-| R1       | G0/2      | 192.168.0.193 /27         | N/A               | 2001:db8:acad:2::1/64      |
-| R1       | S0/0/1    | 172.16.1.2 /30            | N/A               | 2001:db8:2::1/64           |
-| Central  | S0/0/0    | 209.165.200.226 /30       | N/A               | 2001:db8:1::1/64           |
-| Central  | S0/0/1    | 172.16.1.1 /30            | N/A               | 2001:db8:2::2/64           |
-| S1       | VLAN 1    | 192.168.0.3 /25           | 192.168.0.1       | N/A                        |
-| S2       | VLAN 1    | 192.168.0.131 /26         | 192.168.0.129     | N/A                        |
-| S3       | VLAN 1    | 192.168.0.195 /27         | 192.168.0.193     | N/A                        |
-| Staff    | NIC       | 192.168.0.2 /25           | 192.168.0.1       | 2001:db8:acad::2/64        |
-| Sales    | NIC       | 192.168.0.130 /26         | 192.168.0.129     | 2001:db8:acad:1::2/64      |
-| IT       | NIC       | 192.168.0.194 /27         | 192.168.0.193     | 2001:db8:acad:2::2/64      |
-| Web      | NIC       | 64.100.0.3 /29            | 64.100.0.1        | 2001:db8:cafe::3/64        |
+## 1. Scenario
 
-## 2. Configuration Steps
+The router Central, ISP cluster, and the Web server are fully configured. Your task is to:
 
-### R1 Configuration
+- Create a new IPv4 addressing scheme using the `192.168.0.0/24` network that accommodates four subnets:
+  - Staff requires 100 hosts.
+  - Sales requires 50 hosts.
+  - IT requires 25 hosts.
+  - Guest (to be added later) requires 25 hosts.
+- Configure the R1 router's interfaces with IPv4 and IPv6 addressing according to your scheme.
+- Finish the basic security settings and interface configurations on R1.
+- Configure the SVI interface and basic security settings on switches S1, S2, and S3.
 
-1. **Set Device Name and Disable DNS Lookup**
+---
 
-    ```
-    Router> enable
-    Router# configure terminal
-    Router(config)# hostname R1
-    Router(config)# no ip domain-lookup
-    ```
+## 2. Addressing Scheme
 
-2. **Set Privileged EXEC Mode Password**
+Based on the host requirements, the IPv4 addressing scheme will be as follows:
 
-    ```
-    Router(config)# enable secret Ciscoenpa55
-    ```
+- **Staff Subnet**: 100 hosts → `192.168.0.0/25` (Subnet Mask: 255.255.255.128)
+- **Sales Subnet**: 50 hosts → `192.168.0.128/26` (Subnet Mask: 255.255.255.192)
+- **IT Subnet**: 25 hosts → `192.168.0.192/27` (Subnet Mask: 255.255.255.224)
+- **Guest Subnet** (future) → `192.168.0.224/27` (Subnet Mask: 255.255.255.224)
 
-3. **Set Console Password**
+### Addressing Table:
 
-    ```
-    Router(config)# line console 0
-    Router(config-line)# password Ciscoconpa55
-    Router(config-line)# login
-    ```
+| Device   | Interface | IP Address / Prefix       | Default Gateway   |
+|----------|-----------|---------------------------|-------------------|
+| R1       | G0/0      | 192.168.0.1 /25           | N/A               |
+| R1       | G0/1      | 192.168.0.129 /26         | N/A               |
+| R1       | G0/2      | 192.168.0.193 /27         | N/A               |
+| S1       | VLAN 1    | 192.168.0.3 /25           | 192.168.0.1       |
+| S2       | VLAN 1    | 192.168.0.131 /26         | 192.168.0.129     |
+| S3       | VLAN 1    | 192.168.0.195 /27         | 192.168.0.193     |
+| Staff PC | NIC       | 192.168.0.2 /25           | 192.168.0.1       |
+| Sales PC | NIC       | 192.168.0.130 /26         | 192.168.0.129     |
+| IT PC    | NIC       | 192.168.0.194 /27         | 192.168.0.193     |
 
-4. **Set Minimum Password Length**
+---
 
-    ```
-    Router(config)# security passwords min-length 10
-    ```
+## 3. Router R1 Configuration
 
-5. **Encrypt Plaintext Passwords**
+### 3.1 Set Device Name and Disable DNS Lookup:
 
-    ```
-    Router(config)# service password-encryption
-    ```
+```bash
+Router> enable
+Router# configure terminal
+Router(config)# hostname R1
+Router(config)# no ip domain-lookup
+```
 
-6. **Set a Banner**
+### 3.2 Set Privileged EXEC Mode Password:
 
-    ```
-    Router(config)# banner motd $ Unauthorized access is prohibited $
-    ```
+```bash
+Router(config)# enable secret Ciscoenpa55
+```
 
-7. **Configure GigabitEthernet Interfaces with IPv4 and IPv6**
+### 3.3 Set Console Password:
 
-    ```
-    Router(config)# interface g0/0
-    Router(config-if)# ip address 192.168.0.1 255.255.255.128
-    Router(config-if)# ipv6 address 2001:db8:acad::1/64
-    Router(config-if)# no shutdown
-    Router(config-if)# exit
+```bash
+Router(config)# line console 0
+Router(config-line)# password Ciscoconpa55
+Router(config-line)# login
+```
 
-    Router(config)# interface g0/1
-    Router(config-if)# ip address 192.168.0.129 255.255.255.192
-    Router(config-if)# ipv6 address 2001:db8:acad:1::1/64
-    Router(config-if)# no shutdown
-    Router(config-if)# exit
+### 3.4 Set Minimum Password Length:
 
-    Router(config)# interface g0/2
-    Router(config-if)# ip address 192.168.0.193 255.255.255.224
-    Router(config-if)# ipv6 address 2001:db8:acad:2::1/64
-    Router(config-if)# no shutdown
-    Router(config-if)# exit
-    ```
+```bash
+Router(config)# security passwords min-length 10
+```
 
-8. **Configure SSH**
+### 3.5 Encrypt Plaintext Passwords:
 
-    ```
-    Router(config)# ip domain-name CCNA-lab.com
-    Router(config)# crypto key generate rsa modulus 1024
-    Router(config)# line vty 0 4
-    Router(config-line)# transport input ssh
-    Router(config-line)# login local
-    Router(config)# username Admin1 privilege 15 secret Admin1pa55
-    ```
+```bash
+Router(config)# service password-encryption
+```
 
-9. **Set Inactivity Timeout**
+### 3.6 Set a Banner:
 
-    ```
-    Router(config)# line console 0
-    Router(config-line)# exec-timeout 5 0
-    Router(config)# line vty 0 4
-    Router(config-line)# exec-timeout 5 0
-    ```
+```bash
+Router(config)# banner motd $ Unauthorized access is prohibited $
+```
 
-10. **Configure Login Block**
+### 3.7 Configure GigabitEthernet Interfaces:
 
-    ```
-    Router(config)# login block-for 180 attempts 4 within 120
-    ```
+```bash
+Router(config)# interface g0/0
+Router(config-if)# ip address 192.168.0.1 255.255.255.128
+Router(config-if)# no shutdown
+Router(config-if)# exit
 
-11. **Save Configuration**
+Router(config)# interface g0/1
+Router(config-if)# ip address 192.168.0.129 255.255.255.192
+Router(config-if)# no shutdown
+Router(config-if)# exit
 
-    ```
-    Router# write memory
-    ```
+Router(config)# interface g0/2
+Router(config-if)# ip address 192.168.0.193 255.255.255.224
+Router(config-if)# no shutdown
+Router(config-if)# exit
+```
 
-### Switch Configuration (S1, S2, S3)
+### 3.8 Configure SSH:
 
-1. **Set Device Name**
+```bash
+Router(config)# ip domain-name CCNA-lab.com
+Router(config)# crypto key generate rsa modulus 1024
+Router(config)# line vty 0 4
+Router(config-line)# transport input ssh
+Router(config-line)# login local
+Router(config)# username Admin1 privilege 15 secret Admin1pa55
+```
 
-    ```
-    Switch> enable
-    Switch# configure terminal
-    Switch(config)# hostname S1   # Change S1 to S2 or S3 for other switches
-    ```
+### 3.9 Set Inactivity Timeout:
 
-2. **Configure SVI Interface and Default Gateway**
+```bash
+Router(config)# line console 0
+Router(config-line)# exec-timeout 5 0
+Router(config)# line vty 0 4
+Router(config-line)# exec-timeout 5 0
+```
 
-    ```
-    Switch(config)# interface vlan 1
-    Switch(config-if)# ip address 192.168.0.3 255.255.255.128
+### 3.10 Configure Login Block:
 
-    # Configure VLAN interfaces: 
-    # S1: 192.168.0.3/25 (255.255.255.128) 
-    # S2: 192.168.0.131/26 (255.255.255.192) 
-    # S3: 192.168.0.195/27 (255.255.255.224) 
-    # 
-    # Each IP address is assigned with a specific subnet mask to define the network size: 
-    # /25 allows 126 hosts, /26 allows 62 hosts, and /27 allows 30 hosts.
-    
-    Switch(config-if)# no shutdown
-    Switch(config)# ip default-gateway 192.168.0.1   # Change default gateway based on respective subnets
-    ```
+```bash
+Router(config)# login block-for 180 attempts 4 within 120
+```
 
-3. **Set Privileged EXEC Mode Password**
+## 4. Switch Configuration (S1, S2, S3)
 
-    ```
-    Switch(config)# enable secret Ciscoenpa55
-    ```
+### 4.1 S1 (Staff Network - VLAN 1):
 
-4. **Set Console Password**
+```bash
+Switch> enable
+Switch# configure terminal
+Switch(config)# interface vlan 1
+Switch(config-if)# ip address 192.168.0.3 255.255.255.128
+Switch(config-if)# no shutdown
+Switch(config-if)# exit
+Switch(config)# ip default-gateway 192.168.0.1
+Switch# write memory
+```
 
-    ```
-    Switch(config)# line console 0
-    Switch(config-line)# password Ciscoconpa55
-    Switch(config-line)# login
-    ```
+### 4.2 S2 (Sales Network - VLAN 1):
 
-5. **Set Inactivity Timeout**
+```bash
+Switch> enable
+Switch# configure terminal
+Switch(config)# interface vlan 1
+Switch(config-if)# ip address 192.168.0.131 255.255.255.192
+Switch(config-if)# no shutdown
+Switch(config-if)# exit
+Switch(config)# ip default-gateway 192.168.0.129
+Switch# write memory
+```
 
-    ```
-    Switch(config)# line vty 0 4
-    Switch(config-line)# exec-timeout 5 0
-    ```
+### 4.3 S3 (IT Network - VLAN 1):
 
-6. **Encrypt Plaintext Passwords**
+```bash
+Switch> enable
+Switch# configure terminal
+Switch(config)# interface vlan 1
+Switch(config-if)# ip address 192.168.0.195 255.255.255.224
+Switch(config-if)# no shutdown
+Switch(config-if)# exit
+Switch(config)# ip default-gateway 192.168.0.193
+Switch# write memory
+```
 
-    ```
-    Switch(config)# service password-encryption
-    ```
+## 5. PC Configuration
 
-7. **Save Configuration**
+### 5.1 Staff PC:
 
-    ```
-    Switch# write memory
-    ```
+- IP Address: 192.168.0.2 /25
+- Subnet Mask: 255.255.255.128
+- Default Gateway: 192.168.0.1
 
-### PC Configuration (Staff, Sales, IT)
+### 5.2 Sales PC:
 
-1. **Staff PC (NIC)**
+- IP Address: 192.168.0.130 /26
+- Subnet Mask: 255.255.255.192
+- Default Gateway: 192.168.0.129
 
-    - IP Address: `192.168.0.2 /25`
-    - Subnet Mask: `255.255.255.128`
-    - Default Gateway: `192.168.0.1`
-    - IPv6 Address: `2001:db8:acad::2/64`
-    - IPv6 Gateway: `fe80::1`
+### 5.3 IT PC:
 
-2. **Sales PC (NIC)**
+- IP Address: 192.168.0.194 /27
+- Subnet Mask: 255.255.255.224
+- Default Gateway: 192.168.0.193
 
-    - IP Address: `192.168.0.130 /26`
-    - Subnet Mask: `255.255.255.192`
-    - Default Gateway: `192.168.0.129`
-    - IPv6 Address: `2001:db8:acad:1::2/64`
-    - IPv6 Gateway: `fe80::1`
+## 6. Connectivity Test
 
-3. **IT PC (NIC)**
+- Use the web browser on Staff, Sales, and IT PCs to navigate to www.cisco.pka.
+- Ensure all PCs can ping each other and the router's interfaces.
 
-    - IP Address: `192.168.0.194 /27`
-    - Subnet Mask: `255.255.255.224`
-    - Default Gateway: `192.168.0.193`
-    - IPv6 Address: `2001:db8:acad:2::2/64`
-    - IPv6 Gateway: `fe80::1`
+## 7. Additional Configuration
 
+Configure security features like SSH access, banner messages, and password policies to meet the security requirements. Make sure the login block and timeout rules are applied to prevent unauthorized access.
