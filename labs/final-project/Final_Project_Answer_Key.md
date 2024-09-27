@@ -131,7 +131,10 @@
 
     ```
     Switch(config)# interface vlan 1
-    Switch(config-if)# ip address 192.168.0.3 255.255.255.128   # Use 192.168.0.131/26 for S2, 192.168.0.195/27 for S3
+    Switch(config-if)# ip address 192.168.0.3 255.255.255.128
+    ##################### The mask /25 means 255.255.255.128 ;  Use 192.168.0.131/26 for S2, 192.168.0.195/27 for S3.
+You can get subnet masks in subnet calculators
+    
     Switch(config-if)# no shutdown
     Switch(config)# ip default-gateway 192.168.0.1   # Change default gateway based on respective subnets
     ```
