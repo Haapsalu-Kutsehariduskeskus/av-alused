@@ -132,8 +132,14 @@
     ```
     Switch(config)# interface vlan 1
     Switch(config-if)# ip address 192.168.0.3 255.255.255.128
-    ##################### The mask /25 means 255.255.255.128 ;  Use 192.168.0.131/26 for S2, 192.168.0.195/27 for S3.
-You can get subnet masks in subnet calculators
+
+    # Configure VLAN interfaces: 
+    # S1: 192.168.0.3/25 (255.255.255.128) 
+    # S2: 192.168.0.131/26 (255.255.255.192) 
+    # S3: 192.168.0.195/27 (255.255.255.224) 
+    # 
+    # Each IP address is assigned with a specific subnet mask to define the network size: 
+    # /25 allows 126 hosts, /26 allows 62 hosts, and /27 allows 30 hosts.
     
     Switch(config-if)# no shutdown
     Switch(config)# ip default-gateway 192.168.0.1   # Change default gateway based on respective subnets
